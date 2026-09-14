@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Team | NCCPA Jankalyan Foundation</title>
+
+<meta name="description" content="NCCPA Jankalyan Foundation की टीम, Directors, Treasurer, Volunteers और Members के बारे में जानकारी।">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f7fa;
+  color:#222;
+  line-height:1.7;
+}
+
+.topbar{
+  background:#0b5d3b;
+  color:white;
+  text-align:center;
+  padding:8px 12px;
+  font-size:14px;
+}
+
+header{
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:12px 20px;
+  box-shadow:0 2px 10px rgba(0,0,0,.12);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  width:70px;
+  height:70px;
+  object-fit:contain;
+}
+
+.logo h1{
+  color:#0b5d3b;
+  font-size:20px;
+}
+
+.logo p{
+  color:#777;
+  font-size:12px;
+}
+
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:7px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#222;
+  font-size:14px;
+  font-weight:bold;
+  padding:8px 10px;
+  border-radius:5px;
+}
+
+nav a:hover,
+nav a.active{
+  background:#0b5d3b;
+  color:white;
+}
+
+.hero{
+  background:linear-gradient(135deg,#0b5d3b,#16804f);
+  color:white;
+  text-align:center;
+  padding:65px 20px;
+}
+
+.hero h2{
+  font-size:40px;
+  margin-bottom:12px;
+}
+
+.hero p{
+  max-width:850px;
+  margin:auto;
+  font-size:18px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:45px 20px;
+}
+
+.intro{
+  background:white;
+  padding:30px;
+  border-radius:14px;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.intro h3{
+  color:#0b5d3b;
+  font-size:27px;
+  margin-bottom:10px;
+}
+
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.team-card{
+  background:white;
+  padding:28px 20px;
+  border-radius:14px;
+  text-align:center;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
+  border-top:5px solid #0b5d3b;
+}
+
+.photo{
+  width:130px;
+  height:130px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  background:#eef3f0;
+  border:5px solid #0b5d3b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#0b5d3b;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.team-card h3{
+  color:#0b5d3b;
+  font-size:21px;
+  margin-bottom:5px;
+}
+
+.role{
+  color:#f39c12;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.team-card p{
+  font-size:15px;
+}
+
+.section{
+  background:white;
+  padding:30px;
+  margin-top:30px;
+  border-radius:14px;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.section h3{
+  color:#0b5d3b;
+  font-size:27px;
+  margin-bottom:15px;
+  border-left:5px solid #f39c12;
+  padding-left:12px;
+}
+
+.section ul{
+  padding-left:22px;
+}
+
+.section li{
+  margin:9px 0;
+}
+
+.join{
+  background:#0b5d3b;
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+  border-radius:14px;
+  margin-top:30px;
+}
+
+.join h3{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.btn{
+  display:inline-block;
+  margin:18px 5px 0;
+  padding:12px 24px;
+  background:#f39c12;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+footer{
+  background:#092f20;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+  margin-top:30px;
+}
+
+footer p{
+  margin:5px 0;
+}
+
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#25D366;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:25px;
+  box-shadow:0 3px 12px rgba(0,0,0,.25);
+  z-index:2000;
+}
+
+@media(max-width:850px){
+
+  header{
+    flex-direction:column;
+  }
+
+  .team-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hero h2{
+    font-size:30px;
+  }
+
+}
+
+@media(max-width:550px){
+
+  .team-grid{
+    grid-template-columns:1fr;
+  }
+
+  .intro,
+  .section{
+    padding:22px;
+  }
+
+  nav a{
+    font-size:13px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+📞 8084284106 | 📱 7903998184 | ✉️ infonccpa@gmail.com
+</div>
+
+
+<header>
+
+<div class="logo">
+
+<img src="assets/logo.svg"
+     alt="NCCPA Jankalyan Foundation Logo">
+
+<div>
+<h1>NCCPA Jankalyan Foundation</h1>
+<p>National Council for Community Promotion & Awareness</p>
+</div>
+
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="mission.html">Mission</a>
+<a href="leadership.html">Leadership</a>
+<a href="team.html" class="active">Team</a>
+<a href="services.html">Services</a>
+<a href="schemes.html">Schemes</a>
+<a href="news.html">News</a>
+<a href="gallery.html">Gallery</a>
+<a href="donate.html">Donate</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h2>👥 हमारी टीम</h2>
+
+<p>
+एक मजबूत टीम, बेहतर सेवा और सामाजिक विकास की दिशा में एकजुट प्रयास।
+</p>
+
+</section>
+
+
+<main class="container">
+
+
+<section class="intro">
+
+<h3>🤝 NCCPA Team</h3>
+
+<p>
+NCCPA Jankalyan Foundation के सामाजिक कार्यों को सफल बनाने में
+Directors, Team Members, Volunteers और Community Members की
+महत्वपूर्ण भूमिका है।
+</p>
+
+<p>
+हम टीमवर्क, सेवा भावना और सामुदायिक भागीदारी के माध्यम से
+जरूरतमंद लोगों तक पहुँचने का प्रयास करते हैं।
+</p>
+
+</section>
+
+
+<section class="team-grid">
+
+
+<!-- Founder -->
+
+<div class="team-card">
+
+<div class="photo">
+Founder<br>Photo
+</div>
+
+<h3>Mukesh Kumar Sharma</h3>
+
+<div class="role">
+Founder & Director
+</div>
+
+<p>
+संस्था के नेतृत्व, योजना निर्माण और सामाजिक कार्यक्रमों
+के संचालन में प्रमुख भूमिका।
+</p>
+
+</div>
+
+
+<!-- Secretary -->
+
+<div class="team-card">
+
+<div class="photo">
+Director<br>Photo
+</div>
+
+<h3>Puja Kumari</h3>
+
+<div class="role">
+Secretary / 2nd Director
+</div>
+
+<p>
+संस्था के प्रशासनिक कार्यों एवं सामाजिक गतिविधियों में सहयोग।
+</p>
+
+</div>
+
+
+<!-- Treasurer -->
+
+<div class="team-card">
+
+<div class="photo">
+Treasurer<br>Photo
+</div>
+
+<h3>Pradeep Kumar Rajak</h3>
+
+<div class="role">
+Treasurer
+</div>
+
+<p>
+संस्था के वित्तीय एवं लेखा संबंधी कार्यों की जिम्मेदारी।
+</p>
+
+</div>
+
+
+<!-- Volunteer Coordinator -->
+
+<div class="team-card">
+
+<div class="photo">
+Volunteer<br>Team
+</div>
+
+<h3>Volunteer Team</h3>
+
+<div class="role">
+Field Volunteers
+</div>
+
+<p>
+ग्रामीण क्षेत्रों में सर्वे, जागरूकता और सामुदायिक गतिविधियों में सहयोग।
+</p>
+
+</div>
+
+
+<!-- Survey Team -->
+
+<div class="team-card">
+
+<div class="photo">
+Survey<br>Team
+</div>
+
+<h3>Survey Team</h3>
+
+<div class="role">
+Field Surveyors
+</div>
+
+<p>
+समुदाय से आवश्यक जानकारी एकत्र करने और जरूरतों को समझने में सहयोग।
+</p>
+
+</div>
+
+
+<!-- Community -->
+
+<div class="team-card">
+
+<div class="photo">
+Community<br>Members
+</div>
+
+<h3>Community Members</h3>
+
+<div class="role">
+Community Support
+</div>
+
+<p>
+स्थानीय समुदाय की भागीदारी और सामाजिक कार्यक्रमों में सहयोग।
+</p>
+
+</div>
+
+
+</section>
+
+
+<section class="section">
+
+<h3>🎯 हमारी टीम के प्रमुख कार्य</h3>
+
+<ul>
+
+<li>सामुदायिक सर्वे एवं जरूरतों की पहचान।</li>
+
+<li>स्वास्थ्य एवं शिक्षा जागरूकता कार्यक्रम।</li>
+
+<li>सरकारी योजनाओं की जानकारी लोगों तक पहुँचाना।</li>
+
+<li>महिला एवं युवा विकास कार्यक्रमों में सहयोग।</li>
+
+<li>पर्यावरण एवं स्वच्छता अभियान।</li>
+
+<li>आपदा एवं आपातकालीन सहायता गतिविधियों में सहयोग।</li>
+
+<li>ग्रामीण क्षेत्रों में सामाजिक जागरूकता अभियान।</li>
+
+<li>जरूरतमंद परिवारों को उपलब्ध सहायता सेवाओं से जोड़ना।</li>
+
+</ul>
+
+</section>
+
+
+<section class="section">
+
+<h3>🌟 Team Values</h3>
+
+<ul>
+
+<li><strong>सेवा:</strong> समाज की सहायता को प्राथमिकता।</li>
+
+<li><strong>ईमानदारी:</strong> जिम्मेदारी और विश्वास के साथ कार्य।</li>
+
+<li><strong>टीमवर्क:</strong> मिलकर बेहतर परिणाम प्राप्त करना।</li>
+
+<li><strong>सम्मान:</strong> प्रत्येक व्यक्ति के सम्मान को महत्व देना।</li>
+
+<li><strong>पारदर्शिता:</strong> कार्यों में जिम्मेदारी और स्पष्टता।</li>
+
+</ul>
+
+</section>
+
+
+<section class="join">
+
+<h3>🙋 हमारी टीम से जुड़ें</h3>
+
+<p>
+आप Volunteer, Member या Community Supporter के रूप में
+NCCPA Jankalyan Foundation से जुड़ सकते हैं।
+</p>
+
+<a class="btn" href="contact.html">
+Join Our Team
+</a>
+
+<a class="btn" href="index.html">
+Home Page
+</a>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<p><strong>NCCPA Jankalyan Foundation</strong></p>
+
+<p>
+National Council for Community Promotion & Awareness
+</p>
+
+<p>Section 8 Non-Government Organization</p>
+
+<p>📍 Purnea, Bihar</p>
+
+<p>📞 8084284106 | 7903998184</p>
+
+<p>✉️ infonccpa@gmail.com</p>
+
+<br>
+
+<p>हर घर तक सेवा, हर दिल में विश्वास</p>
+
+<p>© 2026 NCCPA Jankalyan Foundation. All Rights Reserved.</p>
+
+</footer>
+
+
+<a class="whatsapp"
+   href="https://wa.me/918084281046"
+   target="_blank"
+   aria-label="WhatsApp">
+💬
+</a>
+
+</body>
+</html>
