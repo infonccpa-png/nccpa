@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>स्वास्थ्य सेवाएँ | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+    content="NCCPA Jankalyan Foundation की स्वास्थ्य सेवाएँ, स्वास्थ्य जागरूकता, प्राथमिक सहायता और सरकारी स्वास्थ्य योजनाओं की जानकारी।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,sans-serif;
+      line-height:1.7;
+      background:#f5f7fa;
+      color:#222;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .topbar{
+      background:#087443;
+      color:white;
+      text-align:center;
+      padding:8px 5%;
+      font-size:14px;
+    }
+
+    header{
+      background:white;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.12);
+    }
+
+    .header-inner{
+      max-width:1200px;
+      margin:auto;
+      padding:10px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo img{
+      width:65px;
+      height:65px;
+      object-fit:contain;
+    }
+
+    .logo-text h2{
+      color:#087443;
+      font-size:20px;
+    }
+
+    .logo-text p{
+      color:#555;
+      font-size:12px;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:7px;
+    }
+
+    nav a{
+      color:#222;
+      font-weight:bold;
+      padding:7px 8px;
+      font-size:14px;
+    }
+
+    nav a:hover{
+      color:#087443;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#087443,#0b9b59);
+      color:white;
+      text-align:center;
+      padding:70px 20px;
+    }
+
+    .hero img{
+      width:110px;
+      height:110px;
+      background:white;
+      border-radius:50%;
+      padding:5px;
+      margin-bottom:15px;
+    }
+
+    .hero h1{
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      max-width:800px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:50px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:35px;
+    }
+
+    .section-title h2{
+      color:#087443;
+      font-size:30px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    .health-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:14px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      border-top:4px solid #087443;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+    }
+
+    .icon{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      color:#087443;
+      font-size:21px;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      color:#555;
+      font-size:15px;
+    }
+
+    .notice{
+      margin-top:40px;
+      background:#fff8e8;
+      border-left:5px solid #d99b00;
+      padding:25px;
+      border-radius:10px;
+    }
+
+    .notice h2{
+      color:#9a6b00;
+      margin-bottom:10px;
+    }
+
+    .steps{
+      margin-top:45px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .step{
+      background:#eef8f2;
+      padding:22px;
+      text-align:center;
+      border-radius:12px;
+    }
+
+    .step-number{
+      width:45px;
+      height:45px;
+      border-radius:50%;
+      background:#087443;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto 10px;
+      font-weight:bold;
+    }
+
+    .step h3{
+      color:#087443;
+      margin-bottom:6px;
+    }
+
+    .step p{
+      color:#555;
+      font-size:14px;
+    }
+
+    .cta{
+      background:#087443;
+      color:white;
+      text-align:center;
+      padding:45px 20px;
+      margin-top:40px;
+    }
+
+    .cta h2{
+      font-size:30px;
+      margin-bottom:10px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin:15px 5px 0;
+      padding:12px 22px;
+      border-radius:25px;
+      background:white;
+      color:#087443;
+      font-weight:bold;
+    }
+
+    footer{
+      background:#10231a;
+      color:white;
+      text-align:center;
+      padding:30px 20px;
+    }
+
+    footer img{
+      width:75px;
+      background:white;
+      border-radius:50%;
+      padding:4px;
+      margin-bottom:10px;
+    }
+
+    footer p{
+      margin:5px 0;
+      font-size:14px;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#25D366;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      box-shadow:0 4px 12px rgba(0,0,0,.3);
+      z-index:2000;
+    }
+
+    @media(max-width:850px){
+
+      .header-inner{
+        flex-direction:column;
+      }
+
+      .health-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .steps{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .hero h1{
+        font-size:32px;
+      }
+    }
+
+    @media(max-width:600px){
+
+      .health-grid,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:28px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  📞 8084284106 &nbsp; | &nbsp;
+  📱 WhatsApp: 7903998184 &nbsp; | &nbsp;
+  ✉️ infonccpa@gmail.com
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+
+    <div class="logo">
+
+      <img src="assets/logo.svg"
+           alt="NCCPA Jankalyan Foundation Logo">
+
+      <div class="logo-text">
+        <h2>NCCPA Jankalyan Foundation</h2>
+        <p>हर घर तक सेवा, हर दिल में विश्वास</p>
+      </div>
+
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="objectives.html">Objectives</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="impact.html">Impact</a>
+      <a href="future-plans.html">Future Plans</a>
+      <a href="health.html">Health</a>
+      <a href="schemes.html">Schemes</a>
+      <a href="news.html">News</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <img src="assets/logo.svg" alt="NCCPA Logo">
+
+  <h1>स्वास्थ्य सेवाएँ</h1>
+
+  <p>
+    स्वास्थ्य जागरूकता, प्राथमिक सहायता और जरूरतमंद लोगों को
+    उचित स्वास्थ्य सेवाओं से जोड़ने की दिशा में हमारा प्रयास
+  </p>
+
+</section>
+
+<!-- INTRO -->
+<section class="container">
+
+  <div class="section-title">
+
+    <h2>हमारे स्वास्थ्य सेवा क्षेत्र</h2>
+
+    <p>
+      हमारा उद्देश्य लोगों को स्वास्थ्य के प्रति जागरूक करना और
+      उपलब्ध स्वास्थ्य सेवाओं तक पहुँच बनाने में सहयोग करना है।
+    </p>
+
+  </div>
+
+  <div class="health-grid">
+
+    <div class="card">
+      <div class="icon">🩺</div>
+      <h3>स्वास्थ्य जागरूकता</h3>
+      <p>
+        सामान्य स्वास्थ्य, स्वच्छता, रोगों से बचाव और स्वस्थ जीवनशैली
+        के बारे में समुदाय में जागरूकता फैलाने का प्रयास।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏥</div>
+      <h3>स्वास्थ्य शिविर</h3>
+      <p>
+        योग्य स्वास्थ्य विशेषज्ञों और सहयोगी संस्थाओं के साथ मिलकर
+        स्वास्थ्य जागरूकता एवं जांच संबंधी शिविर आयोजित करने की दिशा में पहल।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚑</div>
+      <h3>आपातकालीन सहायता</h3>
+      <p>
+        आपात स्थिति में लोगों को उचित चिकित्सा सहायता एवं संबंधित
+        आपातकालीन सेवाओं तक पहुँचने की जानकारी देने का प्रयास।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💊</div>
+      <h3>दवा संबंधी जागरूकता</h3>
+      <p>
+        दवाओं के सुरक्षित उपयोग और सरकारी दवा सुविधाओं के बारे में
+        सही जानकारी उपलब्ध कराने की दिशा में जागरूकता।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">❤️</div>
+      <h3>हृदय स्वास्थ्य जागरूकता</h3>
+      <p>
+        स्वस्थ जीवनशैली, नियमित स्वास्थ्य जांच और हृदय स्वास्थ्य
+        के प्रति जागरूकता को बढ़ावा देने का प्रयास।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🧼</div>
+      <h3>स्वच्छता एवं स्वास्थ्य</h3>
+      <p>
+        व्यक्तिगत स्वच्छता, साफ पानी, स्वच्छ वातावरण और संक्रमण से
+        बचाव के संबंध में जनजागरूकता गतिविधियाँ।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🥗</div>
+      <h3>पोषण जागरूकता</h3>
+      <p>
+        संतुलित आहार, बच्चों एवं परिवारों के पोषण तथा स्वस्थ भोजन
+        की उपयोगिता के बारे में जागरूकता।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🩸</div>
+      <h3>रक्तदान जागरूकता</h3>
+      <p>
+        स्वैच्छिक रक्तदान के महत्व और जरूरतमंद मरीजों के लिए
+        सुरक्षित रक्त उपलब्धता के प्रति जागरूकता।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">👴</div>
+      <h3>वरिष्ठ नागरिक सहयोग</h3>
+      <p>
+        बुजुर्गों के स्वास्थ्य, सम्मान और आवश्यक सेवाओं तक पहुँच
+        के संबंध में सहयोग एवं जागरूकता।
+      </p>
+    </div>
+
+  </div>
+
+  <!-- IMPORTANT NOTICE -->
+
+  <div class="notice">
+
+    <h2>महत्वपूर्ण स्वास्थ्य सूचना</h2>
+
+    <p>
+      NCCPA Jankalyan Foundation की वेबसाइट पर दी गई स्वास्थ्य संबंधी
+      जानकारी केवल जनजागरूकता और मार्गदर्शन के उद्देश्य से है।
+      यह किसी योग्य डॉक्टर या अन्य लाइसेंस प्राप्त स्वास्थ्य विशेषज्ञ
+      की व्यक्तिगत चिकित्सा सलाह का विकल्प नहीं है।
+    </p>
+
+    <p style="margin-top:10px;">
+      गंभीर या आपातकालीन स्थिति में तुरंत नजदीकी अस्पताल,
+      डॉक्टर या संबंधित आपातकालीन सेवा से संपर्क करें।
+    </p>
+
+  </div>
+
+  <!-- SERVICE PROCESS -->
+
+  <div class="section-title" style="margin-top:50px;">
+
+    <h2>हम कैसे सहयोग करते हैं?</h2>
+
+    <p>
+      स्वास्थ्य सेवा से संबंधित हमारी सामान्य कार्यप्रणाली
+    </p>
+
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div class="step-number">1</div>
+
+      <h3>समस्या समझना</h3>
+
+      <p>
+        व्यक्ति या समुदाय की स्वास्थ्य संबंधी आवश्यकता को समझना।
+      </p>
+
+    </div>
+
+    <div class="step">
+
+      <div class="step-number">2</div>
+
+      <h3>जानकारी देना</h3>
+
+      <p>
+        उपलब्ध स्वास्थ्य सेवाओं और योजनाओं की सही जानकारी देना।
+      </p>
+
+    </div>
+
+    <div class="step">
+
+      <div class="step-number">3</div>
+
+      <h3>सेवा से जोड़ना</h3>
+
+      <p>
+        आवश्यकता के अनुसार योग्य स्वास्थ्य केंद्र या संबंधित सेवा
+        तक पहुँचने में सहयोग करना।
+      </p>
+
+    </div>
+
+    <div class="step">
+
+      <div class="step-number">4</div>
+
+      <h3>जागरूकता बढ़ाना</h3>
+
+      <p>
+        भविष्य में स्वास्थ्य संबंधी समस्याओं से बचाव के लिए
+        जागरूकता को बढ़ावा देना।
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <h2>स्वस्थ समाज के निर्माण में साथ दें</h2>
+
+  <p>
+    स्वास्थ्य जागरूकता और जनसेवा अभियान से जुड़ने के लिए हमसे संपर्क करें।
+  </p>
+
+  <a class="btn" href="contact.html">
+    संपर्क करें
+  </a>
+
+  <a class="btn" href="health-camps.html">
+    स्वास्थ्य शिविर
+  </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <img src="assets/logo.svg" alt="NCCPA Logo">
+
+  <h3>NCCPA Jankalyan Foundation</h3>
+
+  <p>
+    National Council for Community Promotion & Awareness
+  </p>
+
+  <p>
+    “हर घर तक सेवा, हर दिल में विश्वास”
+  </p>
+
+  <p>
+    “आपातकाल हो या अधिकार – हम हैं तैयार”
+  </p>
+
+  <p>
+    📞 8084284106 &nbsp; | &nbsp;
+    📱 7903998184
+  </p>
+
+  <p>
+    ✉️ infonccpa@gmail.com
+  </p>
+
+  <p>
+    © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+  </p>
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+   href="https://wa.me/917903998184"
+   target="_blank"
+   aria-label="WhatsApp">
+  💬
+</a>
+
+</body>
+</html>
