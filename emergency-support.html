@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Emergency Support | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+    content="NCCPA Jankalyan Foundation की आपातकालीन सहायता, राहत, स्वास्थ्य एवं जरूरतमंद परिवारों के लिए सहयोग संबंधी जानकारी।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,sans-serif;
+      line-height:1.7;
+      color:#222;
+      background:#f5f8fa;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .topbar{
+      background:#123b2a;
+      color:#fff;
+      padding:8px 5%;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:8px;
+      font-size:14px;
+    }
+
+    header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.10);
+    }
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      padding:10px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo{
+      width:75px;
+      height:75px;
+      object-fit:contain;
+    }
+
+    .brand h1{
+      color:#123b2a;
+      font-size:21px;
+    }
+
+    .brand p{
+      color:#666;
+      font-size:12px;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:7px;
+    }
+
+    nav a{
+      color:#123b2a;
+      font-weight:bold;
+      font-size:14px;
+      padding:7px 9px;
+      border-radius:6px;
+    }
+
+    nav a:hover{
+      background:#e8f5ed;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#7b1717,#c62828);
+      color:#fff;
+      text-align:center;
+      padding:70px 5%;
+    }
+
+    .badge{
+      display:inline-block;
+      background:#fff;
+      color:#b71c1c;
+      padding:6px 16px;
+      border-radius:30px;
+      font-weight:bold;
+      margin-bottom:18px;
+    }
+
+    .hero h2{
+      font-size:42px;
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1150px;
+      margin:auto;
+      padding:50px 5%;
+    }
+
+    .intro{
+      background:#fff;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 3px 15px rgba(0,0,0,.08);
+      margin-bottom:40px;
+    }
+
+    .intro h3{
+      color:#b71c1c;
+      font-size:25px;
+      margin-bottom:12px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .section-title h2{
+      color:#123b2a;
+      font-size:30px;
+      margin-bottom:8px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:#fff;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 3px 15px rgba(0,0,0,.08);
+      border-top:4px solid #c62828;
+    }
+
+    .icon{
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      color:#123b2a;
+      margin-bottom:10px;
+      font-size:21px;
+    }
+
+    .card p{
+      color:#555;
+      font-size:15px;
+    }
+
+    .emergency-box{
+      background:#fff0f0;
+      border-left:6px solid #c62828;
+      padding:28px;
+      border-radius:10px;
+      margin:40px 0;
+    }
+
+    .emergency-box h2{
+      color:#b71c1c;
+      margin-bottom:12px;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .step{
+      background:#fff;
+      padding:22px;
+      text-align:center;
+      border-radius:12px;
+      box-shadow:0 3px 12px rgba(0,0,0,.07);
+    }
+
+    .number{
+      width:45px;
+      height:45px;
+      line-height:45px;
+      margin:0 auto 12px;
+      background:#c62828;
+      color:#fff;
+      border-radius:50%;
+      font-size:20px;
+      font-weight:bold;
+    }
+
+    .help-list{
+      background:#eaf6ef;
+      padding:30px;
+      border-radius:15px;
+      margin-top:40px;
+    }
+
+    .help-list h2{
+      color:#123b2a;
+      margin-bottom:15px;
+    }
+
+    .help-list ul{
+      padding-left:22px;
+    }
+
+    .help-list li{
+      margin-bottom:8px;
+    }
+
+    .notice{
+      background:#fff4e5;
+      border-left:5px solid #e28b00;
+      padding:22px;
+      border-radius:8px;
+      margin-top:35px;
+    }
+
+    .notice strong{
+      color:#a85d00;
+    }
+
+    .cta{
+      background:#123b2a;
+      color:#fff;
+      text-align:center;
+      padding:50px 5%;
+    }
+
+    .cta h2{
+      font-size:30px;
+      margin-bottom:10px;
+    }
+
+    .cta p{
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:8px;
+      margin:5px;
+      font-weight:bold;
+      background:#fff;
+      color:#123b2a;
+    }
+
+    .btn.whatsapp{
+      background:#25D366;
+      color:#fff;
+    }
+
+    footer{
+      background:#0c261c;
+      color:#fff;
+      text-align:center;
+      padding:30px 5%;
+    }
+
+    footer p{
+      margin:6px 0;
+      font-size:14px;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#25D366;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:27px;
+      box-shadow:0 4px 12px rgba(0,0,0,.25);
+      z-index:999;
+    }
+
+    @media(max-width:900px){
+      .cards{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .steps{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .nav{
+        flex-direction:column;
+      }
+    }
+
+    @media(max-width:600px){
+      .topbar{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .nav{
+        padding:10px 3%;
+      }
+
+      .logo{
+        width:65px;
+        height:65px;
+      }
+
+      .brand h1{
+        font-size:17px;
+      }
+
+      nav a{
+        font-size:13px;
+        padding:6px;
+      }
+
+      .hero{
+        padding:50px 5%;
+      }
+
+      .hero h2{
+        font-size:30px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .cards,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .container{
+        padding:35px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>📞 8084284106</span>
+    <span>📱 WhatsApp: 7903998184</span>
+    <span>✉️ infonccpa@gmail.com</span>
+  </div>
+
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+
+      <div class="brand">
+
+        <img src="assets/logo.svg"
+             alt="NCCPA Jankalyan Foundation Logo"
+             class="logo">
+
+        <div>
+          <h1>NCCPA Jankalyan Foundation</h1>
+          <p>National Council for Community Promotion & Awareness</p>
+        </div>
+
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="mission.html">Mission</a>
+        <a href="services.html">Services</a>
+        <a href="health.html">Health</a>
+        <a href="health-camps.html">Health Camps</a>
+        <a href="medical-awareness.html">Medical Awareness</a>
+        <a href="schemes.html">Schemes</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <span class="badge">NCCPA Emergency Support</span>
+
+    <h2>🚑 Emergency Support</h2>
+
+    <p>
+      आपातकालीन परिस्थितियों में जरूरतमंद लोगों को उचित
+      सहायता, मार्गदर्शन और उपलब्ध संसाधनों से जोड़ने का प्रयास।
+    </p>
+
+  </section>
+
+
+  <!-- MAIN -->
+  <section class="container">
+
+    <div class="intro">
+
+      <h3>आपातकाल में सहायता का हमारा उद्देश्य</h3>
+
+      <p>
+        किसी भी आपातकालीन परिस्थिति में समय पर सही जानकारी और
+        उचित सहायता तक पहुँच बहुत महत्वपूर्ण होती है।
+        NCCPA Jankalyan Foundation जरूरतमंद परिवारों और समुदायों
+        को उपलब्ध सहायता संसाधनों से जोड़ने तथा राहत एवं
+        जन-जागरूकता गतिविधियों में सहयोग करने का प्रयास करता है।
+      </p>
+
+      <p style="margin-top:12px;">
+        हमारी गतिविधियाँ आवश्यकता, उपलब्ध संसाधनों और स्थानीय
+        परिस्थितियों के अनुसार संचालित की जाती हैं।
+      </p>
+
+    </div>
+
+
+    <!-- SUPPORT AREAS -->
+    <div class="section-title">
+
+      <h2>आपातकालीन सहायता के प्रमुख क्षेत्र</h2>
+
+      <p>
+        आवश्यकता के अनुसार विभिन्न प्रकार की सहायता में सहयोग
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🚑</div>
+        <h3>स्वास्थ्य सहायता</h3>
+        <p>
+          आपात स्वास्थ्य स्थिति में उपलब्ध स्वास्थ्य सेवाओं और
+          उचित चिकित्सा सहायता तक पहुँचने के लिए मार्गदर्शन।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>अस्पताल मार्गदर्शन</h3>
+        <p>
+          जरूरत के अनुसार नजदीकी स्वास्थ्य सुविधा या संबंधित
+          सेवा तक पहुँचने में जानकारी एवं मार्गदर्शन।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🍚</div>
+        <h3>राहत सामग्री</h3>
+        <p>
+          उपलब्ध संसाधनों के अनुसार जरूरतमंद परिवारों तक
+          भोजन या आवश्यक राहत सामग्री पहुँचाने में सहयोग।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🌧️</div>
+        <h3>आपदा राहत</h3>
+        <p>
+          बाढ़, अत्यधिक वर्षा या अन्य प्राकृतिक आपदा जैसी
+          परिस्थितियों में राहत एवं जागरूकता गतिविधियों में सहयोग।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🏠</div>
+        <h3>परिवार सहायता</h3>
+        <p>
+          संकटग्रस्त परिवारों की आवश्यकता को समझकर उपलब्ध
+          सहायता संसाधनों से जोड़ने का प्रयास।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">📢</div>
+        <h3>आपात सूचना</h3>
+        <p>
+          आपात स्थिति में आवश्यक सरकारी एवं सार्वजनिक सेवाओं
+          के बारे में सही जानकारी साझा करना।
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+    <div class="emergency-box">
+
+      <h2>🚨 वास्तविक आपातकाल में सबसे पहले क्या करें?</h2>
+
+      <p>
+        यदि किसी व्यक्ति की जान को तत्काल खतरा है, तो पहले
+        संबंधित सरकारी आपातकालीन सेवा, नजदीकी अस्पताल,
+        पुलिस या अन्य सक्षम सेवा से संपर्क करें।
+      </p>
+
+      <p style="margin-top:10px;">
+        NCCPA की सहायता उपलब्धता परिस्थितियों और संसाधनों पर
+        निर्भर करती है।
+      </p>
+
+    </div>
+
+
+    <!-- PROCESS -->
+    <div class="section-title">
+
+      <h2>सहायता प्रक्रिया</h2>
+
+      <p>
+        किसी सहायता अनुरोध पर सामान्य प्रक्रिया
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+      <div class="step">
+
+        <div class="number">1</div>
+
+        <h3>सूचना</h3>
+
+        <p>
+          आपात स्थिति की जानकारी प्राप्त करने का प्रयास।
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="number">2</div>
+
+        <h3>स्थिति समझना</h3>
+
+        <p>
+          जरूरत और उपलब्ध संसाधनों का प्राथमिक आकलन।
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="number">3</div>
+
+        <h3>सहायता से जोड़ना</h3>
+
+        <p>
+          संबंधित सेवा, संस्था या उपलब्ध संसाधन तक पहुँचने
+          में सहयोग।
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="number">4</div>
+
+        <h3>फॉलो-अप</h3>
+
+        <p>
+          संभव होने पर सहायता की स्थिति की जानकारी लेना।
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- EMERGENCY NUMBERS -->
+    <div class="help-list">
+
+      <h2>📞 महत्वपूर्ण आपातकालीन सेवाएँ</h2>
+
+      <ul>
+        <li><strong>112</strong> — भारत की एकीकृत आपातकालीन सेवा</li>
+        <li><strong>108</strong> — एम्बुलेंस सेवा, जहाँ उपलब्ध हो</li>
+        <li><strong>1098</strong> — बाल सहायता सेवा</li>
+        <li>स्थानीय अस्पताल एवं स्वास्थ्य केंद्र से आवश्यकता अनुसार संपर्क करें।</li>
+      </ul>
+
+    </div>
+
+
+    <!-- CONTACT -->
+    <div class="notice">
+
+      <strong>📢 NCCPA से संपर्क:</strong>
+
+      <p style="margin-top:8px;">
+        यदि आपको NCCPA की किसी सामाजिक सहायता गतिविधि के संबंध
+        में जानकारी चाहिए, तो हमारे संपर्क नंबर या WhatsApp पर
+        संदेश भेज सकते हैं।
+      </p>
+
+      <p style="margin-top:8px;">
+        📞 8084284106 &nbsp; | &nbsp;
+        📱 WhatsApp 7903998184
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>जरूरतमंदों तक सहायता पहुँचाएँ</h2>
+
+    <p>
+      आपका सहयोग किसी जरूरतमंद परिवार के लिए महत्वपूर्ण हो सकता है।
+    </p>
+
+    <a href="contact.html" class="btn">
+      📞 संपर्क करें
+    </a>
+
+    <a href="donate.html" class="btn">
+      ❤️ सहयोग करें
+    </a>
+
+    <a href="https://wa.me/9179039918184"
+       target="_blank"
+       class="btn whatsapp">
+      💬 WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p><strong>NCCPA Jankalyan Foundation</strong></p>
+
+    <p>
+      National Council for Community Promotion & Awareness
+    </p>
+
+    <p>
+      “हर घर तक सेवा, हर दिल में विश्वास”
+    </p>
+
+    <p>
+      “आपातकाल हो या अधिकार – हम हैं तैयार”
+    </p>
+
+    <p>
+      © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/9179039918184"
+     target="_blank"
+     class="whatsapp-float"
+     aria-label="WhatsApp">
+    
+  </a>
+
+</body>
+  </html>५55
