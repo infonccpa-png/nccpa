@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>रोजगार सहायता एवं अवसर | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+        content="NCCPA Jankalyan Foundation द्वारा युवाओं, महिलाओं और रोजगार इच्छुक लोगों के लिए रोजगार जागरूकता, करियर मार्गदर्शन, कौशल विकास और स्वरोजगार सहायता।">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      line-height: 1.7;
+      background: #f5f7fa;
+      color: #222;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background: #075e54;
+      color: white;
+      padding: 8px 5%;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* HEADER */
+    header {
+      background: white;
+      padding: 12px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      color: #075e54;
+      font-size: 22px;
+    }
+
+    .brand-text p {
+      color: #777;
+      font-size: 12px;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #333;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #075e54;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #075e54, #128c7e);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      color: #075e54;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    /* INTRO */
+    .intro {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    }
+
+    .intro p {
+      font-size: 17px;
+      text-align: justify;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px 22px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card .icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #075e54;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* OPPORTUNITY */
+    .opportunity {
+      background: #eaf7f5;
+    }
+
+    .opportunity-list {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    }
+
+    .opportunity-list ul {
+      list-style: none;
+    }
+
+    .opportunity-list li {
+      padding: 13px 10px;
+      border-bottom: 1px solid #eee;
+      font-size: 16px;
+    }
+
+    .opportunity-list li:last-child {
+      border-bottom: none;
+    }
+
+    .opportunity-list li::before {
+      content: "✔ ";
+      color: #075e54;
+      font-weight: bold;
+    }
+
+    /* STEPS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      background: white;
+      padding: 25px 18px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: #075e54;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .step h3 {
+      color: #075e54;
+      margin-bottom: 8px;
+    }
+
+    /* AWARENESS */
+    .awareness {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    }
+
+    .awareness h3 {
+      color: #075e54;
+      margin-bottom: 15px;
+    }
+
+    .awareness ul {
+      padding-left: 22px;
+    }
+
+    .awareness li {
+      margin-bottom: 8px;
+    }
+
+    /* NOTICE */
+    .notice {
+      background: #fff8e1;
+      border-left: 5px solid #f4b400;
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    .notice h3 {
+      color: #9a6700;
+      margin-bottom: 10px;
+    }
+
+    /* CTA */
+    .cta {
+      background: #075e54;
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 750px;
+      margin: 0 auto 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #075e54;
+      padding: 12px 25px;
+      border-radius: 30px;
+      margin: 5px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #e8f5e9;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: white;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    footer h3 {
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #ccc;
+      font-size: 14px;
+      margin: 5px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      z-index: 2000;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .topbar {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand-text h1 {
+        font-size: 18px;
+      }
+
+      .logo
