@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>कंप्यूटर प्रशिक्षण केंद्र | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description" content="NCCPA Jankalyan Foundation द्वारा कंप्यूटर एवं डिजिटल कौशल प्रशिक्षण, ग्रामीण युवाओं, महिलाओं, विद्यार्थियों और रोजगार इच्छुक लोगों के लिए।">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      line-height: 1.7;
+      background: #f5f7fa;
+      color: #222;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background: #075e54;
+      color: white;
+      padding: 8px 5%;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* HEADER */
+    header {
+      background: white;
+      padding: 12px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      color: #075e54;
+      font-size: 22px;
+    }
+
+    .brand-text p {
+      color: #777;
+      font-size: 12px;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #333;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #075e54;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #075e54, #128c7e);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    /* COMMON */
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      color: #075e54;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    /* INTRO */
+    .intro {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+      margin-bottom: 35px;
+    }
+
+    .intro p {
+      font-size: 17px;
+      text-align: justify;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px 22px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card .icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #075e54;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* TRAINING */
+    .training-list {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    }
+
+    .training-list ul {
+      list-style: none;
+    }
+
+    .training-list li {
+      padding: 12px 10px;
+      border-bottom: 1px solid #eee;
+      font-size: 16px;
+    }
+
+    .training-list li:last-child {
+      border-bottom: none;
+    }
+
+    .training-list li::before {
+      content: "✔ ";
+      color: #075e54;
+      font-weight: bold;
+    }
+
+    /* WHO CAN JOIN */
+    .join-section {
+      background: #eaf7f5;
+    }
+
+    /* STEPS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      background: white;
+      padding: 25px 18px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: #075e54;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .step h3 {
+      color: #075e54;
+      margin-bottom: 8px;
+    }
+
+    /* NOTICE */
+    .notice {
+      background: #fff8e1;
+      border-left: 5px solid #f4b400;
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 35px;
+    }
+
+    .notice h3 {
+      color: #9a6700;
+      margin-bottom: 10px;
+    }
+
+    /* CTA */
+    .cta {
+      background: #075e54;
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 750px;
+      margin: 0 auto 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #075e54;
+      padding: 12px 25px;
+      border-radius: 30px;
+      margin: 5px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #e8f5e9;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: white;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    footer h3 {
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #ccc;
+      font-size: 14px;
+      margin: 5px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      z-index: 2000;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .topbar {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand-text h1 {
+        font-size: 18px;
+      }
+
+      .logo {
+        width: 55px;
+        height: 55px;
+      }
+
+      .hero {
+        padding: 50px 15px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .cards,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 25px;
+      }
+
+      .intro {
+        padding: 22px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div>📞 8084284106 | 7903998184</div>
+    <div>📧 infonccpa@gmail.com</div>
+  </div>
+
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="brand">
+
+      <img src="assets/logo.svg"
+           alt="NCCPA Jankalyan Foundation Logo"
+           class="logo">
+
+      <div class="brand-text">
+        <h1>NCCPA Jankalyan Foundation</h1>
+        <p>हर घर तक सेवा, हर दिल में विश्वास</p>
+      </div>
+
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="education.html">Education</a>
+      <a href="skill-development.html">Skills</a>
+      <a href="schemes.html">Schemes</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <h2>💻 कंप्यूटर प्रशिक्षण केंद्र</h2>
+
+    <p>
+      डिजिटल युग में शिक्षा, रोजगार और आत्मनिर्भरता के लिए
+      कंप्यूटर एवं डिजिटल कौशल को बढ़ावा देना।
+    </p>
+
+  </section>
+
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- INTRO -->
+    <section class="container">
+
+      <div class="section-title">
+        <h2>कंप्यूटर प्रशिक्षण के बारे में</h2>
+        <p>डिजिटल ज्ञान से आत्मनिर्भरता की ओर</p>
+      </div>
+
+      <div class="intro">
+
+        <p>
+          NCCPA Jankalyan Foundation का उद्देश्य ग्रामीण एवं जरूरतमंद
+          युवाओं, विद्यार्थियों, महिलाओं और रोजगार की तलाश कर रहे लोगों
+          को कंप्यूटर तथा डिजिटल तकनीक की बुनियादी जानकारी से जोड़ना है।
+        </p>
+
+        <br>
+
+        <p>
+          प्रशिक्षण के माध्यम से प्रतिभागियों को कंप्यूटर संचालन,
+          टाइपिंग, दस्तावेज तैयार करने, इंटरनेट, ई-मेल, ऑनलाइन फॉर्म,
+          डिजिटल सेवाओं और सुरक्षित डिजिटल व्यवहार जैसी उपयोगी
+          जानकारियां सीखने का अवसर प्रदान करने का प्रयास किया जाएगा।
+        </p>
+
+      </div>
+
+
+      <!-- COURSES -->
+      <div class="section-title">
+        <h2>📚 प्रमुख प्रशिक्षण विषय</h2>
+        <p>आवश्यकता और उपलब्ध संसाधनों के अनुसार प्रशिक्षण</p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon">🖥️</div>
+          <h3>Basic Computer</h3>
+          <p>
+            कंप्यूटर का परिचय, हार्डवेयर, सॉफ्टवेयर,
+            फाइल एवं फोल्डर का उपयोग।
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📝</div>
+          <h3>MS Word</h3>
+          <p>
+            पत्र, आवेदन, रिज्यूमे, प्रमाण-पत्र एवं
+            अन्य दस्तावेज तैयार करना।
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📊</div>
+          <h3>MS Excel</h3>
+          <p>
+            टेबल, डेटा एंट्री, बेसिक फॉर्मूला और
+            दैनिक उपयोग के स्प्रेडशीट कार्य।
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📽️</div>
+          <h3>PowerPoint</h3>
+          <p>
+            प्रेजेंटेशन बनाना, स्लाइड तैयार करना
+            और जानकारी प्रस्तुत करना।
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🌐</div>
+          <h3>Internet & Email</h3>
+          <p>
+            इंटरनेट ब्राउजिंग, ई-मेल बनाना,
+            भेजना और ऑनलाइन जानकारी खोजना।
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">⌨️</div>
+          <h3>Typing</h3>
+          <p>
+            हिंदी एवं अंग्रेजी टाइपिंग की
+            बुनियादी जानकारी और अभ्यास।
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📱</div>
+          <h3>Digital Services</h3>
+          <p>
+            ऑनलाइन आवेदन, डिजिटल सेवाओं और
+            सरकारी पोर्टल के उपयोग की जानकारी।
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔐</div>
+          <h3>Digital Safety</h3>
+          <p>
+            पासवर्ड सुरक्षा, OTP सावधानी,
+            ऑनलाइन धोखाधड़ी से बचाव और साइबर जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎨</div>
+          <h3>Basic Design</h3>
+          <p>
+            सामान्य पोस्टर, सूचना सामग्री और
+            डिजिटल कंटेंट तैयार करने की बुनियादी जानकारी।
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRAINING TOPICS -->
+    <section class="container">
+
+      <div class="section-title">
+        <h2>🛠️ प्रशिक्षण में क्या सीख सकते हैं?</h2>
+      </div>
+
+      <div class="training-list">
+
+        <ul>
+          <li>कंप्यूटर को सही तरीके से चालू और बंद करना</li>
+          <li>की-बोर्ड और माउस का उपयोग</li>
+          <li>फाइल एवं फोल्डर बनाना और व्यवस्थित करना</li>
+          <li>हिंदी एवं अंग्रेजी में टाइपिंग का अभ्यास</li>
+          <li>MS Word में आवेदन एवं रिज्यूमे बनाना</li>
+          <li>MS Excel में बेसिक डेटा एंट्री</li>
+          <li>PowerPoint में सामान्य प्रस्तुति बनाना</li>
+          <li>इंटरनेट और ई-मेल का सुरक्षित उपयोग</li>
+          <li>ऑनलाइन फॉर्म भरने की बुनियादी जानकारी</li>
+          <li>डिजिटल सेवाओं के उपयोग की जानकारी</li>
+          <li>साइबर सुरक्षा एवं ऑनलाइन फ्रॉड से बचाव</li>
+          <li>डिजिटल तकनीक का जिम्मेदारी से उपयोग</li>
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHO CAN JOIN -->
+    <section class="join-section">
+
+      <div class="container">
+
+        <div class="section-title">
+          <h2>👥 कौन प्रशिक्षण ले सकता है?</h2>
+          <p>डिजिटल ज्ञान की आवश्यकता रखने वाले लोगों के लिए</p>
+        </div>
+
+        <div class="cards">
+
+          <div class="card">
+            <div class="icon">🎓</div>
+            <h3>विद्यार्थी</h3>
+            <p>
+              पढ़ाई एवं भविष्य की तैयारी के लिए कंप्यूटर ज्ञान।
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">👨‍💼</div>
+            <h3>युवा</h3>
+            <p>
+              रोजगार एवं डिजिटल कार्यों के लिए उपयोगी कौशल।
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">👩‍💻</div>
+            <h3>महिलाएं</h3>
+            <p>
+              डिजिटल साक्षरता एवं आत्मनिर्भरता के लिए प्रशिक्षण।
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🧑‍🔧</div>
+            <h3>रोजगार इच्छुक</h3>
+            <p>
+              नौकरी एवं स्वरोजगार के लिए बुनियादी डिजिटल कौशल।
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROCESS -->
+    <section class="container">
+
+      <div class="section-title">
+        <h2>🚀 प्रशिक्षण की प्रक्रिया</h2>
+        <p>सरल तरीके से सीखने की यात्रा</p>
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>पंजीकरण</h3>
+          <p>
+            इच्छुक व्यक्ति प्रशिक्षण के लिए संपर्क एवं पंजीकरण कर सकते हैं।
+          </p>
+        </div>
+
+        <div class="
