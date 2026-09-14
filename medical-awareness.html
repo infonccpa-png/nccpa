@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Medical Awareness | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+    content="NCCPA Jankalyan Foundation द्वारा स्वास्थ्य एवं चिकित्सा जागरूकता, स्वच्छता, पोषण और बीमारी से बचाव संबंधी जन-जागरूकता।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      line-height:1.7;
+      color:#222;
+      background:#f5f8fa;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .topbar{
+      background:#123b2a;
+      color:#fff;
+      padding:8px 5%;
+      font-size:14px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.10);
+    }
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      padding:10px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo{
+      width:75px;
+      height:75px;
+      object-fit:contain;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .brand h1{
+      font-size:21px;
+      color:#123b2a;
+    }
+
+    .brand p{
+      font-size:12px;
+      color:#666;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:8px;
+    }
+
+    nav a{
+      color:#123b2a;
+      padding:7px 9px;
+      font-size:14px;
+      font-weight:bold;
+      border-radius:6px;
+    }
+
+    nav a:hover{
+      background:#e8f5ed;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#123b2a,#176b48);
+      color:#fff;
+      text-align:center;
+      padding:70px 5%;
+    }
+
+    .hero h2{
+      font-size:42px;
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .badge{
+      display:inline-block;
+      background:#fff;
+      color:#176b48;
+      padding:6px 15px;
+      border-radius:30px;
+      font-weight:bold;
+      margin-bottom:18px;
+    }
+
+    .container{
+      max-width:1150px;
+      margin:auto;
+      padding:50px 5%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:35px;
+    }
+
+    .section-title h2{
+      color:#123b2a;
+      font-size:30px;
+      margin-bottom:8px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    .intro{
+      background:#fff;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 3px 15px rgba(0,0,0,.08);
+      margin-bottom:35px;
+    }
+
+    .intro h3{
+      color:#176b48;
+      margin-bottom:12px;
+      font-size:25px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:#fff;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 3px 15px rgba(0,0,0,.08);
+      border-top:4px solid #176b48;
+    }
+
+    .icon{
+      font-size:38px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      color:#123b2a;
+      margin-bottom:10px;
+      font-size:21px;
+    }
+
+    .card p{
+      color:#555;
+      font-size:15px;
+    }
+
+    .awareness{
+      background:#eaf6ef;
+      padding:35px;
+      border-radius:15px;
+      margin-top:40px;
+    }
+
+    .awareness h2{
+      color:#123b2a;
+      margin-bottom:18px;
+    }
+
+    .awareness ul{
+      padding-left:22px;
+    }
+
+    .awareness li{
+      margin-bottom:8px;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:25px;
+    }
+
+    .step{
+      background:#fff;
+      padding:22px;
+      border-radius:12px;
+      text-align:center;
+      box-shadow:0 3px 12px rgba(0,0,0,.07);
+    }
+
+    .number{
+      width:45px;
+      height:45px;
+      line-height:45px;
+      margin:0 auto 12px;
+      background:#176b48;
+      color:#fff;
+      border-radius:50%;
+      font-weight:bold;
+      font-size:20px;
+    }
+
+    .notice{
+      background:#fff4e5;
+      border-left:5px solid #e28b00;
+      padding:22px;
+      margin-top:40px;
+      border-radius:8px;
+    }
+
+    .notice strong{
+      color:#a85d00;
+    }
+
+    .cta{
+      background:#123b2a;
+      color:#fff;
+      text-align:center;
+      padding:50px 5%;
+    }
+
+    .cta h2{
+      font-size:30px;
+      margin-bottom:10px;
+    }
+
+    .cta p{
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:8px;
+      margin:5px;
+      font-weight:bold;
+      background:#fff;
+      color:#123b2a;
+    }
+
+    .btn.whatsapp{
+      background:#25D366;
+      color:#fff;
+    }
+
+    footer{
+      background:#0c261c;
+      color:#fff;
+      text-align:center;
+      padding:30px 5%;
+    }
+
+    footer p{
+      margin:6px 0;
+      font-size:14px;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:#25D366;
+      color:#fff;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:27px;
+      box-shadow:0 4px 12px rgba(0,0,0,.25);
+      z-index:999;
+    }
+
+    @media(max-width:900px){
+      .cards{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .steps{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .nav{
+        flex-direction:column;
+      }
+    }
+
+    @media(max-width:600px){
+      .topbar{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .brand h1{
+        font-size:17px;
+      }
+
+      .logo{
+        width:65px;
+        height:65px;
+      }
+
+      nav a{
+        font-size:13px;
+        padding:6px;
+      }
+
+      .hero{
+        padding:50px 5%;
+      }
+
+      .hero h2{
+        font-size:30px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .cards,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .container{
+        padding:35px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>📞 8084284106</span>
+    <span>📱 WhatsApp: 7903998184</span>
+    <span>✉️ infonccpa@gmail.com</span>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+
+      <div class="brand">
+        <img src="assets/logo.svg"
+             alt="NCCPA Jankalyan Foundation Logo"
+             class="logo">
+
+        <div>
+          <h1>NCCPA Jankalyan Foundation</h1>
+          <p>National Council for Community Promotion & Awareness</p>
+        </div>
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="mission.html">Mission</a>
+        <a href="services.html">Services</a>
+        <a href="health.html">Health</a>
+        <a href="health-camps.html">Health Camps</a>
+        <a href="schemes.html">Schemes</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <span class="badge">Section 8 Non-Government Organization</span>
+
+    <h2>🩺 Medical Awareness</h2>
+
+    <p>
+      स्वास्थ्य संबंधी सही जानकारी, जागरूकता और समय पर
+      योग्य चिकित्सा सलाह के महत्व को जन-जन तक पहुँचाने का प्रयास।
+    </p>
+
+  </section>
+
+
+  <!-- INTRO -->
+  <section class="container">
+
+    <div class="intro">
+
+      <h3>चिकित्सा जागरूकता क्यों आवश्यक है?</h3>
+
+      <p>
+        NCCPA Jankalyan Foundation का उद्देश्य लोगों को स्वास्थ्य,
+        स्वच्छता, पोषण, बीमारी से बचाव और समय पर स्वास्थ्य सेवा
+        लेने के प्रति जागरूक करना है।
+      </p>
+
+      <p style="margin-top:12px;">
+        ग्रामीण एवं जरूरतमंद समुदायों तक सरल भाषा में स्वास्थ्य
+        संबंधी उपयोगी जानकारी पहुँचाने के लिए जागरूकता कार्यक्रम,
+        जन-संपर्क गतिविधियाँ और स्वास्थ्य शिविर आयोजित करने का
+        प्रयास किया जाता है।
+      </p>
+
+    </div>
+
+
+    <!-- AWARENESS CARDS -->
+    <div class="section-title">
+      <h2>हमारी चिकित्सा जागरूकता गतिविधियाँ</h2>
+      <p>समुदाय में स्वास्थ्य जागरूकता बढ़ाने के प्रमुख क्षेत्र</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🩺</div>
+        <h3>सामान्य स्वास्थ्य</h3>
+        <p>
+          दैनिक स्वास्थ्य देखभाल, नियमित जांच और स्वस्थ जीवनशैली
+          के महत्व के बारे में जागरूकता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧼</div>
+        <h3>स्वच्छता जागरूकता</h3>
+        <p>
+          हाथ धोने, स्वच्छ पानी, व्यक्तिगत स्वच्छता और साफ-सफाई
+          के महत्व पर जन-जागरूकता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🥗</div>
+        <h3>पोषण जागरूकता</h3>
+        <p>
+          संतुलित आहार, पोषण संबंधी जानकारी और स्वस्थ भोजन
+          की आदतों के बारे में जागरूकता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">❤️</div>
+        <h3>हृदय स्वास्थ्य</h3>
+        <p>
+          स्वस्थ जीवनशैली, नियमित स्वास्थ्य जांच और हृदय संबंधी
+          जोखिमों के प्रति सामान्य जागरूकता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👁️</div>
+        <h3>नेत्र स्वास्थ्य</h3>
+        <p>
+          आंखों की देखभाल, स्क्रीन उपयोग में सावधानी और जरूरत
+          होने पर योग्य चिकित्सक से जांच कराने की जागरूकता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🦷</div>
+        <h3>दंत स्वास्थ्य</h3>
+        <p>
+          दांतों की सफाई, मौखिक स्वच्छता और नियमित दंत जांच
+          के महत्व के बारे में जानकारी।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👩</div>
+        <h3>महिला स्वास्थ्य</h3>
+        <p>
+          महिलाओं के स्वास्थ्य, पोषण, स्वच्छता और स्वास्थ्य
+          सेवाओं तक पहुँच के प्रति जागरूकता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👶</div>
+        <h3>बाल स्वास्थ्य</h3>
+        <p>
+          बच्चों के पोषण, स्वच्छता, टीकाकरण संबंधी जानकारी और
+          समय पर स्वास्थ्य सलाह लेने की जागरूकता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👴</div>
+        <h3>वरिष्ठ नागरिक स्वास्थ्य</h3>
+        <p>
+          बुजुर्गों की नियमित स्वास्थ्य जांच, पोषण और दैनिक
+          स्वास्थ्य देखभाल के महत्व पर जागरूकता।
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- IMPORTANT AWARENESS -->
+    <div class="awareness">
+
+      <h2>📢 महत्वपूर्ण स्वास्थ्य जागरूकता</h2>
+
+      <ul>
+        <li>बीमारी के लक्षण दिखाई देने पर योग्य स्वास्थ्य विशेषज्ञ से सलाह लें।</li>
+        <li>बिना चिकित्सकीय सलाह के दवाओं का उपयोग करने से बचें।</li>
+        <li>नियमित स्वास्थ्य जांच को महत्व दें।</li>
+        <li>स्वच्छ पानी और स्वच्छ भोजन का उपयोग करें।</li>
+        <li>व्यक्तिगत एवं आसपास की स्वच्छता बनाए रखें।</li>
+        <li>बच्चों और बुजुर्गों के स्वास्थ्य पर विशेष ध्यान दें।</li>
+        <li>आपातकालीन स्थिति में तुरंत उचित चिकित्सा सहायता लें।</li>
+        <li>स्वास्थ्य संबंधी अफवाहों के बजाय विश्वसनीय स्रोतों से जानकारी प्राप्त करें।</li>
+      </ul>
+
+    </div>
+
+
+    <!-- PROCESS -->
+    <div class="section-title" style="margin-top:50px;">
+      <h2>जागरूकता कार्यक्रम कैसे होते हैं?</h2>
+      <p>समुदाय तक स्वास्थ्य जानकारी पहुँचाने की प्रक्रिया</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="number">1</div>
+        <h3>जरूरत पहचान</h3>
+        <p>
+          स्थानीय समुदाय की स्वास्थ्य जागरूकता आवश्यकताओं
+          को समझने का प्रयास।
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="number">2</div>
+        <h3>जानकारी</h3>
+        <p>
+          सरल भाषा में उपयोगी और जिम्मेदार स्वास्थ्य जानकारी
+          साझा करना।
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="number">3</div>
+        <h3>जागरूकता कार्यक्रम</h3>
+        <p>
+          शिविर, बैठक, जन-जागरूकता अभियान एवं सामुदायिक
+          गतिविधियों का आयोजन।
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="number">4</div>
+        <h3>मार्गदर्शन</h3>
+        <p>
+          जरूरत पड़ने पर लोगों को उचित स्वास्थ्य सेवा या
+          योग्य विशेषज्ञ तक पहुँचने के लिए मार्गदर्शन।
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="notice">
+
+      <strong>⚠️ स्वास्थ्य संबंधी सूचना:</strong>
+
+      <p>
+        इस वेबसाइट पर दी गई जानकारी सामान्य जन-जागरूकता के उद्देश्य
+        से है। यह किसी व्यक्ति के लिए व्यक्तिगत चिकित्सा निदान,
+        उपचार या दवा की सलाह नहीं है। किसी बीमारी या स्वास्थ्य
+        समस्या की स्थिति में योग्य डॉक्टर या स्वास्थ्य विशेषज्ञ
+        से उचित सलाह लें।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>स्वास्थ्य जागरूकता अभियान से जुड़ें</h2>
+
+    <p>
+      आइए मिलकर स्वस्थ, जागरूक और मजबूत समाज के निर्माण में
+      अपना योगदान दें।
+    </p>
+
+    <a href="contact.html" class="btn">
+      📞 संपर्क करें
+    </a>
+
+    <a href="https://wa.me/9179039918184"
+       class="btn whatsapp"
+       target="_blank">
+      💬 WhatsApp करें
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p><strong>NCCPA Jankalyan Foundation</strong></p>
+
+    <p>
+      National Council for Community Promotion & Awareness
+    </p>
+
+    <p>
+      “हर घर तक सेवा, हर दिल में विश्वास”
+    </p>
+
+    <p>
+      “आपातकाल हो या अधिकार – हम हैं तैयार”
+    </p>
+
+    <p>
+      © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/9179039918184"
+     class="whatsapp-float"
+     target="_blank"
+     aria-label="WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
