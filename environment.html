@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>पर्यावरण संरक्षण एवं जागरूकता | NCCPA Jankalyan Foundation</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      line-height: 1.7;
+      background: #f4f8f5;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #075e2b, #159447);
+      color: white;
+      padding: 15px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 70px;
+      height: 70px;
+      background: white;
+      border-radius: 50%;
+      padding: 3px;
+    }
+
+    .brand h1 {
+      font-size: 22px;
+    }
+
+    .brand p {
+      font-size: 13px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .hero {
+      padding: 75px 20px;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(rgba(0,90,35,0.84), rgba(0,130,65,0.84)),
+        linear-gradient(135deg, #4b914c, #b6d99d);
+    }
+
+    .hero h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    .intro {
+      background: white;
+      margin-top: 30px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .intro h3 {
+      color: #075e2b;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #075e2b;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      border-top: 4px solid #159447;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #075e2b;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    .green-section {
+      background: #e8f5eb;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+    }
+
+    .item {
+      background: white;
+      padding: 18px;
+      border-radius: 10px;
+      border-left: 5px solid #159447;
+    }
+
+    .item strong {
+      color: #075e2b;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .step {
+      background: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+
+    .number {
+      width: 50px;
+      height: 50px;
+      margin: auto auto 15px;
+      border-radius: 50%;
+      background: #159447;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #fff8dc, #fff);
+      border-left: 6px solid #d49b00;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    .highlight h3 {
+      color: #8a6500;
+      margin-bottom: 12px;
+    }
+
+    .quote {
+      background: #075e2b;
+      color: white;
+      padding: 35px;
+      border-radius: 18px;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .quote h2 {
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #075e2b;
+      color: white;
+      padding: 45px 20px;
+      border-radius: 18px;
+      margin: 30px 0 50px;
+    }
+
+    .cta h2 {
+      margin-bottom: 12px;
+      font-size: 30px;
+    }
+
+    .cta p {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #075e2b;
+      background: white;
+      padding: 12px 20px;
+      margin: 5px;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      background: #123b20;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    footer p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .brand h1 {
+        font-size: 18px;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 6px 9px;
+      }
+
+      .intro h3,
+      .section-title {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="brand">
+
+      <img src="assets/logo.svg"
+           alt="NCCPA Jankalyan Foundation Logo"
+           class="logo">
+
+      <div>
+        <h1>NCCPA Jankalyan Foundation</h1>
+        <p>हर घर तक सेवा, हर दिल में विश्वास</p>
+      </div>
+
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="schemes.html">सरकारी योजना</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="container">
+
+      <h2>🌳 पर्यावरण संरक्षण एवं जागरूकता</h2>
+
+      <p>
+        स्वच्छ हवा, स्वच्छ पानी, हरियाली और सुरक्षित प्राकृतिक वातावरण
+        के लिए जनभागीदारी एवं पर्यावरण जागरूकता को बढ़ावा देना।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+  <section>
+
+    <div class="container">
+
+      <div class="intro">
+
+        <h3>🌍 प्रकृति सुरक्षित तो भविष्य सुरक्षित</h3>
+
+        <p>
+          हमारा जीवन प्राकृतिक संसाधनों पर निर्भर है। स्वच्छ हवा,
+          पानी, मिट्टी, पेड़-पौधे और जैव विविधता मानव जीवन के लिए
+          अत्यंत महत्वपूर्ण हैं।
+        </p>
+
+        <br>
+
+        <p>
+          पर्यावरण संरक्षण केवल सरकार या किसी संस्था की जिम्मेदारी नहीं है।
+          प्रत्येक नागरिक, परिवार, विद्यालय, युवा, महिला समूह और समुदाय
+          छोटे-छोटे प्रयासों से पर्यावरण संरक्षण में योगदान दे सकता है।
+        </p>
+
+        <br>
+
+        <p>
+          <strong>NCCPA Jankalyan Foundation</strong> पर्यावरण के प्रति
+          जागरूकता और सामुदायिक भागीदारी को प्रोत्साहित करने के लिए
+          विभिन्न जनहित गतिविधियों को बढ़ावा देता है।
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- AREAS -->
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">🌱 पर्यावरण संरक्षण के प्रमुख क्षेत्र</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>🌳 वृक्ष संरक्षण</h3>
+          <p>
+            पेड़ लगाने के साथ-साथ मौजूदा पेड़ों की देखभाल और
+            संरक्षण के प्रति जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>💧 जल संरक्षण</h3>
+          <p>
+            पानी की बचत, वर्षा जल संरक्षण और जल स्रोतों की
+            स्वच्छता के प्रति जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🌾 मिट्टी संरक्षण</h3>
+          <p>
+            मिट्टी की गुणवत्ता और कृषि भूमि के संरक्षण के
+            प्रति जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>♻️ कचरा प्रबंधन</h3>
+          <p>
+            कचरे को कम करने, अलग करने, पुन: उपयोग और उचित
+            निपटान के प्रति जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🚯 प्लास्टिक जागरूकता</h3>
+          <p>
+            एकल-उपयोग प्लास्टिक को कम करने और जिम्मेदार
+            उपभोग के प्रति जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🌬️ स्वच्छ हवा</h3>
+          <p>
+            वायु प्रदूषण कम करने और स्वच्छ वातावरण बनाए रखने
+            के लिए जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🐦 जैव विविधता</h3>
+          <p>
+            स्थानीय पेड़-पौधों, पक्षियों और अन्य जीवों के
+            प्राकृतिक आवास के महत्व की जानकारी।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🏡 हरित गांव</h3>
+          <p>
+            गांवों में स्वच्छता, हरियाली, जल संरक्षण और
+            पर्यावरण-अनुकूल आदतों को बढ़ावा देना।
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ACTIVITIES -->
+  <section class="green-section">
+
+    <div class="container">
+
+      <h2 class="section-title">📋 हमारी संभावित पर्यावरण गतिविधियां</h2>
+
+      <div class="list">
+
+        <div class="item">
+          <strong>🌱 पौधारोपण अभियान:</strong>
+          स्थानीय परिस्थितियों के अनुसार पौधारोपण एवं पौधों की देखभाल के लिए जागरूकता।
+        </div>
+
+        <div class="item">
+          <strong>🚰 जल बचाओ अभियान:</strong>
+          पानी की बर्बादी रोकने और जल संरक्षण के लिए जनजागरूकता।
+        </div>
+
+        <div class="item">
+          <strong>🧹 स्वच्छता अभियान:</strong>
+          सार्वजनिक स्थानों और सामुदायिक क्षेत्रों में स्वच्छता के प्रति जागरूकता।
+        </div>
+
+        <div class="item">
+          <strong>♻️ कचरा जागरूकता:</strong>
+          गीले और सूखे कचरे को अलग रखने की आदत को प्रोत्साहित करना।
+        </div>
+
+        <div class="item">
+          <strong>🚯 प्लास्टिक कम करें:</strong>
+          प्लास्टिक के जिम्मेदार उपयोग और वैकल्पिक विकल्पों के प्रति जागरूकता।
+        </div>
+
+        <div class="item">
+          <strong>🏫 स्कूल जागरूकता:</strong>
+          बच्चों को पर्यावरण संरक्षण की दैनिक आदतों के बारे में शिक्षित करना।
+        </div>
+
+        <div class="item">
+          <strong>👨‍👩‍👧 परिवार जागरूकता:</strong>
+          घर से ही पानी, बिजली और संसाधनों की बचत के लिए प्रेरित करना।
+        </div>
+
+        <div class="item">
+          <strong>👥 सामुदायिक भागीदारी:</strong>
+          युवाओं, महिलाओं और स्थानीय नागरिकों को पर्यावरण गतिविधियों से जोड़ना।
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DAILY HABITS -->
+  <section>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>पर्यावरण संरक्षण एवं जागरूकता | NCCPA Jankalyan Foundation</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      line-height: 1.7;
+      background: #f4f8f5;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #075e2b, #159447);
+      color: white;
+      padding: 15px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 70px;
+      height: 70px;
+      background: white;
+      border-radius: 50%;
+      padding: 3px;
+    }
+
+    .brand h1 {
+      font-size: 22px;
+    }
+
+    .brand p {
+      font-size: 13px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .hero {
+      padding: 75px 20px;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(rgba(0,90,35,0.84), rgba(0,130,65,0.84)),
+        linear-gradient(135deg, #4b914c, #b6d99d);
+    }
+
+    .hero h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    .intro {
+      background: white;
+      margin-top: 30px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .intro h3 {
+      color: #075e2b;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #075e2b;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      border-top: 4px solid #159447;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #075e2b;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    .green-section {
+      background: #e8f5eb;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+    }
+
+    .item {
+      background: white;
+      padding: 18px;
+      border-radius: 10px;
+      border-left: 5px solid #159447;
+    }
+
+    .item strong {
+      color: #075e2b;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .step {
+      background: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+
+    .number {
+      width: 50px;
+      height: 50px;
+      margin: auto auto 15px;
+      border-radius: 50%;
+      background: #159447;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #fff8dc, #fff);
+      border-left: 6px solid #d49b00;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    .highlight h3 {
+      color: #8a6500;
+      margin-bottom: 12px;
+    }
+
+    .quote {
+      background: #075e2b;
+      color: white;
+      padding: 35px;
+      border-radius: 18px;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .quote h2 {
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #075e2b;
+      color: white;
+      padding: 45px 20px;
+      border-radius: 18px;
+      margin: 30px 0 50px;
+    }
+
+    .cta h2 {
+      margin-bottom: 12px;
+      font-size: 30px;
+    }
+
+    .cta p {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #075e2b;
+      background: white;
+      padding: 12px 20px;
+      margin: 5px;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      background: #123b20;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    footer p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .brand h1 {
+        font-size: 18px;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 6px 9px;
+      }
+
+      .intro h3,
+      .section-title {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="brand">
+
+      <img src="assets/logo.svg"
+           alt="NCCPA Jankalyan Foundation Logo"
+           class="logo">
+
+      <div>
+        <h1>NCCPA Jankalyan Foundation</h1>
+        <p>हर घर तक सेवा, हर दिल में विश्वास</p>
+      </div>
+
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="schemes.html">सरकारी योजना</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="container">
+
+      <h2>🌳 पर्यावरण संरक्षण एवं जागरूकता</h2>
+
+      <p>
+        स्वच्छ हवा, स्वच्छ पानी, हरियाली और सुरक्षित प्राकृतिक वातावरण
+        के लिए जनभागीदारी एवं पर्यावरण जागरूकता को बढ़ावा देना।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+  <section>
+
+    <div class="container">
+
+      <div class="intro">
+
+        <h3>🌍 प्रकृति सुरक्षित तो भविष्य सुरक्षित</h3>
+
+        <p>
+          हमारा जीवन प्राकृतिक संसाधनों पर निर्भर है। स्वच्छ हवा,
+          पानी, मिट्टी, पेड़-पौधे और जैव विविधता मानव जीवन के लिए
+          अत्यंत महत्वपूर्ण हैं।
+        </p>
+
+        <br>
+
+        <p>
+          पर्यावरण संरक्षण केवल सरकार या किसी संस्था की जिम्मेदारी नहीं है।
+          प्रत्येक नागरिक, परिवार, विद्यालय, युवा, महिला समूह और समुदाय
+          छोटे-छोटे प्रयासों से पर्यावरण संरक्षण में योगदान दे सकता है।
+        </p>
+
+        <br>
+
+        <p>
+          <strong>NCCPA Jankalyan Foundation</strong> पर्यावरण के प्रति
+          जागरूकता और सामुदायिक भागीदारी को प्रोत्साहित करने के लिए
+          विभिन्न जनहित गतिविधियों को बढ़ावा देता है।
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- AREAS -->
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">🌱 पर्यावरण संरक्षण के प्रमुख क्षेत्र</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>🌳 वृक्ष संरक्षण</h3>
+          <p>
+            पेड़ लगाने के साथ-साथ मौजूदा पेड़ों की देखभाल और
+            संरक्षण के प्रति जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>💧 जल संरक्षण</h3>
+          <p>
+            पानी की बचत, वर्षा जल संरक्षण और जल स्रोतों की
+            स्वच्छता के प्रति जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🌾 मिट्टी संरक्षण</h3>
+          <p>
+            मिट्टी की गुणवत्ता और कृषि भूमि के संरक्षण के
+            प्रति जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>♻️ कचरा प्रबंधन</h3>
+          <p>
+            कचरे को कम करने, अलग करने, पुन: उपयोग और उचित
+            निपटान के प्रति जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🚯 प्लास्टिक जागरूकता</h3>
+          <p>
+            एकल-उपयोग प्लास्टिक को कम करने और जिम्मेदार
+            उपभोग के प्रति जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🌬️ स्वच्छ हवा</h3>
+          <p>
+            वायु प्रदूषण कम करने और स्वच्छ वातावरण बनाए रखने
+            के लिए जागरूकता।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🐦 जैव विविधता</h3>
+          <p>
+            स्थानीय पेड़-पौधों, पक्षियों और अन्य जीवों के
+            प्राकृतिक आवास के महत्व की जानकारी।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🏡 हरित गांव</h3>
+          <p>
+            गांवों में स्वच्छता, हरियाली, जल संरक्षण और
+            पर्यावरण-अनुकूल आदतों को बढ़ावा देना।
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ACTIVITIES -->
+  <section class="green-section">
+
+    <div class="container">
+
+      <h2 class="section-title">📋 हमारी संभावित पर्यावरण गतिविधियां</h2>
+
+      <div class="list">
+
+        <div class="item">
+          <strong>🌱 पौधारोपण अभियान:</strong>
+          स्थानीय परिस्थितियों के अनुसार पौधारोपण एवं पौधों की देखभाल के लिए जागरूकता।
+        </div>
+
+        <div class="item">
+          <strong>🚰 जल बचाओ अभियान:</strong>
+          पानी की बर्बादी रोकने और जल संरक्षण के लिए जनजागरूकता।
+        </div>
+
+        <div class="item">
+          <strong>🧹 स्वच्छता अभियान:</strong>
+          सार्वजनिक स्थानों और सामुदायिक क्षेत्रों में स्वच्छता के प्रति जागरूकता।
+        </div>
+
+        <div class="item">
+          <strong>♻️ कचरा जागरूकता:</strong>
+          गीले और सूखे कचरे को अलग रखने की आदत को प्रोत्साहित करना।
+        </div>
+
+        <div class="item">
+          <strong>🚯 प्लास्टिक कम करें:</strong>
+          प्लास्टिक के जिम्मेदार उपयोग और वैकल्पिक विकल्पों के प्रति जागरूकता।
+        </div>
+
+        <div class="item">
+          <strong>🏫 स्कूल जागरूकता:</strong>
+          बच्चों को पर्यावरण संरक्षण की दैनिक आदतों के बारे में शिक्षित करना।
+        </div>
+
+        <div class="item">
+          <strong>👨‍👩‍👧 परिवार जागरूकता:</strong>
+          घर से ही पानी, बिजली और संसाधनों की बचत के लिए प्रेरित करना।
+        </div>
+
+        <div class="item">
+          <strong>👥 सामुदायिक भागीदारी:</strong>
+          युवाओं, महिलाओं और स्थानीय नागरिकों को पर्यावरण गतिविधियों से जोड़ना।
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DAILY HABITS -->
+  <section>
+
+    <div class="container">
+
+      <h
+    <div class="container">
+
+      <h
