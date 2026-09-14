@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>वृद्धजन देखभाल | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+        content="NCCPA Jankalyan Foundation द्वारा वृद्धजनों की देखभाल, सम्मान, स्वास्थ्य जागरूकता और सामाजिक सहयोग के लिए पहल।">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      background: #fffaf5;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background: #7b3f00;
+      color: white;
+      padding: 8px 5%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    /* HEADER */
+    header {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 12px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      color: #7b3f00;
+      font-size: 22px;
+    }
+
+    .brand-text p {
+      color: #777;
+      font-size: 13px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 7px;
+    }
+
+    nav a {
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #7b3f00;
+      color: white;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #7b3f00, #b86f28);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      color: #7b3f00;
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    /* INTRO */
+    .intro-box {
+      background: #fff0df;
+      border-left: 5px solid #7b3f00;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+
+    .intro-box h3 {
+      color: #7b3f00;
+      margin-bottom: 10px;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      border-top: 4px solid #7b3f00;
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #7b3f00;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    /* SUPPORT */
+    .support-section {
+      background: #f5eadf;
+      padding: 55px 20px;
+    }
+
+    .support-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .support-item {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
+    .support-item h3 {
+      color: #7b3f00;
+      margin-bottom: 8px;
+    }
+
+    /* CHECKLIST */
+    .checklist {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .checklist li {
+      list-style: none;
+      background: white;
+      padding: 16px 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #7b3f00, #b86f28);
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 750px;
+      margin: 0 auto 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #7b3f00;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #321b0c;
+      color: white;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: #f2c38b;
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      color: #ddd;
+      margin-bottom: 7px;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 30px;
+      padding-top: 18px;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      z-index: 2000;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .topbar {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .brand-text h1 {
+        font-size: 19px;
+      }
+
+      .hero {
+        padding: 50px 15px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .cards,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div>📞 8084284106 | 7903998184</div>
+    <div>✉️ infonccpa@gmail.com</div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+
+        <img src="assets/logo.svg"
+             alt="NCCPA Jankalyan Foundation Logo"
+             class="logo">
+
+        <div class="brand-text">
+          <h1>NCCPA Jankalyan Foundation</h1>
+          <p>हर घर तक सेवा, हर दिल में विश्वास</p>
+        </div>
+
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="mission.html">Mission</a>
+        <a href="services.html">Services</a>
+        <a href="health.html">Health</a>
+        <a href="health-camps.html">Camps</a>
+        <a href="education.html">Education</a>
+        <a href="schemes.html">Schemes</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <h2>👴 वृद्धजन देखभाल</h2>
+
+    <p>
+      वरिष्ठ नागरिकों के सम्मान, सहयोग, स्वास्थ्य जागरूकता
+      और सुरक्षित एवं सम्मानजनक जीवन के लिए सामुदायिक प्रयास।
+    </p>
+
+  </section>
+
+  <!-- INTRO -->
+  <section class="container">
+
+    <div class="section-title">
+      <h2>वृद्धजनों का सम्मान हमारा दायित्व</h2>
+      <p>अनुभव और उम्र का सम्मान, समाज की जिम्मेदारी है।</p>
+    </div>
+
+    <div class="intro-box">
+
+      <h3>🤝 हमारा उद्देश्य</h3>
+
+      <p>
+        NCCPA Jankalyan Foundation का प्रयास है कि वृद्धजनों को
+        सम्मान, परिवार एवं समुदाय का सहयोग तथा स्वास्थ्य और
+        सामाजिक सेवाओं से जुड़ी सामान्य जानकारी उपलब्ध कराने
+        के लिए जागरूकता बढ़ाई जाए।
+      </p>
+
+    </div>
+
+    <!-- SERVICES -->
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">❤️</div>
+        <h3>सम्मान और अपनापन</h3>
+        <p>
+          वरिष्ठ नागरिकों के साथ सम्मानजनक व्यवहार और
+          परिवार में उनके महत्व के प्रति जागरूकता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>स्वास्थ्य जागरूकता</h3>
+        <p>
+          नियमित स्वास्थ्य जांच और आवश्यकता पड़ने पर
+          योग्य स्वास्थ्य विशेषज्ञ से सलाह लेने के महत्व
+          के बारे में जागरूकता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💊</div>
+        <h3>दवा संबंधी जागरूकता</h3>
+        <p>
+          निर्धारित दवाओं को डॉक्टर की सलाह के अनुसार लेने
+          और स्वयं से दवा बदलने से बचने के बारे में जानकारी।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🥗</div>
+        <h3>पोषण जागरूकता</h3>
+        <p>
+          वृद्धजनों के लिए संतुलित भोजन, पर्याप्त तरल पदार्थ
+          और व्यक्तिगत जरूरतों के अनुसार पोषण संबंधी सलाह
+          लेने के महत्व की जानकारी।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚶</div>
+        <h3>सक्रिय जीवनशैली</h3>
+        <p>
+          व्यक्ति की क्षमता और स्वास्थ्य स्थिति के अनुसार
+          सुरक्षित शारीरिक गतिविधि एवं दैनिक दिनचर्या के
+          महत्व के प्रति जागरूकता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👨‍👩‍👧‍👦</div>
+        <h3>परिवार का सहयोग</h3>
+        <p>
+          परिवार के सदस्यों को वृद्धजनों की जरूरतों को समझने,
+          बातचीत करने और आवश्यक सहयोग देने के लिए प्रेरित करना।
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SUPPORT SECTION -->
+  <section class="support-section">
+
+    <div class="section-title">
+
+      <h2>🌿 वृद्धजनों के लिए सामुदायिक सहयोग</h2>
+
+      <p>
+        जरूरत के समय साथ देना और जानकारी तक पहुंच आसान बनाना।
+      </p>
+
+    </div>
+
+    <div class="support-grid">
+
+      <div class="support-item">
+        <h3>📞 संपर्क एवं सहायता</h3>
+        <p>
+          अकेले रहने वाले या सहायता की जरूरत वाले वरिष्ठ
+          नागरिकों को उपलब्ध स्थानीय सहायता सेवाओं की
+          जानकारी से जोड़ने का प्रयास।
+        </p>
+      </div>
+
+      <div class="support-item">
+        <h3>🏠 घर-परिवार जागरूकता</h3>
+        <p>
+          परिवारों को वृद्धजनों की सुरक्षा, सम्मान और
+          दैनिक आवश्यकताओं पर ध्यान देने के लिए जागरूक करना।
+        </p>
+      </div>
+
+      <div class="support-item">
+        <h3>📚 सरकारी योजनाओं की जानकारी</h3>
+        <p>
+          वरिष्ठ नागरिकों से संबंधित उपलब्ध सरकारी योजनाओं
+          और सेवाओं की जानकारी तक पहुंच बनाने में मार्गदर्शन।
+        </p>
+      </div>
+
+      <div class="support-item">
+        <h3>🧑‍🤝‍🧑 सामाजिक सहभागिता</h3>
+        <p>
+          वृद्धजनों को सामाजिक गतिविधियों और सामुदायिक
+          कार्यक्रमों में सम्मानपूर्वक शामिल करने के लिए
+          जागरूकता।
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SAFETY CHECKLIST -->
+  <section class="container">
+
+    <div class="section-title">
+
+      <h2>🛡️ वृद्धजन सुरक्षा के लिए सामान्य सुझाव</h2>
+
+      <p>
+        परिवार और समुदाय के लिए जागरूकता संदेश
+      </p>
+
+    </div>
+
+    <ul class="checklist">
+
+      <li>✅ घर में चलने-फिरने के रास्ते को सुरक्षित और व्यवस्थित रखें।</li>
+
+      <li>✅ वृद्धजन को नियमित रूप से परिवार और परिचित लोगों से बातचीत का अवसर दें।</li>
+
+      <li>✅ आवश्यक दस्तावेज और महत्वपूर्ण संपर्क नंबर सुरक्षित रखें।</li>
+
+      <li>✅ दवाओं और स्वास्थ्य जांच के बारे में डॉक्टर की सलाह का पालन करें।</li>
+
+      <li>✅ अचानक स्वास्थ्य समस्या होने पर उचित चिकित्सा सहायता लें।</li>
+
+      <li>✅ वृद्धजन के साथ सम्मानजनक और धैर्यपूर्ण व्यवहार करें।</li>
+
+      <li>✅ अकेले रहने वाले वरिष्ठ नागरिकों की समय-समय पर कुशलक्षेम पूछें।</li>
+
+    </ul>
+
+  </section>
+
+  <!-- OUR ACTIVITIES -->
+  <section class="container">
+
+    <div class="section-title">
+
+      <h2>🤲 NCCPA की संभावित गतिविधियां</h2>
+
+      <p>
+        समुदाय स्तर पर वृद्धजन सहायता एवं जागरूकता
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>स्वास्थ्य शिविर सहयोग</h3>
+        <p>
+          स्वास्थ्य जागरूकता कार्यक्रमों और शिविरों के
+          माध्यम से वरिष्ठ नागरिकों तक जानकारी पहुंचाना।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📢</div>
+        <h3>जागरूकता अभियान</h3>
+        <p>
+          वृद्धजन सम्मान, स्वास्थ्य, सुरक्षा और सामाजिक
+          सहभागिता के प्रति जागरूकता अभियान।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h3>सामुदायिक सहयोग</h3>
+        <p>
+          जरूरतमंद वरिष्ठ नागरिकों को उपलब्ध स्थानीय
+          सेवाओं और सहायता संसाधनों से जोड़ने का प्रयास।
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>❤️ वृद्धजनों का सम्मान करें</h2>
+
+    <p>
+      उनके अनुभव, संघर्ष और योगदान हमारे समाज की अमूल्य
+      विरासत हैं। आइए, मिलकर ऐसा वातावरण बनाएं जहां
+      हर वरिष्ठ नागरिक सम्मान और अपनापन महसूस करे।
+    </p>
+
+    <a href="contact.html" class="btn">
+      📞 हमसे संपर्क करें
+    </a>
+
+    <a href="donate.html" class="btn">
+      ❤️ सहयोग करें
+    </a>
+
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="container">
+
+    <div class="intro-box">
+
+      <h3>⚠️ महत्वपूर्ण सूचना</h3>
+
+      <p>
+        यह पेज सामान्य जन-जागरूकता के उद्देश्य से बनाया गया है।
+        यह किसी व्यक्ति के लिए व्यक्तिगत चिकित्सा, कानूनी या
+        वित्तीय सलाह नहीं है। स्वास्थ्य संबंधी समस्या होने पर
+        योग्य चिकित्सक या संबंधित विशेषज्ञ से सलाह लें।
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>NCCPA Jankalyan Foundation</h3>
+
+        <p>
+          National Council for Community Promotion & Awareness
+        </p>
+
+        <p>
+          Section 8 Non-Government Organization
+        </p>
+
+        <p>
+          हर घर तक सेवा, हर दिल में विश्वास
+        </p>
+      </div>
+
+      <div>
+
+        <h3>महत्वपूर्ण लिंक</h3>
+
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="services.html">Our Services</a></p>
+        <p><a href="health.html">Health Services</a></p>
+        <p><a href="education.html">Education</a></p>
+        <p><a href="schemes.html">Government Schemes</a></p>
+        <p><a href="donate.html">Donate</a></p>
+
+      </div>
+
+      <div>
+
+        <h3>संपर्क</h3>
+
+        <p>📞 8084284106</p>
+        <p>📞 7903998184</p>
+        <p>✉️ infonccpa@gmail.com</p>
+        <p>📍 Purnea, Bihar, India</p>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+
+      © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+
+      <br>
+
+      सेवा ही हमारा परम धर्म है, विकास ही हमारा लक्ष्य है!
+
+    </div>
+
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a
+    class="whatsapp"
+    href="https://wa.me/918084281046"
+    target="_blank"
+    aria-label="WhatsApp">
+    ☎
+  </a>
+
+</body>
+</html>
