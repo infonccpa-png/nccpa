@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Blood Donation Awareness | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+        content="NCCPA Jankalyan Foundation द्वारा रक्तदान जागरूकता, स्वैच्छिक रक्तदान और जरूरतमंदों तक सुरक्षित रक्त सेवा की जानकारी।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,sans-serif;
+      line-height:1.7;
+      color:#222;
+      background:#f5f8fa;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .topbar{
+      background:#123b2a;
+      color:#fff;
+      padding:8px 5%;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:8px;
+      font-size:14px;
+    }
+
+    header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.10);
+    }
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      padding:10px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo{
+      width:75px;
+      height:75px;
+      object-fit:contain;
+    }
+
+    .brand h1{
+      color:#123b2a;
+      font-size:21px;
+    }
+
+    .brand p{
+      color:#666;
+      font-size:12px;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:7px;
+    }
+
+    nav a{
+      color:#123b2a;
+      font-weight:bold;
+      font-size:14px;
+      padding:7px 9px;
+      border-radius:6px;
+    }
+
+    nav a:hover{
+      background:#e8f5ed;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#8b0000,#c62828);
+      color:#fff;
+      text-align:center;
+      padding:70px 5%;
+    }
+
+    .badge{
+      display:inline-block;
+      background:#fff;
+      color:#a00000;
+      padding:6px 16px;
+      border-radius:30px;
+      font-weight:bold;
+      margin-bottom:18px;
+    }
+
+    .hero h2{
+      font-size:42px;
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1150px;
+      margin:auto;
+      padding:50px 5%;
+    }
+
+    .intro{
+      background:#fff;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 3px 15px rgba(0,0,0,.08);
+      margin-bottom:40px;
+    }
+
+    .intro h3{
+      color:#a00000;
+      font-size:25px;
+      margin-bottom:12px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .section-title h2{
+      color:#123b2a;
+      font-size:30px;
+      margin-bottom:8px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:#fff;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 3px 15px rgba(0,0,0,.08);
+      border-top:4px solid #c62828;
+    }
+
+    .icon{
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      color:#123b2a;
+      margin-bottom:10px;
+      font-size:21px;
+    }
+
+    .card p{
+      color:#555;
+      font-size:15px;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:30px;
+    }
+
+    .step{
+      background:#fff;
+      padding:22px;
+      text-align:center;
+      border-radius:12px;
+      box-shadow:0 3px 12px rgba(0,0,0,.07);
+    }
+
+    .number{
+      width:45px;
+      height:45px;
+      line-height:45px;
+      margin:0 auto 12px;
+      background:#c62828;
+      color:#fff;
+      border-radius:50%;
+      font-size:20px;
+      font-weight:bold;
+    }
+
+    .info-box{
+      background:#eaf6ef;
+      padding:30px;
+      border-radius:15px;
+      margin-top:40px;
+    }
+
+    .info-box h2{
+      color:#123b2a;
+      margin-bottom:15px;
+    }
+
+    .info-box ul{
+      padding-left:22px;
+    }
+
+    .info-box li{
+      margin-bottom:8px;
+    }
+
+    .notice{
+      background:#fff4e5;
+      border-left:5px solid #e28b00;
+      padding:22px;
+      border-radius:8px;
+      margin-top:35px;
+    }
+
+    .notice strong{
+      color:#a85d00;
+    }
+
+    .cta{
+      background:#123b2a;
+      color:#fff;
+      text-align:center;
+      padding:50px 5%;
+    }
+
+    .cta h2{
+      font-size:30px;
+      margin-bottom:10px;
+    }
+
+    .cta p{
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:8px;
+      margin:5px;
+      font-weight:bold;
+      background:#fff;
+      color:#123b2a;
+    }
+
+    .btn.whatsapp{
+      background:#25D366;
+      color:#fff;
+    }
+
+    footer{
+      background:#0c261c;
+      color:#fff;
+      text-align:center;
+      padding:30px 5%;
+    }
+
+    footer p{
+      margin:6px 0;
+      font-size:14px;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#25D366;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:27px;
+      box-shadow:0 4px 12px rgba(0,0,0,.25);
+      z-index:999;
+    }
+
+    @media(max-width:900px){
+      .cards{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .steps{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .nav{
+        flex-direction:column;
+      }
+    }
+
+    @media(max-width:600px){
+      .topbar{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .nav{
+        padding:10px 3%;
+      }
+
+      .logo{
+        width:65px;
+        height:65px;
+      }
+
+      .brand h1{
+        font-size:17px;
+      }
+
+      nav a{
+        font-size:13px;
+        padding:6px;
+      }
+
+      .hero{
+        padding:50px 5%;
+      }
+
+      .hero h2{
+        font-size:30px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .cards,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .container{
+        padding:35px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>📞 8084284106</span>
+    <span>📱 WhatsApp: 7903998184</span>
+    <span>✉️ infonccpa@gmail.com</span>
+  </div>
+
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+
+      <div class="brand">
+
+        <img src="assets/logo.svg"
+             alt="NCCPA Jankalyan Foundation Logo"
+             class="logo">
+
+        <div>
+          <h1>NCCPA Jankalyan Foundation</h1>
+          <p>National Council for Community Promotion & Awareness</p>
+        </div>
+
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="mission.html">Mission</a>
+        <a href="services.html">Services</a>
+        <a href="health.html">Health</a>
+        <a href="health-camps.html">Health Camps</a>
+        <a href="medical-awareness.html">Medical Awareness</a>
+        <a href="ayushman.html">Ayushman Bharat</a>
+        <a href="jan-aushadhi.html">Jan Aushadhi</a>
+        <a href="blood-donation.html">Blood Donation</a>
+        <a href="schemes.html">Schemes</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <span class="badge">रक्तदान जागरूकता अभियान</span>
+
+    <h2>🩸 Blood Donation</h2>
+
+    <p>
+      स्वैच्छिक रक्तदान के प्रति जागरूकता बढ़ाना और जरूरतमंद
+      लोगों को सुरक्षित एवं अधिकृत रक्त सेवा तक पहुँचने में
+      मार्गदर्शन करना।
+    </p>
+
+  </section>
+
+
+  <!-- MAIN -->
+  <section class="container">
+
+    <div class="intro">
+
+      <h3>रक्तदान क्यों महत्वपूर्ण है?</h3>
+
+      <p>
+        रक्त की आवश्यकता विभिन्न चिकित्सा परिस्थितियों में हो
+        सकती है। स्वैच्छिक रक्तदान के प्रति जागरूकता बढ़ाना
+        समुदाय के लिए एक महत्वपूर्ण सामाजिक सेवा है।
+      </p>
+
+      <p style="margin-top:12px;">
+        NCCPA Jankalyan Foundation का प्रयास है कि नागरिकों को
+        रक्तदान के महत्व की जानकारी दी जाए और जरूरत पड़ने पर
+        उन्हें अधिकृत ब्लड बैंक एवं संबंधित स्वास्थ्य सेवा तक
+        पहुँचने में मार्गदर्शन मिले।
+      </p>
+
+    </div>
+
+
+    <!-- ACTIVITIES -->
+    <div class="section-title">
+
+      <h2>हमारी रक्तदान जागरूकता गतिविधियाँ</h2>
+
+      <p>
+        समुदाय में स्वैच्छिक रक्तदान की भावना को बढ़ावा देने के प्रयास
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🩸</div>
+        <h3>रक्तदान जागरूकता</h3>
+        <p>
+          नागरिकों को स्वैच्छिक रक्तदान के महत्व और सामाजिक
+          उपयोगिता के बारे में जागरूक करना।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>ब्लड बैंक जानकारी</h3>
+        <p>
+          जरूरत पड़ने पर संबंधित अधिकृत ब्लड बैंक या स्वास्थ्य
+          सुविधा से जानकारी प्राप्त करने में मार्गदर्शन।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h3>दाता जागरूकता</h3>
+        <p>
+          इच्छुक लोगों को रक्तदान से पहले अधिकृत स्वास्थ्य
+          केंद्र की आवश्यक प्रक्रिया और पात्रता की जानकारी
+          लेने के लिए प्रेरित करना।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">📢</div>
+        <h3>जन-जागरूकता अभियान</h3>
+        <p>
+          पोस्टर, बैठक, सामाजिक कार्यक्रम और अन्य जागरूकता
+          गतिविधियों के माध्यम से रक्तदान संदेश पहुँचाना।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🚑</div>
+        <h3>आपातकालीन मार्गदर्शन</h3>
+        <p>
+          जरूरतमंद परिवारों को उचित स्वास्थ्य सेवा और अधिकृत
+          रक्त सुविधा से संपर्क करने में मार्गदर्शन।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">❤️</div>
+        <h3>मानव सेवा</h3>
+        <p>
+          रक्तदान को मानवता, सहयोग और सामुदायिक सेवा की भावना
+          से जोड़ते हुए जागरूकता बढ़ाना।
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- PROCESS -->
+    <div class="section-title" style="margin-top:50px;">
+
+      <h2>रक्तदान से पहले सामान्य प्रक्रिया</h2>
+
+      <p>
+        अंतिम पात्रता एवं रक्तदान की अनुमति अधिकृत स्वास्थ्य केंद्र द्वारा तय की जाती है।
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="number">1</div>
+        <h3>जानकारी लें</h3>
+        <p>
+          अधिकृत ब्लड बैंक या रक्तदान केंद्र से प्रक्रिया की जानकारी प्राप्त करें।
+        </p>
+      </div>
+
+
+      <div class="step">
+        <div class="number">2</div>
+        <h3>स्वास्थ्य जाँच</h3>
+        <p>
+          रक्तदान से पहले केंद्र द्वारा निर्धारित स्वास्थ्य जाँच कराएँ।
+        </p>
+      </div>
+
+
+      <div class="step">
+        <div class="number">3</div>
+        <h3>विशेषज्ञ की अनुमति</h3>
+        <p>
+          स्वास्थ्यकर्मी की जाँच और अनुमति के बाद ही रक्तदान करें।
+        </p>
+      </div>
+
+
+      <div class="step">
+        <div class="number">4</div>
+        <h3>सुरक्षित प्रक्रिया</h3>
+        <p>
+          केवल अधिकृत एवं सुरक्षित रक्तदान केंद्र पर ही रक्तदान करें।
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+    <div class="info-box">
+
+      <h2>📌 रक्तदान के संबंध में महत्वपूर्ण बातें</h2>
+
+      <ul>
+        <li>रक्तदान की पात्रता उम्र, स्वास्थ्य और अन्य निर्धारित मानकों पर निर्भर करती है।</li>
+        <li>रक्तदान से पहले अधिकृत स्वास्थ्यकर्मी से अपनी पात्रता की पुष्टि करें।</li>
+        <li>केवल अधिकृत ब्लड बैंक या रक्तदान केंद्र पर ही रक्तदान करें।</li>
+        <li>रक्तदान से संबंधित चिकित्सा निर्देशों का पालन करें।</li>
+        <li>किसी अन्य व्यक्ति के लिए रक्त की आवश्यकता होने पर अधिकृत ब्लड बैंक से संपर्क करें।</li>
+        <li>रक्तदान संबंधी गलत जानकारी या अफवाहों से बचें।</li>
+      </ul>
+
+    </div>
+
+
+    <!-- EMERGENCY -->
+    <div class="notice">
+
+      <strong>🚨 आपातकालीन स्थिति:</strong>
+
+      <p style="margin-top:8px;">
+        यदि किसी मरीज को तत्काल रक्त की आवश्यकता है, तो पहले
+        संबंधित अस्पताल या अधिकृत ब्लड बैंक से संपर्क करें।
+        रक्त समूह, उपलब्धता और क्रॉस-मैच जैसी चिकित्सा प्रक्रिया
+        संबंधित स्वास्थ्य संस्था द्वारा निर्धारित की जाती है।
+      </p>
+
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="notice">
+
+      <strong>⚠️ महत्वपूर्ण स्वास्थ्य सूचना:</strong>
+
+      <p style="margin-top:8px;">
+        यह पेज केवल जन-जागरूकता के उद्देश्य से है। रक्तदान की
+        पात्रता, प्रक्रिया और चिकित्सकीय निर्णय अधिकृत स्वास्थ्य
+        केंद्र द्वारा निर्धारित किए जाते हैं। व्यक्तिगत स्वास्थ्य
+        संबंधी प्रश्नों के लिए योग्य चिकित्सक या स्वास्थ्यकर्मी
+        से सलाह लें।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>रक्तदान जागरूकता से जुड़ें ❤️</h2>
+
+    <p>
+      स्वैच्छिक रक्तदान के संदेश को अपने परिवार और समुदाय तक पहुँचाएँ।
+    </p>
+
+    <a href="contact.html" class="btn">
+      📞 संपर्क करें
+    </a>
+
+    <a href="health.html" class="btn">
+      🏥 Health Services
+    </a>
+
+    <a href="https://wa.me/9179039918184"
+       target="_blank"
+       class="btn whatsapp">
+      💬 WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p><strong>NCCPA Jankalyan Foundation</strong></p>
+
+    <p>
+      National Council for Community Promotion & Awareness
+    </p>
+
+    <p>
+      “हर घर तक सेवा, हर दिल में विश्वास”
+    </p>
+
+    <p>
+      “आपातकाल हो या अधिकार – हम हैं तैयार”
+    </p>
+
+    <p>
+      © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/9179039918184"
+     target="_blank"
+     class="whatsapp-float"
+     aria-label="WhatsApp">
+    💬
+  </a>
+
+</body>
+          </html>
