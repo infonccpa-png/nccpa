@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ayushman Bharat Awareness | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+    content="NCCPA Jankalyan Foundation द्वारा Ayushman Bharat और स्वास्थ्य योजनाओं के प्रति जन-जागरूकता एवं मार्गदर्शन।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,sans-serif;
+      line-height:1.7;
+      color:#222;
+      background:#f5f8fa;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .topbar{
+      background:#123b2a;
+      color:#fff;
+      padding:8px 5%;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:8px;
+      font-size:14px;
+    }
+
+    header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.10);
+    }
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      padding:10px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo{
+      width:75px;
+      height:75px;
+      object-fit:contain;
+    }
+
+    .brand h1{
+      color:#123b2a;
+      font-size:21px;
+    }
+
+    .brand p{
+      color:#666;
+      font-size:12px;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:7px;
+    }
+
+    nav a{
+      color:#123b2a;
+      font-weight:bold;
+      font-size:14px;
+      padding:7px 9px;
+      border-radius:6px;
+    }
+
+    nav a:hover{
+      background:#e8f5ed;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#075985,#0f766e);
+      color:#fff;
+      text-align:center;
+      padding:70px 5%;
+    }
+
+    .badge{
+      display:inline-block;
+      background:#fff;
+      color:#075985;
+      padding:6px 16px;
+      border-radius:30px;
+      font-weight:bold;
+      margin-bottom:18px;
+    }
+
+    .hero h2{
+      font-size:42px;
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1150px;
+      margin:auto;
+      padding:50px 5%;
+    }
+
+    .intro{
+      background:#fff;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 3px 15px rgba(0,0,0,.08);
+      margin-bottom:40px;
+    }
+
+    .intro h3{
+      color:#075985;
+      font-size:25px;
+      margin-bottom:12px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .section-title h2{
+      color:#123b2a;
+      font-size:30px;
+      margin-bottom:8px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:#fff;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 3px 15px rgba(0,0,0,.08);
+      border-top:4px solid #0f766e;
+    }
+
+    .icon{
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      color:#123b2a;
+      margin-bottom:10px;
+      font-size:21px;
+    }
+
+    .card p{
+      color:#555;
+      font-size:15px;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:25px;
+    }
+
+    .step{
+      background:#fff;
+      padding:22px;
+      text-align:center;
+      border-radius:12px;
+      box-shadow:0 3px 12px rgba(0,0,0,.07);
+    }
+
+    .number{
+      width:45px;
+      height:45px;
+      line-height:45px;
+      margin:0 auto 12px;
+      background:#0f766e;
+      color:#fff;
+      border-radius:50%;
+      font-size:20px;
+      font-weight:bold;
+    }
+
+    .info-box{
+      background:#e8f5ed;
+      padding:30px;
+      border-radius:15px;
+      margin-top:40px;
+    }
+
+    .info-box h2{
+      color:#123b2a;
+      margin-bottom:15px;
+    }
+
+    .info-box ul{
+      padding-left:22px;
+    }
+
+    .info-box li{
+      margin-bottom:8px;
+    }
+
+    .notice{
+      background:#fff4e5;
+      border-left:5px solid #e28b00;
+      padding:22px;
+      border-radius:8px;
+      margin-top:35px;
+    }
+
+    .notice strong{
+      color:#a85d00;
+    }
+
+    .cta{
+      background:#123b2a;
+      color:#fff;
+      text-align:center;
+      padding:50px 5%;
+    }
+
+    .cta h2{
+      font-size:30px;
+      margin-bottom:10px;
+    }
+
+    .cta p{
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:8px;
+      margin:5px;
+      font-weight:bold;
+      background:#fff;
+      color:#123b2a;
+    }
+
+    .btn.whatsapp{
+      background:#25D366;
+      color:#fff;
+    }
+
+    footer{
+      background:#0c261c;
+      color:#fff;
+      text-align:center;
+      padding:30px 5%;
+    }
+
+    footer p{
+      margin:6px 0;
+      font-size:14px;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#25D366;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:27px;
+      box-shadow:0 4px 12px rgba(0,0,0,.25);
+      z-index:999;
+    }
+
+    @media(max-width:900px){
+      .cards{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .steps{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .nav{
+        flex-direction:column;
+      }
+    }
+
+    @media(max-width:600px){
+      .topbar{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .nav{
+        padding:10px 3%;
+      }
+
+      .logo{
+        width:65px;
+        height:65px;
+      }
+
+      .brand h1{
+        font-size:17px;
+      }
+
+      nav a{
+        font-size:13px;
+        padding:6px;
+      }
+
+      .hero{
+        padding:50px 5%;
+      }
+
+      .hero h2{
+        font-size:30px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .cards,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .container{
+        padding:35px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>📞 8084284106</span>
+    <span>📱 WhatsApp: 7903998184</span>
+    <span>✉️ infonccpa@gmail.com</span>
+  </div>
+
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+
+      <div class="brand">
+
+        <img src="assets/logo.svg"
+             alt="NCCPA Jankalyan Foundation Logo"
+             class="logo">
+
+        <div>
+          <h1>NCCPA Jankalyan Foundation</h1>
+          <p>National Council for Community Promotion & Awareness</p>
+        </div>
+
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="mission.html">Mission</a>
+        <a href="services.html">Services</a>
+        <a href="health.html">Health</a>
+        <a href="health-camps.html">Health Camps</a>
+        <a href="medical-awareness.html">Medical Awareness</a>
+        <a href="ayushman.html">Ayushman Bharat</a>
+        <a href="schemes.html">Schemes</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <span class="badge">स्वास्थ्य योजना जागरूकता</span>
+
+    <h2>🏥 Ayushman Bharat</h2>
+
+    <p>
+      पात्र परिवारों को स्वास्थ्य योजनाओं की जानकारी,
+      जागरूकता और उचित सरकारी सेवा तक पहुँचने में मार्गदर्शन।
+    </p>
+
+  </section>
+
+
+  <!-- INTRO -->
+  <section class="container">
+
+    <div class="intro">
+
+      <h3>आयुष्मान भारत के बारे में जागरूकता</h3>
+
+      <p>
+        आयुष्मान भारत भारत सरकार की प्रमुख स्वास्थ्य पहल है।
+        NCCPA Jankalyan Foundation का प्रयास है कि ग्रामीण,
+        गरीब और जरूरतमंद परिवारों तक स्वास्थ्य योजनाओं से
+        संबंधित सही और उपयोगी जानकारी सरल भाषा में पहुँचाई जाए।
+      </p>
+
+      <p style="margin-top:12px;">
+        योजना की पात्रता, उपलब्ध सुविधाओं और आवेदन/सेवा प्राप्त
+        करने की वर्तमान प्रक्रिया के लिए हमेशा आधिकारिक सरकारी
+        स्रोत या संबंधित अधिकृत केंद्र से जानकारी सत्यापित करें।
+      </p>
+
+    </div>
+
+
+    <!-- AREAS -->
+    <div class="section-title">
+
+      <h2>हम किस प्रकार जागरूकता में सहयोग करते हैं?</h2>
+
+      <p>
+        योजना संबंधी जानकारी और नागरिक मार्गदर्शन
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">📢</div>
+        <h3>योजना जागरूकता</h3>
+        <p>
+          लोगों को स्वास्थ्य योजनाओं के बारे में सामान्य जानकारी
+          और जागरूकता प्रदान करना।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🪪</div>
+        <h3>पात्रता जानकारी</h3>
+        <p>
+          नागरिकों को अपनी पात्रता की जानकारी आधिकारिक माध्यम
+          से जाँचने के लिए मार्गदर्शन।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>अस्पताल संबंधी जानकारी</h3>
+        <p>
+          उपलब्ध अधिकृत स्वास्थ्य सुविधाओं के बारे में जानकारी
+          प्राप्त करने हेतु मार्गदर्शन।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">📄</div>
+        <h3>दस्तावेज जागरूकता</h3>
+        <p>
+          सरकारी प्रक्रिया में आवश्यक दस्तावेजों की जानकारी
+          आधिकारिक स्रोत से सत्यापित करने में सहयोग।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">👨‍👩‍👧‍👦</div>
+        <h3>परिवार जागरूकता</h3>
+        <p>
+          परिवारों को स्वास्थ्य सुरक्षा और उपलब्ध सरकारी
+          स्वास्थ्य सेवाओं के प्रति जागरूक करना।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h3>मार्गदर्शन</h3>
+        <p>
+          जरूरतमंद नागरिकों को उचित सरकारी या अधिकृत सेवा
+          केंद्र तक पहुँचने में सहयोग।
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- PROCESS -->
+    <div class="section-title" style="margin-top:50px;">
+
+      <h2>मार्गदर्शन की सामान्य प्रक्रिया</h2>
+
+      <p>
+        नागरिकों को योजना संबंधी जानकारी समझने में सहायता
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="number">1</div>
+        <h3>जानकारी</h3>
+        <p>
+          नागरिक की आवश्यकता और प्रश्न को समझना।
+        </p>
+      </div>
+
+
+      <div class="step">
+        <div class="number">2</div>
+        <h3>सत्यापन</h3>
+        <p>
+          योजना की वर्तमान जानकारी आधिकारिक स्रोत से
+          सत्यापित करने की सलाह।
+        </p>
+      </div>
+
+
+      <div class="step">
+        <div class="number">3</div>
+        <h3>मार्गदर्शन</h3>
+        <p>
+          संबंधित सरकारी या अधिकृत सेवा केंद्र तक पहुँचने
+          में सहायता।
+        </p>
+      </div>
+
+
+      <div class="step">
+        <div class="number">4</div>
+        <h3>सहयोग</h3>
+        <p>
+          उपलब्ध संसाधनों के अनुसार आगे की प्रक्रिया समझने
+          में सहयोग।
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+    <div class="info-box">
+
+      <h2>📌 नागरिकों के लिए महत्वपूर्ण बातें</h2>
+
+      <ul>
+        <li>योजना की पात्रता की जानकारी आधिकारिक माध्यम से जाँचें।</li>
+        <li>किसी अनजान व्यक्ति को OTP, PIN या बैंक संबंधी गोपनीय जानकारी न दें।</li>
+        <li>सरकारी योजना के नाम पर होने वाली ठगी से सावधान रहें।</li>
+        <li>किसी भी भुगतान या दस्तावेज जमा करने से पहले संबंधित अधिकृत केंद्र की पुष्टि करें।</li>
+        <li>स्वास्थ्य संबंधी आपात स्थिति में पहले उचित चिकित्सा सहायता प्राप्त करें।</li>
+      </ul>
+
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="notice">
+
+      <strong>⚠️ महत्वपूर्ण सूचना:</strong>
+
+      <p style="margin-top:8px;">
+        NCCPA Jankalyan Foundation इस पेज के माध्यम से केवल
+        जन-जागरूकता एवं सामान्य मार्गदर्शन प्रदान करता है।
+        योजना की पात्रता, लाभ, नियम, अस्पताल सूची और आवेदन
+        प्रक्रिया समय के साथ बदल सकती है। अंतिम और आधिकारिक
+        जानकारी संबंधित सरकारी पोर्टल/विभाग से ही सत्यापित करें।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>स्वास्थ्य अधिकारों के प्रति जागरूक बनें</h2>
+
+    <p>
+      सही जानकारी प्राप्त करें और जरूरत पड़ने पर उचित
+      सरकारी स्वास्थ्य सेवा तक पहुँचने का प्रयास करें।
+    </p>
+
+    <a href="schemes.html" class="btn">
+      📋 सरकारी योजनाएँ
+    </a>
+
+    <a href="contact.html" class="btn">
+      📞 संपर्क करें
+    </a>
+
+    <a href="https://wa.me/9179039918184"
+       target="_blank"
+       class="btn whatsapp">
+      💬 WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p><strong>NCCPA Jankalyan Foundation</strong></p>
+
+    <p>
+      National Council for Community Promotion & Awareness
+    </p>
+
+    <p>
+      “हर घर तक सेवा, हर दिल में विश्वास”
+    </p>
+
+    <p>
+      “आपातकाल हो या अधिकार – हम हैं तैयार”
+    </p>
+
+    <p>
+      © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/9179039918184"
+     target="_blank"
+     class="whatsapp-float"
+     aria-label="WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
