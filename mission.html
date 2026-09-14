@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mission & Vision | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description" content="NCCPA Jankalyan Foundation का Mission, Vision और Core Values. शिक्षा, स्वास्थ्य, रोजगार, महिला सशक्तिकरण और ग्रामीण विकास के लिए प्रतिबद्ध।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,sans-serif;
+      background:#f5f7fa;
+      color:#222;
+      line-height:1.7;
+    }
+
+    .topbar{
+      background:#0b5d3b;
+      color:white;
+      text-align:center;
+      padding:8px 12px;
+      font-size:14px;
+    }
+
+    header{
+      background:white;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+      padding:12px 20px;
+      box-shadow:0 2px 10px rgba(0,0,0,.12);
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo img{
+      width:70px;
+      height:70px;
+      object-fit:contain;
+    }
+
+    .logo h1{
+      color:#0b5d3b;
+      font-size:20px;
+    }
+
+    .logo p{
+      color:#777;
+      font-size:12px;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:7px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#222;
+      font-size:14px;
+      font-weight:bold;
+      padding:8px 10px;
+      border-radius:5px;
+    }
+
+    nav a:hover,
+    nav a.active{
+      background:#0b5d3b;
+      color:white;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#0b5d3b,#16804f);
+      color:white;
+      text-align:center;
+      padding:65px 20px;
+    }
+
+    .hero h2{
+      font-size:40px;
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:45px 20px;
+    }
+
+    .card{
+      background:white;
+      padding:32px;
+      margin-bottom:25px;
+      border-radius:14px;
+      box-shadow:0 3px 15px rgba(0,0,0,.08);
+    }
+
+    .card h3{
+      color:#0b5d3b;
+      font-size:28px;
+      margin-bottom:15px;
+      border-left:5px solid #f39c12;
+      padding-left:12px;
+    }
+
+    .mission-box{
+      background:#eef8f2;
+      border:2px solid #cce8d8;
+      padding:25px;
+      border-radius:12px;
+      text-align:center;
+      font-size:21px;
+      font-weight:bold;
+      color:#0b5d3b;
+    }
+
+    .vision-box{
+      background:#fff7e6;
+      border:2px solid #f4d79b;
+      padding:25px;
+      border-radius:12px;
+      text-align:center;
+      font-size:21px;
+      font-weight:bold;
+      color:#8a5700;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .value{
+      background:#f8faf9;
+      border:1px solid #e1e8e4;
+      padding:22px;
+      border-radius:12px;
+      text-align:center;
+    }
+
+    .value .icon{
+      font-size:38px;
+      margin-bottom:10px;
+    }
+
+    .value h4{
+      color:#0b5d3b;
+      font-size:19px;
+      margin-bottom:8px;
+    }
+
+    .objective{
+      padding-left:22px;
+    }
+
+    .objective li{
+      margin:10px 0;
+    }
+
+    .quote{
+      text-align:center;
+      background:#0b5d3b;
+      color:white;
+      padding:35px 20px;
+      border-radius:14px;
+      margin-top:10px;
+    }
+
+    .quote h3{
+      font-size:28px;
+      margin-bottom:8px;
+    }
+
+    .quote p{
+      font-size:20px;
+    }
+
+    .buttons{
+      text-align:center;
+      margin-top:25px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 24px;
+      margin:5px;
+      background:#f39c12;
+      color:white;
+      text-decoration:none;
+      border-radius:6px;
+      font-weight:bold;
+    }
+
+    footer{
+      background:#092f20;
+      color:white;
+      text-align:center;
+      padding:30px 20px;
+      margin-top:20px;
+    }
+
+    footer p{
+      margin:5px 0;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#25D366;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      font-size:25px;
+      box-shadow:0 3px 12px rgba(0,0,0,.25);
+      z-index:2000;
+    }
+
+    @media(max-width:800px){
+
+      header{
+        flex-direction:column;
+      }
+
+      .logo{
+        justify-content:center;
+      }
+
+      .hero h2{
+        font-size:30px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      nav a{
+        font-size:13px;
+      }
+
+      .card{
+        padding:22px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    📞 8084284106 | 📱 7903998184 | ✉️ infonccpa@gmail.com
+  </div>
+
+  <header>
+
+    <div class="logo">
+
+      <img src="assets/logo.svg"
+           alt="NCCPA Jankalyan Foundation Logo">
+
+      <div>
+        <h1>NCCPA Jankalyan Foundation</h1>
+        <p>National Council for Community Promotion & Awareness</p>
+      </div>
+
+    </div>
+
+    <nav>
+
+      <a href="index.html">Home</a>
+
+      <a href="about.html">About</a>
+
+      <a href="mission.html" class="active">Mission</a>
+
+      <a href="services.html">Services</a>
+
+      <a href="schemes.html">Schemes</a>
+
+      <a href="news.html">News</a>
+
+      <a href="gallery.html">Gallery</a>
+
+      <a href="team.html">Team</a>
+
+      <a href="donate.html">Donate</a>
+
+      <a href="contact.html">Contact</a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h2>🎯 Mission & Vision</h2>
+
+    <p>
+      सेवा, जागरूकता, समान अवसर और सामाजिक विकास के माध्यम से
+      एक सशक्त एवं आत्मनिर्भर समाज का निर्माण।
+    </p>
+
+  </section>
+
+
+  <main class="container">
+
+
+    <!-- MISSION -->
+
+    <section class="card">
+
+      <h3>🎯 हमारा Mission</h3>
+
+      <div class="mission-box">
+
+        “हर घर तक सेवा, हर दिल में विश्वास”
+
+      </div>
+
+      <br>
+
+      <p>
+        NCCPA Jankalyan Foundation का मिशन समाज के जरूरतमंद,
+        गरीब, वंचित एवं कमजोर वर्गों तक शिक्षा, स्वास्थ्य,
+        रोजगार, सरकारी योजनाओं की जानकारी और सामाजिक सहायता
+        पहुँचाने में योगदान देना है।
+      </p>
+
+      <p>
+        हमारा प्रयास है कि ग्रामीण एवं पिछड़े क्षेत्रों में
+        रहने वाले लोगों को सही जानकारी, अवसर और आवश्यक सेवाओं
+        से जोड़कर उन्हें आत्मनिर्भर बनने में सहायता मिले।
+      </p>
+
+    </section>
+
+
+    <!-- VISION -->
+
+    <section class="card">
+
+      <h3>🌍 हमारा Vision</h3>
+
+      <div class="vision-box">
+
+        “एक जागरूक, शिक्षित, स्वस्थ, आत्मनिर्भर और
+        समान अवसर वाला समाज”
+
+      </div>
+
+      <br>
+
+      <p>
+        हमारा विजन ऐसा समाज बनाना है जहाँ प्रत्येक व्यक्ति को
+        शिक्षा, स्वास्थ्य, सम्मान, अधिकार और विकास के समान
+        अवसर प्राप्त हों।
+      </p>
+
+      <p>
+        हम सामुदायिक भागीदारी और सामाजिक जागरूकता के माध्यम से
+        स्थायी एवं सकारात्मक परिवर्तन की दिशा में कार्य करने
+        के लिए प्रतिबद्ध हैं।
+      </p>
+
+    </section>
+
+
+    <!-- TAGLINE -->
+
+    <section class="card">
+
+      <h3>🚨 हमारी सेवा भावना
