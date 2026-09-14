@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Objectives | NCCPA Jankalyan Foundation</title>
+
+<meta name="description" content="NCCPA Jankalyan Foundation के सामाजिक उद्देश्य - शिक्षा, स्वास्थ्य, महिला सशक्तिकरण, रोजगार, ग्रामीण विकास, पर्यावरण एवं मानवाधिकार।">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f7fa;
+  color:#222;
+  line-height:1.7;
+}
+
+.topbar{
+  background:#0b5d3b;
+  color:white;
+  text-align:center;
+  padding:8px 12px;
+  font-size:14px;
+}
+
+header{
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:12px 20px;
+  box-shadow:0 2px 10px rgba(0,0,0,.12);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  width:70px;
+  height:70px;
+  object-fit:contain;
+}
+
+.logo h1{
+  color:#0b5d3b;
+  font-size:20px;
+}
+
+.logo p{
+  color:#777;
+  font-size:12px;
+}
+
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:7px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#222;
+  font-size:14px;
+  font-weight:bold;
+  padding:8px 10px;
+  border-radius:5px;
+}
+
+nav a:hover,
+nav a.active{
+  background:#0b5d3b;
+  color:white;
+}
+
+.hero{
+  background:linear-gradient(135deg,#0b5d3b,#16804f);
+  color:white;
+  text-align:center;
+  padding:65px 20px;
+}
+
+.hero h2{
+  font-size:40px;
+  margin-bottom:12px;
+}
+
+.hero p{
+  max-width:850px;
+  margin:auto;
+  font-size:18px;
+}
+
+.container{
+  max-width:1150px;
+  margin:auto;
+  padding:45px 20px;
+}
+
+.intro{
+  background:white;
+  padding:30px;
+  border-radius:14px;
+  text-align:center;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
+  margin-bottom:30px;
+}
+
+.intro h3{
+  color:#0b5d3b;
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.objectives{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.objective{
+  background:white;
+  padding:25px 20px;
+  border-radius:14px;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
+  border-top:5px solid #0b5d3b;
+}
+
+.objective .icon{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.objective h3{
+  color:#0b5d3b;
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.objective p{
+  font-size:15px;
+}
+
+.number{
+  display:inline-flex;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#f39c12;
+  color:white;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.section{
+  background:white;
+  padding:30px;
+  margin-top:30px;
+  border-radius:14px;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.section h3{
+  color:#0b5d3b;
+  font-size:27px;
+  margin-bottom:15px;
+  border-left:5px solid #f39c12;
+  padding-left:12px;
+}
+
+.section ul{
+  padding-left:22px;
+}
+
+.section li{
+  margin:9px 0;
+}
+
+.highlight{
+  background:#fff7e6;
+  border-left:5px solid #f39c12;
+  padding:20px;
+  border-radius:8px;
+  margin-top:15px;
+  font-weight:bold;
+}
+
+.cta{
+  background:#0b5d3b;
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+  margin-top:30px;
+  border-radius:14px;
+}
+
+.cta h3{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.btn{
+  display:inline-block;
+  margin:18px 5px 0;
+  padding:12px 24px;
+  background:#f39c12;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+footer{
+  background:#092f20;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+  margin-top:30px;
+}
+
+footer p{
+  margin:5px 0;
+}
+
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#25D366;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:25px;
+  box-shadow:0 3px 12px rgba(0,0,0,.25);
+  z-index:2000;
+}
+
+@media(max-width:900px){
+
+  header{
+    flex-direction:column;
+  }
+
+  .objectives{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hero h2{
+    font-size:32px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .objectives{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding:50px 18px;
+  }
+
+  .hero h2{
+    font-size:28px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .intro,
+  .section{
+    padding:22px;
+  }
+
+  nav a{
+    font-size:13px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+📞 8084284106 | 📱 7903998184 | ✉️ infonccpa@gmail.com
+</div>
+
+
+<header>
+
+<div class="logo">
+
+<img src="assets/logo.svg"
+     alt="NCCPA Jankalyan Foundation Logo">
+
+<div>
+<h1>NCCPA Jankalyan Foundation</h1>
+<p>National Council for Community Promotion & Awareness</p>
+</div>
+
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="mission.html">Mission</a>
+<a href="leadership.html">Leadership</a>
+<a href="team.html">Team</a>
+<a href="services.html">Services</a>
+<a href="objectives.html" class="active">Objectives</a>
+<a href="schemes.html">Schemes</a>
+<a href="news.html">News</a>
+<a href="gallery.html">Gallery</a>
+<a href="donate.html">Donate</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h2>🎯 हमारे उद्देश्य</h2>
+
+<p>
+समाज के कमजोर, जरूरतमंद और वंचित वर्गों के
+सामाजिक एवं आर्थिक विकास में योगदान देना।
+</p>
+
+</section>
+
+
+<main class="container">
+
+
+<section class="intro">
+
+<h3>🌱 NCCPA के प्रमुख उद्देश्य</h3>
+
+<p>
+NCCPA Jankalyan Foundation का उद्देश्य विभिन्न सामाजिक
+क्षेत्रों में जागरूकता, सहायता और सामुदायिक भागीदारी के
+माध्यम से सकारात्मक परिवर्तन को बढ़ावा देना है।
+</p>
+
+</section>
+
+
+<section class="objectives">
+
+
+<div class="objective">
+<span class="number">01</span>
+<div class="icon">📚</div>
+<h3>शिक्षा को बढ़ावा देना</h3>
+<p>
+बच्चों, युवाओं और जरूरतमंद लोगों में शिक्षा के अवसरों
+और शैक्षणिक जागरूकता को बढ़ावा देना।
+</p>
+</div>
+
+
+<div class="objective">
+<span class="number">02</span>
+<div class="icon">🏥</div>
+<h3>स्वास्थ्य जागरूकता</h3>
+<p>
+स्वास्थ्य, स्वच्छता, पोषण और उपलब्ध स्वास्थ्य सेवाओं
+के प्रति समुदाय को जागरूक करना।
+</p>
+</div>
+
+
+<div class="objective">
+<span class="number">03</span>
+<div class="icon">👩</div>
+<h3>महिला सशक्तिकरण</h3>
+<p>
+महिलाओं की शिक्षा, कौशल, आत्मनिर्भरता और सामाजिक
+भागीदारी को बढ़ावा देना।
+</p>
+</div>
+
+
+<div class="objective">
+<span class="number">04</span>
+<div class="icon">💼</div>
+<h3>रोजगार एवं कौशल</h3>
+<p>
+युवाओं और महिलाओं को कौशल विकास, करियर एवं
+रोजगार संबंधी जानकारी से जोड़ना।
+</p>
+</div>
+
+
+<div class="objective">
+<span class="number">05</span>
+<div class="icon">🏘️</div>
+<h3>ग्रामीण विकास</h3>
+<p>
+ग्रामीण क्षेत्रों में सामाजिक जागरूकता और सामुदायिक
+विकास गतिविधियों को प्रोत्साहित करना।
+</p>
+</div>
+
+
+<div class="objective">
+<span class="number">06</span>
+<div class="icon">⚖️</div>
+<h3>मानवाधिकार जागरूकता</h3>
+<p>
+लोगों को उनके अधिकारों, कर्तव्यों और उपलब्ध
+कानूनी सहायता के बारे में जागरूक करना।
+</p>
+</div>
+
+
+<div class="objective">
+<span class="number">07</span>
+<div class="icon">🌳</div>
+<h3>पर्यावरण संरक्षण</h3>
+<p>
+वृक्षारोपण, स्वच्छता और पर्यावरण संरक्षण के प्रति
+सामुदायिक जागरूकता बढ़ाना।
+</p>
+</div>
+
+
+<div class="objective">
+<span class="number">08</span>
+<div class="icon">👶</div>
+<h3>बाल कल्याण</h3>
+<p>
+बाल शिक्षा, बाल अधिकार और बाल सुरक्षा के प्रति
+जागरूकता को बढ़ावा देना।
+</p>
+</div>
+
+
+<div class="objective">
+<span class="number">09</span>
+<div class="icon">🏛️</div>
+<h3>सरकारी योजनाओं की जानकारी</h3>
+<p>
+लोगों को विभिन्न सरकारी योजनाओं और उपलब्ध
+सुविधाओं की जानकारी तक पहुँचाने में सहयोग।
+</p>
+</div>
+
+
+<div class="objective">
+<span class="number">10</span>
+<div class="icon">🤝</div>
+<h3>गरीब परिवार सहायता</h3>
+<p>
+जरूरतमंद परिवारों की आवश्यकताओं को समझकर
+उपलब्ध सहायता एवं सेवाओं से जोड़ना।
+</p>
+</div>
+
+
+<div class="objective">
+<span class="number">11</span>
+<div class="icon">🆘</div>
+<h3>आपदा एवं आपात सहायता</h3>
+<p>
+आपदा और आपातकालीन परिस्थितियों में उपलब्ध
+सहायता संसाधनों से लोगों को जोड़ने का प्रयास।
+</p>
+</div>
+
+
+<div class="objective">
+<span class="number">12</span>
+<div class="icon">💻</div>
+<h3>डिजिटल जागरूकता</h3>
+<p>
+डिजिटल सेवाओं, इंटरनेट और तकनीकी संसाधनों
+के सुरक्षित उपयोग के प्रति जागरूकता।
+</p>
+</div>
+
+
+</section>
+
+
+<section class="section">
+
+<h3>📌 हमारे विस्तृत सामाजिक लक्ष्य</h3>
+
+<ul>
+
+<li>समाज के अंतिम व्यक्ति तक आवश्यक जानकारी पहुँचाना।</li>
+
+<li>शिक्षा एवं स्वास्थ्य सेवाओं के प्रति जागरूकता बढ़ाना।</li>
+
+<li>महिलाओं एवं युवाओं को आत्मनिर्भर बनने के अवसरों से जोड़ना।</li>
+
+<li>गरीब एवं जरूरतमंद परिवारों के लिए सहायता उपलब्ध कराने में सहयोग।</li>
+
+<li>ग्रामीण समुदाय की सक्रिय भागीदारी को बढ़ावा देना।</li>
+
+<li>बाल विवाह जैसी सामाजिक कुरीतियों के विरुद्ध जागरूकता।</li>
+
+<li>स्वच्छता एवं पर्यावरण संरक्षण अभियान को प्रोत्साहित करना।</li>
+
+<li>मानवाधिकार और सामाजिक न्याय के प्रति जागरूकता बढ़ाना।</li>
+
+<li>सरकारी योजनाओं की सही जानकारी समुदाय तक पहुँचाना।</li>
+
+<li>सामुदायिक सर्वे के माध्यम से स्थानीय जरूरतों को समझना।</li>
+
+</ul>
+
+</section>
+
+
+<section class="section">
+
+<h3>🌟 हमारा मूल संकल्प</h3>
+
+<div class="highlight">
+
+“हर घर तक सेवा, हर दिल में विश्वास”
+
+</div>
+
+<p style="margin-top:20px;text-align:center;">
+
+हमारा प्रयास है कि सामाजिक विकास केवल कुछ लोगों तक
+सीमित न रहे, बल्कि समुदाय की भागीदारी के साथ
+अधिक से अधिक जरूरतमंद लोगों तक पहुँचे।
+
+</p>
+
+</section>
+
+
+<section class="cta">
+
+<h3>🤝 उद्देश्य से जुड़ें, बदलाव का हिस्सा बनें</h3>
+
+<p>
+आप Volunteer, Member या Supporter के रूप में
+सामाजिक सेवा अभियान से जुड़ सकते हैं।
+</p>
+
+<a class="btn" href="contact.html">
+हमसे संपर्क करें
+</a>
+
+<a class="btn" href="donate.html">
+सहयोग करें
+</a>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<p><strong>NCCPA Jankalyan Foundation</strong></p>
+
+<p>
+National Council for Community Promotion & Awareness
+</p>
+
+<p>Section 8 Non-Government Organization</p>
+
+<p>📍 Purnea, Bihar</p>
+
+<p>📞 8084284106 | 7903998184</p>
+
+<p>✉️ infonccpa@gmail.com</p>
+
+<br>
+
+<p>हर घर तक सेवा, हर दिल में विश्वास</p>
+
+<p>© 2026 NCCPA Jankalyan Foundation. All Rights Reserved.</p>
+
+</footer>
+
+
+<a class="whatsapp"
+   href="https://wa.me/918084281046"
+   target="_blank"
+   aria-label="WhatsApp">
+💬
+</a>
+
+</body>
+</html>
