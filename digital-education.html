@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>डिजिटल शिक्षा एवं कंप्यूटर जागरूकता | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+        content="NCCPA Jankalyan Foundation द्वारा डिजिटल शिक्षा, कंप्यूटर प्रशिक्षण, इंटरनेट जागरूकता और डिजिटल साक्षरता को बढ़ावा देने की पहल।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,"Noto Sans Devanagari",sans-serif;
+      line-height:1.7;
+      background:#f5f8fb;
+      color:#222;
+    }
+
+    .topbar{
+      background:#123c69;
+      color:#fff;
+      padding:8px 5%;
+      font-size:14px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.12);
+    }
+
+    .header-inner{
+      max-width:1200px;
+      margin:auto;
+      padding:12px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo{
+      width:75px;
+      height:75px;
+      object-fit:contain;
+    }
+
+    .brand h1{
+      color:#123c69;
+      font-size:22px;
+    }
+
+    .brand p{
+      color:#555;
+      font-size:13px;
+    }
+
+    nav{
+      background:#123c69;
+      padding:10px 5%;
+      text-align:center;
+      overflow-x:auto;
+      white-space:nowrap;
+    }
+
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin:0 9px;
+      font-size:14px;
+    }
+
+    nav a:hover{
+      color:#ffd54f;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#123c69,#1976a8);
+      color:#fff;
+      padding:65px 20px;
+      text-align:center;
+    }
+
+    .hero h2{
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:45px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      color:#123c69;
+      font-size:30px;
+      margin-bottom:12px;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      color:#666;
+      max-width:800px;
+      margin:0 auto 35px;
+    }
+
+    .intro{
+      background:#fff;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      margin-bottom:35px;
+    }
+
+    .intro h3{
+      color:#123c69;
+      margin-bottom:12px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:#fff;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      transition:.3s;
+      border-top:4px solid #1976a8;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .icon{
+      font-size:38px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      color:#123c69;
+      margin-bottom:8px;
+    }
+
+    .training{
+      margin-top:45px;
+      background:#eaf4fb;
+      padding:35px 25px;
+      border-radius:15px;
+    }
+
+    .training ul{
+      padding-left:22px;
+    }
+
+    .training li{
+      margin-bottom:10px;
+    }
+
+    .activities{
+      margin-top:45px;
+    }
+
+    .activity-list{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
+      margin-top:25px;
+    }
+
+    .activity{
+      background:#fff;
+      padding:18px;
+      border-radius:10px;
+      box-shadow:0 3px 10px rgba(0,0,0,.07);
+    }
+
+    .activity strong{
+      color:#123c69;
+    }
+
+    .steps{
+      margin-top:45px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:15px;
+    }
+
+    .step{
+      background:#fff;
+      padding:20px;
+      text-align:center;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,.07);
+    }
+
+    .number{
+      width:45px;
+      height:45px;
+      border-radius:50%;
+      background:#123c69;
+      color:#fff;
+      margin:0 auto 10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+      font-size:20px;
+    }
+
+    .cta{
+      background:#123c69;
+      color:#fff;
+      text-align:center;
+      padding:45px 20px;
+      margin-top:45px;
+    }
+
+    .cta h2{
+      font-size:30px;
+      margin-bottom:12px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin:10px 6px;
+      padding:12px 25px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .btn-light{
+      background:#fff;
+      color:#123c69;
+    }
+
+    .btn-green{
+      background:#25D366;
+      color:#fff;
+    }
+
+    .disclaimer{
+      max-width:1000px;
+      margin:30px auto;
+      padding:20px;
+      background:#fff8e1;
+      border-left:5px solid #f0ad00;
+      color:#555;
+    }
+
+    footer{
+      background:#0d2d4d;
+      color:#fff;
+      text-align:center;
+      padding:30px 20px;
+    }
+
+    footer p{
+      margin:6px 0;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#25D366;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      text-decoration:none;
+      box-shadow:0 4px 15px rgba(0,0,0,.25);
+      z-index:2000;
+    }
+
+    @media(max-width:850px){
+      .cards{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .steps{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:600px){
+      .topbar{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .header-inner{
+        justify-content:center;
+        text-align:center;
+        flex-direction:column;
+      }
+
+      .brand h1{
+        font-size:19px;
+      }
+
+      .cards,
+      .activity-list,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding:45px 15px;
+      }
+
+      .hero h2{
+        font-size:27px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .section-title{
+        font-size:25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>📞 8084284106 / 7903998184</span>
+    <span>✉️ infonccpa@gmail.com</span>
+  </div>
+
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="header-inner">
+
+      <img src="assets/logo.svg"
+           alt="NCCPA Jankalyan Foundation Logo"
+           class="logo">
+
+      <div class="brand">
+        <h1>NCCPA Jankalyan Foundation</h1>
+        <p>National Council for Community Promotion & Awareness</p>
+      </div>
+
+    </div>
+
+    <nav>
+      <a href="index.html">होम</a>
+      <a href="about.html">हमारे बारे में</a>
+      <a href="services.html">सेवाएँ</a>
+      <a href="education.html">शिक्षा</a>
+      <a href="digital-education.html">डिजिटल शिक्षा</a>
+      <a href="health.html">स्वास्थ्य</a>
+      <a href="schemes.html">सरकारी योजनाएँ</a>
+      <a href="news.html">समाचार</a>
+      <a href="gallery.html">गैलरी</a>
+      <a href="contact.html">संपर्क</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <h2>💻 डिजिटल शिक्षा एवं कंप्यूटर जागरूकता</h2>
+
+    <p>
+      डिजिटल युग में कंप्यूटर, इंटरनेट और डिजिटल सेवाओं की जानकारी
+      शिक्षा एवं रोजगार के लिए महत्वपूर्ण है। NCCPA Jankalyan Foundation
+      डिजिटल साक्षरता और तकनीकी जागरूकता को बढ़ावा देने का प्रयास करता है।
+    </p>
+
+  </section>
+
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- INTRO -->
+    <div class="intro">
+
+      <h3>🌐 डिजिटल शिक्षा क्यों जरूरी है?</h3>
+
+      <p>
+        आज शिक्षा, रोजगार, सरकारी सेवाएँ, बैंकिंग और अनेक आवश्यक
+        सेवाएँ डिजिटल माध्यम से उपलब्ध हैं। ग्रामीण एवं जरूरतमंद
+        समुदायों को इन सुविधाओं का सुरक्षित और सही तरीके से उपयोग
+        करने के लिए डिजिटल ज्ञान की आवश्यकता है।
+      </p>
+
+      <p>
+        संस्था का उद्देश्य लोगों को कंप्यूटर, इंटरनेट, डिजिटल सेवाओं
+        और ऑनलाइन जानकारी के उपयोग के प्रति जागरूक करना तथा
+        उपलब्ध अवसरों की जानकारी देना है।
+      </p>
+
+    </div>
+
+
+    <!-- KEY AREAS -->
+    <h2 class="section-title">
+      🖥️ डिजिटल शिक्षा के प्रमुख क्षेत्र
+    </h2>
+
+    <p class="section-subtitle">
+      बच्चों, युवाओं, महिलाओं और ग्रामीण समुदायों में
+      डिजिटल ज्ञान एवं आत्मनिर्भरता को बढ़ावा देने के प्रमुख क्षेत्र।
+    </p>
+
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>बेसिक कंप्यूटर शिक्षा</h3>
+        <p>
+          कंप्यूटर के मूलभूत उपयोग, फाइल, फोल्डर,
+          टाइपिंग और सामान्य कंप्यूटर ज्ञान की जानकारी।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>इंटरनेट जागरूकता</h3>
+        <p>
+          इंटरनेट का सही उपयोग, ऑनलाइन जानकारी प्राप्त करना
+          और डिजिटल सेवाओं की जानकारी।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>स्मार्टफोन जागरूकता</h3>
+        <p>
+          स्मार्टफोन के उपयोग, ऑनलाइन सेवाओं और
+          डिजिटल सुविधाओं के बारे में सामान्य जानकारी।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🔐</div>
+        <h3>साइबर सुरक्षा जागरूकता</h3>
+        <p>
+          OTP, पासवर्ड, संदिग्ध लिंक और ऑनलाइन धोखाधड़ी
+          से बचाव के लिए जागरूकता।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🏦</div>
+        <h3>डिजिटल वित्तीय जागरूकता</h3>
+        <p>
+          डिजिटल भुगतान और ऑनलाइन वित्तीय सेवाओं का
+          सुरक्षित उपयोग समझाने के लिए जागरूकता।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">📝</div>
+        <h3>ऑनलाइन फॉर्म जागरूकता</h3>
+        <p>
+          शिक्षा, रोजगार एवं सरकारी सेवाओं से संबंधित
+          ऑनलाइन आवेदन प्रक्रियाओं की सामान्य जानकारी।
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- TRAINING -->
+    <section class="training">
+
+      <h2 class="section-title">
+        🎯 प्रशिक्षण में शामिल विषय
+      </h2>
+
+      <ul>
+
+        <li>कंप्यूटर का परिचय एवं बेसिक संचालन</li>
+
+        <li>हिंदी एवं अंग्रेजी टाइपिंग की जानकारी</li>
+
+        <li>डॉक्यूमेंट एवं सामान्य कार्यालय कार्य</li>
+
+        <li>इंटरनेट और ई-मेल का उपयोग</li>
+
+        <li>ऑनलाइन शिक्षा संसाधनों की जानकारी</li>
+
+        <li>डिजिटल सरकारी सेवाओं की जानकारी</li>
+
+        <li>साइबर सुरक्षा एवं ऑनलाइन धोखाधड़ी से बचाव</li>
+
+        <li>डिजिटल भुगतान के सुरक्षित उपयोग की जागरूकता</li>
+
+        <li>ऑनलाइन नौकरी एवं कौशल विकास पोर्टल की जानकारी</li>
+
+        <li>डिजिटल दस्तावेज एवं ऑनलाइन आवेदन की सामान्य जानकारी</li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- ACTIVITIES -->
+    <section class="activities">
+
+      <h2 class="section-title">
+        🌟 डिजिटल शिक्षा गतिविधियाँ
+      </h2>
+
+      <p class="section-subtitle">
+        स्थानीय आवश्यकता और उपलब्ध संसाधनों के अनुसार
+        संस्था विभिन्न डिजिटल जागरूकता गतिविधियों को बढ़ावा दे सकती है।
+      </p>
+
+
+      <div class="activity-list">
+
+        <div class="activity">
+          💻 <strong>कंप्यूटर जागरूकता शिविर</strong><br>
+          विद्यार्थियों एवं युवाओं को कंप्यूटर के सामान्य उपयोग की जानकारी।
+        </div>
+
+
+        <div class="activity">
+          📱 <strong>डिजिटल साक्षरता अभियान</strong><br>
+          ग्रामीण समुदाय को डिजिटल सेवाओं के प्रति जागरूक करना।
+        </div>
+
+
+        <div class="activity">
+          🔐 <strong>साइबर सुरक्षा अभियान</strong><br>
+          ऑनलाइन धोखाधड़ी एवं साइबर जोखिमों से बचाव की जानकारी।
+        </div>
+
+
+        <div class="activity">
+          🎓 <strong>ऑनलाइन शिक्षा सहायता</strong><br>
+          विद्यार्थियों को डिजिटल अध्ययन संसाधनों की जानकारी।
+        </div>
+
+
+        <div class="activity">
+          👩‍💻 <strong>महिला डिजिटल सशक्तिकरण</strong><br>
+          महिलाओं को डिजिटल सेवाओं एवं तकनीकी ज्ञान के अवसरों से जोड़ना।
+        </div>
+
+
+        <div class="activity">
+          🧑‍💼 <strong>युवा डिजिटल कौशल</strong><br>
+          युवाओं को रोजगार एवं कौशल विकास से संबंधित डिजिटल अवसरों की जानकारी।
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 4 STEPS -->
+    <section style="margin-top:45px;">
+
+      <h2 class="section-title">
+        🚀 डिजिटल सीखने की सरल शुरुआत
+      </h2>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="number">1</div>
+          <h3>सीखें</h3>
+          <p>कंप्यूटर और मोबाइल की मूल जानकारी प्राप्त करें।</p>
+        </div>
+
+
+        <div class="step">
+          <div class="number">2</div>
+          <h3>समझें</h3>
+          <p>इंटरनेट और डिजिटल सेवाओं का सही उपयोग समझें।</p>
+        </div>
+
+
+        <div class="step">
+          <div class="number">3</div>
+          <h3>सुरक्षित रहें</h3>
+          <p>पासवर्ड, OTP और साइबर सुरक्षा के नियम जानें।</p>
+        </div>
+
+
+        <div class="step">
+          <div class="number">4</div>
+          <h3>आगे बढ़ें</h3>
+          <p>डिजिटल कौशल का उपयोग शिक्षा एवं रोजगार में करें।</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>🤝 डिजिटल शिक्षा अभियान से जुड़ें</h2>
+
+    <p>
+      आप स्वयंसेवक बनकर, प्रशिक्षण संसाधनों में सहयोग देकर
+      या संस्था की गतिविधियों में योगदान करके डिजिटल शिक्षा
+      को बढ़ावा देने में सहायता कर सकते हैं।
+    </p>
+
+    <a href="contact.html" class="btn btn-light">
+      📞 संपर्क करें
+    </a>
+
+    <a href="donate.html" class="btn btn-green">
+      ❤️ सहयोग / Donate
+    </a>
+
+  </section>
+
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+
+    <strong>महत्वपूर्ण सूचना:</strong>
+
+    डिजिटल सेवाओं, सरकारी पोर्टल, बैंकिंग अथवा अन्य ऑनलाइन
+    सेवाओं का उपयोग करते समय संबंधित आधिकारिक वेबसाइट/विभाग
+    के नियमों का पालन करें। किसी भी संवेदनशील जानकारी जैसे
+    OTP, PIN या पासवर्ड को किसी अन्य व्यक्ति के साथ साझा न करें।
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>NCCPA Jankalyan Foundation</strong>
+    </p>
+
+    <p>
+      National Council for Community Promotion & Awareness
+    </p>
+
+    <p>
+      “हर घर तक सेवा, हर दिल में विश्वास”
+    </p>
+
+    <p>
+      “आपातकाल हो या अधिकार – हम हैं तैयार”
+    </p>
+
+    <p>
+      📍 Bochgaon, Purnea, Bihar – 854330
+    </p>
+
+    <p>
+      📞 8084284106 | 7903998184
+    </p>
+
+    <p>
+      ✉️ infonccpa@gmail.com
+    </p>
+
+    <p style="margin-top:15px;">
+      © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/918084281046"
+    class="whatsapp"
+    target="_blank"
+    aria-label="WhatsApp">
+    💬
+  </a>
+
+</body>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>डिजिटल शिक्षा एवं कंप्यूटर जागरूकता | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+        content="NCCPA Jankalyan Foundation द्वारा डिजिटल शिक्षा, कंप्यूटर प्रशिक्षण, इंटरनेट जागरूकता और डिजिटल साक्षरता को बढ़ावा देने की पहल।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,"Noto Sans Devanagari",sans-serif;
+      line-height:1.7;
+      background:#f5f8fb;
+      color:#222;
+    }
+
+    .topbar{
+      background:#123c69;
+      color:#fff;
+      padding:8px 5%;
+      font-size:14px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.12);
+    }
+
+    .header-inner{
+      max-width:1200px;
+      margin:auto;
+      padding:12px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo{
+      width:75px;
+      height:75px;
+      object-fit:contain;
+    }
+
+    .brand h1{
+      color:#123c69;
+      font-size:22px;
+    }
+
+    .brand p{
+      color:#555;
+      font-size:13px;
+    }
+
+    nav{
+      background:#123c69;
+      padding:10px 5%;
+      text-align:center;
+      overflow-x:auto;
+      white-space:nowrap;
+    }
+
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin:0 9px;
+      font-size:14px;
+    }
+
+    nav a:hover{
+      color:#ffd54f;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#123c69,#1976a8);
+      color:#fff;
+      padding:65px 20px;
+      text-align:center;
+    }
+
+    .hero h2{
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:45px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      color:#123c69;
+      font-size:30px;
+      margin-bottom:12px;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      color:#666;
+      max-width:800px;
+      margin:0 auto 35px;
+    }
+
+    .intro{
+      background:#fff;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      margin-bottom:35px;
+    }
+
+    .intro h3{
+      color:#123c69;
+      margin-bottom:12px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:#fff;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      transition:.3s;
+      border-top:4px solid #1976a8;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .icon{
+      font-size:38px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      color:#123c69;
+      margin-bottom:8px;
+    }
+
+    .training{
+      margin-top:45px;
+      background:#eaf4fb;
+      padding:35px 25px;
+      border-radius:15px;
+    }
+
+    .training ul{
+      padding-left:22px;
+    }
+
+    .training li{
+      margin-bottom:10px;
+    }
+
+    .activities{
+      margin-top:45px;
+    }
+
+    .activity-list{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
+      margin-top:25px;
+    }
+
+    .activity{
+      background:#fff;
+      padding:18px;
+      border-radius:10px;
+      box-shadow:0 3px 10px rgba(0,0,0,.07);
+    }
+
+    .activity strong{
+      color:#123c69;
+    }
+
+    .steps{
+      margin-top:45px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:15px;
+    }
+
+    .step{
+      background:#fff;
+      padding:20px;
+      text-align:center;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,.07);
+    }
+
+    .number{
+      width:45px;
+      height:45px;
+      border-radius:50%;
+      background:#123c69;
+      color:#fff;
+      margin:0 auto 10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+      font-size:20px;
+    }
+
+    .cta{
+      background:#123c69;
+      color:#fff;
+      text-align:center;
+      padding:45px 20px;
+      margin-top:45px;
+    }
+
+    .cta h2{
+      font-size:30px;
+      margin-bottom:12px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin:10px 6px;
+      padding:12px 25px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .btn-light{
+      background:#fff;
+      color:#123c69;
+    }
+
+    .btn-green{
+      background:#25D366;
+      color:#fff;
+    }
+
+    .disclaimer{
+      max-width:1000px;
+      margin:30px auto;
+      padding:20px;
+      background:#fff8e1;
+      border-left:5px solid #f0ad00;
+      color:#555;
+    }
+
+    footer{
+      background:#0d2d4d;
+      color:#fff;
+      text-align:center;
+      padding:30px 20px;
+    }
+
+    footer p{
+      margin:6px 0;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#25D366;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      text-decoration:none;
+      box-shadow:0 4px 15px rgba(0,0,0,.25);
+      z-index:2000;
+    }
+
+    @media(max-width:850px){
+      .cards{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .steps{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:600px){
+      .topbar{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .header-inner{
+        justify-content:center;
+        text-align:center;
+        flex-direction:column;
+      }
+
+      .brand h1{
+        font-size:19px;
+      }
+
+      .cards,
+      .activity-list,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding:45px 15px;
+      }
+
+      .hero h2{
+        font-size:27px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .section-title{
+        font-size:25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>📞 8084284106 / 7903998184</span>
+    <span>✉️ infonccpa@gmail.com</span>
+  </div>
+
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="header-inner">
+
+      <img src="assets/logo.svg"
+           alt="NCCPA Jankalyan Foundation Logo"
+           class="logo">
+
+      <div class="brand">
+        <h1>NCCPA Jankalyan Foundation</h1>
+        <p>National Council for Community Promotion & Awareness</p>
+      </div>
+
+    </div>
+
+    <nav>
+      <a href="index.html">होम</a>
+      <a href="about.html">हमारे बारे में</a>
+      <a href="services.html">सेवाएँ</a>
+      <a href="education.html">शिक्षा</a>
+      <a href="digital-education.html">डिजिटल शिक्षा</a>
+      <a href="health.html">स्वास्थ्य</a>
+      <a href="schemes.html">सरकारी योजनाएँ</a>
+      <a href="news.html">समाचार</a>
+      <a href="gallery.html">गैलरी</a>
+      <a href="contact.html">संपर्क</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <h2>💻 डिजिटल शिक्षा एवं कंप्यूटर जागरूकता</h2>
+
+    <p>
+      डिजिटल युग में कंप्यूटर, इंटरनेट और डिजिटल सेवाओं की जानकारी
+      शिक्षा एवं रोजगार के लिए महत्वपूर्ण है। NCCPA Jankalyan Foundation
+      डिजिटल साक्षरता और तकनीकी जागरूकता को बढ़ावा देने का प्रयास करता है।
+    </p>
+
+  </section>
+
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- INTRO -->
+    <div class="intro">
+
+      <h3>🌐 डिजिटल शिक्षा क्यों जरूरी है?</h3>
+
+      <p>
+        आज शिक्षा, रोजगार, सरकारी सेवाएँ, बैंकिंग और अनेक आवश्यक
+        सेवाएँ डिजिटल माध्यम से उपलब्ध हैं। ग्रामीण एवं जरूरतमंद
+        समुदायों को इन सुविधाओं का सुरक्षित और सही तरीके से उपयोग
+        करने के लिए डिजिटल ज्ञान की आवश्यकता है।
+      </p>
+
+      <p>
+        संस्था का उद्देश्य लोगों को कंप्यूटर, इंटरनेट, डिजिटल सेवाओं
+        और ऑनलाइन जानकारी के उपयोग के प्रति जागरूक करना तथा
+        उपलब्ध अवसरों की जानकारी देना है।
+      </p>
+
+    </div>
+
+
+    <!-- KEY AREAS -->
+    <h2 class="section-title">
+      🖥️ डिजिटल शिक्षा के प्रमुख क्षेत्र
+    </h2>
+
+    <p class="section-subtitle">
+      बच्चों, युवाओं, महिलाओं और ग्रामीण समुदायों में
+      डिजिटल ज्ञान एवं आत्मनिर्भरता को बढ़ावा देने के प्रमुख क्षेत्र।
+    </p>
+
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>बेसिक कंप्यूटर शिक्षा</h3>
+        <p>
+          कंप्यूटर के मूलभूत उपयोग, फाइल, फोल्डर,
+          टाइपिंग और सामान्य कंप्यूटर ज्ञान की जानकारी।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>इंटरनेट जागरूकता</h3>
+        <p>
+          इंटरनेट का सही उपयोग, ऑनलाइन जानकारी प्राप्त करना
+          और डिजिटल सेवाओं की जानकारी।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>स्मार्टफोन जागरूकता</h3>
+        <p>
+          स्मार्टफोन के उपयोग, ऑनलाइन सेवाओं और
+          डिजिटल सुविधाओं के बारे में सामान्य जानकारी।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🔐</div>
+        <h3>साइबर सुरक्षा जागरूकता</h3>
+        <p>
+          OTP, पासवर्ड, संदिग्ध लिंक और ऑनलाइन धोखाधड़ी
+          से बचाव के लिए जागरूकता।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🏦</div>
+        <h3>डिजिटल वित्तीय जागरूकता</h3>
+        <p>
+          डिजिटल भुगतान और ऑनलाइन वित्तीय सेवाओं का
+          सुरक्षित उपयोग समझाने के लिए जागरूकता।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">📝</div>
+        <h3>ऑनलाइन फॉर्म जागरूकता</h3>
+        <p>
+          शिक्षा, रोजगार एवं सरकारी सेवाओं से संबंधित
+          ऑनलाइन आवेदन प्रक्रियाओं की सामान्य जानकारी।
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- TRAINING -->
+    <section class="training">
+
+      <h2 class="section-title">
+        🎯 प्रशिक्षण में शामिल विषय
+      </h2>
+
+      <ul>
+
+        <li>कंप्यूटर का परिचय एवं बेसिक संचालन</li>
+
+        <li>हिंदी एवं अंग्रेजी टाइपिंग की जानकारी</li>
+
+        <li>डॉक्यूमेंट एवं सामान्य कार्यालय कार्य</li>
+
+        <li>इंटरनेट और ई-मेल का उपयोग</li>
+
+        <li>ऑनलाइन शिक्षा संसाधनों की जानकारी</li>
+
+        <li>डिजिटल सरकारी सेवाओं की जानकारी</li>
+
+        <li>साइबर सुरक्षा एवं ऑनलाइन धोखाधड़ी से बचाव</li>
+
+        <li>डिजिटल भुगतान के सुरक्षित उपयोग की जागरूकता</li>
+
+        <li>ऑनलाइन नौकरी एवं कौशल विकास पोर्टल की जानकारी</li>
+
+        <li>डिजिटल दस्तावेज एवं ऑनलाइन आवेदन की सामान्य जानकारी</li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- ACTIVITIES -->
+    <section class="activities">
+
+      <h2 class="section-title">
+        🌟 डिजिटल शिक्षा गतिविधियाँ
+      </h2>
+
+      <p class="section-subtitle">
+        स्थानीय आवश्यकता और उपलब्ध संसाधनों के अनुसार
+        संस्था विभिन्न डिजिटल जागरूकता गतिविधियों को बढ़ावा दे सकती है।
+      </p>
+
+
+      <div class="activity-list">
+
+        <div class="activity">
+          💻 <strong>कंप्यूटर जागरूकता शिविर</strong><br>
+          विद्यार्थियों एवं युवाओं को कंप्यूटर के सामान्य उपयोग की जानकारी।
+        </div>
+
+
+        <div class="activity">
+          📱 <strong>डिजिटल साक्षरता अभियान</strong><br>
+          ग्रामीण समुदाय को डिजिटल सेवाओं के प्रति जागरूक करना।
+        </div>
+
+
+        <div class="activity">
+          🔐 <strong>साइबर सुरक्षा अभियान</strong><br>
+          ऑनलाइन धोखाधड़ी एवं साइबर जोखिमों से बचाव की जानकारी।
+        </div>
+
+
+        <div class="activity">
+          🎓 <strong>ऑनलाइन शिक्षा सहायता</strong><br>
+          विद्यार्थियों को डिजिटल अध्ययन संसाधनों की जानकारी।
+        </div>
+
+
+        <div class="activity">
+          👩‍💻 <strong>महिला डिजिटल सशक्तिकरण</strong><br>
+          महिलाओं को डिजिटल सेवाओं एवं तकनीकी ज्ञान के अवसरों से जोड़ना।
+        </div>
+
+
+        <div class="activity">
+          🧑‍💼 <strong>युवा डिजिटल कौशल</strong><br>
+          युवाओं को रोजगार एवं कौशल विकास से संबंधित डिजिटल अवसरों की जानकारी।
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 4 STEPS -->
+    <section style="margin-top:45px;">
+
+      <h2 class="section-title">
+        🚀 डिजिटल सीखने की सरल शुरुआत
+      </h2>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="number">1</div>
+          <h3>सीखें</h3>
+          <p>कंप्यूटर और मोबाइल की मूल जानकारी प्राप्त करें।</p>
+        </div>
+
+
+        <div class="step">
+          <div class="number">2</div>
+          <h3>समझें</h3>
+          <p>इंटरनेट और डिजिटल सेवाओं का सही उपयोग समझें।</p>
+        </div>
+
+
+        <div class="step">
+          <div class="number">3</div>
+          <h3>सुरक्षित रहें</h3>
+          <p>पासवर्ड, OTP और साइबर सुरक्षा के नियम जानें।</p>
+        </div>
+
+
+        <div class="step">
+          <div class="number">4</div>
+          <h3>आगे बढ़ें</h3>
+          <p>डिजिटल कौशल का उपयोग शिक्षा एवं रोजगार में करें।</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>🤝 डिजिटल शिक्षा अभियान से जुड़ें</h2>
+
+    <p>
+      आप स्वयंसेवक बनकर, प्रशिक्षण संसाधनों में सहयोग देकर
+      या संस्था की गतिविधियों में योगदान करके डिजिटल शिक्षा
+      को बढ़ावा देने में सहायता कर सकते हैं।
+    </p>
+
+    <a href="contact.html" class="btn btn-light">
+      📞 संपर्क करें
+    </a>
+
+    <a href="donate.html" class="btn btn-green">
+      ❤️ सहयोग / Donate
+    </a>
+
+  </section>
+
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+
+    <strong>महत्वपूर्ण सूचना:</strong>
+
+    डिजिटल सेवाओं, सरकारी पोर्टल, बैंकिंग अथवा अन्य ऑनलाइन
+    सेवाओं का उपयोग करते समय संबंधित आधिकारिक वेबसाइट/विभाग
+    के नियमों का पालन करें। किसी भी संवेदनशील जानकारी जैसे
+    OTP, PIN या पासवर्ड को किसी अन्य व्यक्ति के साथ साझा न करें।
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>NCCPA Jankalyan Foundation</strong>
+    </p>
+
+    <p>
+      National Council for Community Promotion & Awareness
+    </p>
+
+    <p>
+      “हर घर तक सेवा, हर दिल में विश्वास”
+    </p>
+
+    <p>
+      “आपातकाल हो या अधिकार – हम हैं तैयार”
+    </p>
+
+    <p>
+      📍 Bochgaon, Purnea, Bihar – 854330
+    </p>
+
+    <p>
+      📞 8084284106 | 7903998184
+    </p>
+
+    <p>
+      ✉️ infonccpa@gmail.com
+    </p>
+
+    <p style="margin-top:15px;">
+      © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/918084281046"
+    class="whatsapp"
+    target="_blank"
+    aria-label="WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>                                      </html>
