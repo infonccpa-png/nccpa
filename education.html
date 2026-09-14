@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>शिक्षा एवं शैक्षणिक सहायता | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+        content="NCCPA Jankalyan Foundation द्वारा शिक्षा, शैक्षणिक सहायता, डिजिटल शिक्षा, छात्रवृत्ति जागरूकता और जरूरतमंद विद्यार्थियों के सहयोग हेतु पहल।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,"Noto Sans Devanagari",sans-serif;
+      line-height:1.7;
+      background:#f5f8fb;
+      color:#222;
+    }
+
+    .topbar{
+      background:#123c69;
+      color:#fff;
+      padding:8px 5%;
+      font-size:14px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.12);
+    }
+
+    .header-inner{
+      max-width:1200px;
+      margin:auto;
+      padding:12px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo{
+      width:75px;
+      height:75px;
+      object-fit:contain;
+    }
+
+    .brand h1{
+      color:#123c69;
+      font-size:22px;
+    }
+
+    .brand p{
+      color:#555;
+      font-size:13px;
+    }
+
+    nav{
+      background:#123c69;
+      padding:10px 5%;
+      text-align:center;
+      overflow-x:auto;
+      white-space:nowrap;
+    }
+
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin:0 9px;
+      font-size:14px;
+    }
+
+    nav a:hover{
+      color:#ffd54f;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#123c69,#1976a8);
+      color:#fff;
+      padding:65px 20px;
+      text-align:center;
+    }
+
+    .hero h2{
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:45px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      color:#123c69;
+      font-size:30px;
+      margin-bottom:12px;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      color:#666;
+      max-width:800px;
+      margin:0 auto 35px;
+    }
+
+    .intro{
+      background:#fff;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      margin-bottom:35px;
+    }
+
+    .intro h3{
+      color:#123c69;
+      margin-bottom:12px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:#fff;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      transition:.3s;
+      border-top:4px solid #1976a8;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .icon{
+      font-size:38px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      color:#123c69;
+      margin-bottom:8px;
+    }
+
+    .support{
+      margin-top:45px;
+      background:#eaf4fb;
+      padding:35px 25px;
+      border-radius:15px;
+    }
+
+    .support ul{
+      padding-left:22px;
+    }
+
+    .support li{
+      margin-bottom:10px;
+    }
+
+    .activities{
+      margin-top:45px;
+    }
+
+    .activity-list{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
+      margin-top:25px;
+    }
+
+    .activity{
+      background:#fff;
+      padding:18px;
+      border-radius:10px;
+      box-shadow:0 3px 10px rgba(0,0,0,.07);
+    }
+
+    .activity strong{
+      color:#123c69;
+    }
+
+    .cta{
+      background:#123c69;
+      color:#fff;
+      text-align:center;
+      padding:45px 20px;
+      margin-top:45px;
+    }
+
+    .cta h2{
+      font-size:30px;
+      margin-bottom:12px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin:10px 6px;
+      padding:12px 25px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .btn-light{
+      background:#fff;
+      color:#123c69;
+    }
+
+    .btn-green{
+      background:#25D366;
+      color:#fff;
+    }
+
+    .disclaimer{
+      max-width:1000px;
+      margin:30px auto;
+      padding:20px;
+      background:#fff8e1;
+      border-left:5px solid #f0ad00;
+      color:#555;
+    }
+
+    footer{
+      background:#0d2d4d;
+      color:#fff;
+      text-align:center;
+      padding:30px 20px;
+    }
+
+    footer p{
+      margin:6px 0;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#25D366;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      text-decoration:none;
+      box-shadow:0 4px 15px rgba(0,0,0,.25);
+      z-index:2000;
+    }
+
+    @media(max-width:800px){
+      .cards{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .activity-list{
+        grid-template-columns:1fr;
+      }
+
+      .hero h2{
+        font-size:30px;
+      }
+    }
+
+    @media(max-width:600px){
+      .topbar{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .header-inner{
+        justify-content:center;
+        text-align:center;
+        flex-direction:column;
+      }
+
+      .brand h1{
+        font-size:19px;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding:45px 15px;
+      }
+
+      .hero h2{
+        font-size:27px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .section-title{
+        font-size:25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>📞 8084284106 / 7903998184</span>
+    <span>✉️ infonccpa@gmail.com</span>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+
+      <img src="assets/logo.svg"
+           alt="NCCPA Jankalyan Foundation Logo"
+           class="logo">
+
+      <div class="brand">
+        <h1>NCCPA Jankalyan Foundation</h1>
+        <p>National Council for Community Promotion & Awareness</p>
+      </div>
+
+    </div>
+
+    <nav>
+      <a href="index.html">होम</a>
+      <a href="about.html">हमारे बारे में</a>
+      <a href="services.html">सेवाएँ</a>
+      <a href="education.html">शिक्षा</a>
+      <a href="health.html">स्वास्थ्य</a>
+      <a href="schemes.html">सरकारी योजनाएँ</a>
+      <a href="news.html">समाचार</a>
+      <a href="gallery.html">गैलरी</a>
+      <a href="contact.html">संपर्क</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>🎓 शिक्षा एवं शैक्षणिक सहायता</h2>
+    <p>
+      शिक्षा हर बच्चे और हर व्यक्ति का अधिकार है।
+      NCCPA Jankalyan Foundation शिक्षा के प्रति जागरूकता,
+      अवसरों की जानकारी और जरूरतमंद विद्यार्थियों के सहयोग
+      के लिए विभिन्न सामाजिक पहलों को बढ़ावा देता है।
+    </p>
+  </section>
+
+
+  <!-- INTRO -->
+  <main class="container">
+
+    <div class="intro">
+      <h3>📚 हमारा शिक्षा उद्देश्य</h3>
+
+      <p>
+        हमारा प्रयास है कि आर्थिक या सामाजिक कठिनाइयों के कारण
+        कोई भी बच्चा शिक्षा से वंचित न रहे। संस्था शिक्षा के महत्व,
+        विद्यालय से जुड़ाव, छात्रवृत्ति, डिजिटल शिक्षा, कौशल विकास
+        और करियर संबंधी अवसरों के बारे में जागरूकता बढ़ाने का प्रयास करती है।
+      </p>
+
+      <p>
+        विशेष रूप से ग्रामीण क्षेत्रों के बच्चों, जरूरतमंद परिवारों,
+        बालिकाओं और शिक्षा से दूर हो रहे विद्यार्थियों तक
+        जानकारी एवं सहयोग पहुँचाने को प्राथमिकता दी जाती है।
+      </p>
+    </div>
+
+
+    <!-- KEY AREAS -->
+    <h2 class="section-title">हमारे प्रमुख शिक्षा क्षेत्र</h2>
+
+    <p class="section-subtitle">
+      शिक्षा के क्षेत्र में जागरूकता, मार्गदर्शन और सामुदायिक सहयोग
+      को बढ़ावा देने वाली प्रमुख गतिविधियाँ।
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🏫</div>
+        <h3>स्कूल शिक्षा जागरूकता</h3>
+        <p>
+          बच्चों को नियमित विद्यालय जाने और शिक्षा जारी रखने
+          के महत्व के बारे में जागरूक करना।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👧</div>
+        <h3>बालिका शिक्षा</h3>
+        <p>
+          बालिकाओं की शिक्षा के महत्व तथा उपलब्ध शैक्षणिक
+          अवसरों के प्रति परिवारों को जागरूक करना।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>डिजिटल शिक्षा</h3>
+        <p>
+          विद्यार्थियों को डिजिटल संसाधनों, ऑनलाइन अध्ययन
+          और कंप्यूटर शिक्षा के अवसरों से परिचित कराना।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎓</div>
+        <h3>छात्रवृत्ति जागरूकता</h3>
+        <p>
+          विद्यार्थियों और अभिभावकों को उपलब्ध छात्रवृत्ति
+          एवं शैक्षणिक योजनाओं की जानकारी देना।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📖</div>
+        <h3>पुस्तक एवं अध्ययन सहायता</h3>
+        <p>
+          जरूरतमंद विद्यार्थियों के लिए पुस्तक, अध्ययन सामग्री
+          और शिक्षा सहयोग की संभावनाओं को बढ़ावा देना।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧑‍🏫</div>
+        <h3>शैक्षणिक मार्गदर्शन</h3>
+        <p>
+          विद्यार्थियों को पढ़ाई, प्रतियोगी परीक्षाओं और
+          भविष्य की शिक्षा के संबंध में मार्गदर्शन देना।
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- SUPPORT -->
+    <section class="support">
+
+      <h2 class="section-title">📌 शैक्षणिक सहायता के प्रमुख क्षेत्र</h2>
+
+      <ul>
+        <li>जरूरतमंद विद्यार्थियों के लिए शिक्षा संबंधी जानकारी।</li>
+        <li>विद्यालय में नामांकन और शिक्षा जारी रखने के प्रति जागरूकता।</li>
+        <li>छात्रवृत्ति एवं सरकारी शिक्षा योजनाओं की जानकारी।</li>
+        <li>डिजिटल शिक्षा और कंप्यूटर सीखने के अवसरों की जानकारी।</li>
+        <li>बालिका शिक्षा को बढ़ावा देने के लिए जागरूकता।</li>
+        <li>स्कूल छोड़ चुके बच्चों की शिक्षा से पुनः जुड़ने के लिए जागरूकता।</li>
+        <li>गरीब एवं जरूरतमंद परिवारों के बच्चों के लिए शिक्षा सहयोग की पहल।</li>
+        <li>प्रतियोगी परीक्षा एवं करियर संबंधी जानकारी।</li>
+      </ul>
+
+    </section>
+
+
+    <!-- ACTIVITIES -->
+    <section class="activities">
+
+      <h2 class="section-title">🌟 हमारी संभावित शिक्षा गतिविधियाँ</h2>
+
+      <p class="section-subtitle">
+        स्थानीय आवश्यकता और उपलब्ध संसाधनों के अनुसार संस्था
+        निम्न प्रकार की गतिविधियों को आयोजित या सहयोग कर सकती है।
+      </p>
+
+      <div class="activity-list">
+
+        <div class="activity">
+          📚 <strong>शिक्षा जागरूकता अभियान</strong><br>
+          गांव एवं समुदाय स्तर पर शिक्षा के महत्व के संबंध में जागरूकता।
+        </div>
+
+        <div class="activity">
+          🏫 <strong>स्कूल संपर्क अभियान</strong><br>
+          विद्यार्थियों एवं अभिभावकों तक शिक्षा संबंधी उपयोगी जानकारी पहुँचाना।
+        </div>
+
+        <div class="activity">
+          💻 <strong>डिजिटल लर्निंग</strong><br>
+          कंप्यूटर एवं डिजिटल माध्यम से सीखने के अवसरों को बढ़ावा देना।
+        </div>
+
+        <div class="activity">
+          🎓 <strong>करियर मार्गदर्शन</strong><br>
+          विद्यार्थियों को आगे की पढ़ाई और करियर विकल्पों की जानकारी देना।
+        </div>
+
+        <div class="activity">
+          👩‍🎓 <strong>बालिका शिक्षा अभियान</strong><br>
+          बालिकाओं की शिक्षा जारी रखने के लिए परिवार एवं समाज को जागरूक करना।
+        </div>
+
+        <div class="activity">
+          📖 <strong>ई-लाइब्रेरी एवं अध्ययन सामग्री</strong><br>
+          विद्यार्थियों के लिए डिजिटल अध्ययन संसाधनों को बढ़ावा देना।
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>🤝 शिक्षा के इस अभियान से जुड़ें</h2>
+
+    <p>
+      आप स्वयंसेवक बनकर, शैक्षणिक सामग्री सहयोग देकर या
+      संस्था की गतिविधियों में सहयोग करके शिक्षा के क्षेत्र में योगदान दे सकते हैं।
+    </p>
+
+    <a href="contact.html" class="btn btn-light">
+      📞 संपर्क करें
+    </a>
+
+    <a href="donate.html" class="btn btn-green">
+      ❤️ सहयोग / Donate
+    </a>
+
+  </section>
+
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <strong>महत्वपूर्ण सूचना:</strong>
+    NCCPA Jankalyan Foundation द्वारा उपलब्ध कराई जाने वाली
+    शिक्षा संबंधी जानकारी एवं सहायता स्थानीय परिस्थितियों,
+    उपलब्ध संसाधनों और संस्था की गतिविधियों के अनुसार हो सकती है।
+    किसी भी सरकारी योजना या छात्रवृत्ति के लिए संबंधित आधिकारिक
+    विभाग की पात्रता एवं नियमों की पुष्टि करना आवश्यक है।
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p><strong>NCCPA Jankalyan Foundation</strong></p>
+
+    <p>
+      National Council for Community Promotion & Awareness
+    </p>
+
+    <p>
+      “हर घर तक सेवा, हर दिल में विश्वास”
+    </p>
+
+    <p>
+      “आपातकाल हो या अधिकार – हम हैं तैयार”
+    </p>
+
+    <p>
+      📍 Bochgaon, Purnea, Bihar – 854330
+    </p>
+
+    <p>
+      📞 8084284106 | 7903998184
+    </p>
+
+    <p>
+      ✉️ infonccpa@gmail.com
+    </p>
+
+    <p style="margin-top:15px;">
+      © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/918084281046"
+    class="whatsapp"
+    target="_blank"
+    aria-label="WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
