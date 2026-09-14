@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>स्वच्छता अभियान एवं स्वच्छ गांव | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+        content="NCCPA Jankalyan Foundation द्वारा स्वच्छता अभियान, स्वच्छ गांव, कचरा प्रबंधन, स्वच्छ जल एवं जन-जागरूकता के लिए सामाजिक पहल।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial, "Noto Sans Devanagari", sans-serif;
+      background:#f5fff8;
+      color:#222;
+      line-height:1.7;
+    }
+
+    header{
+      background:linear-gradient(135deg,#087f23,#16a34a);
+      color:white;
+      padding:14px 20px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 3px 12px rgba(0,0,0,.15);
+    }
+
+    .header-inner{
+      max-width:1150px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo{
+      width:62px;
+      height:62px;
+      background:white;
+      border-radius:50%;
+      padding:3px;
+    }
+
+    .brand h1{
+      font-size:20px;
+      margin-bottom:2px;
+    }
+
+    .brand p{
+      font-size:12px;
+      opacity:.95;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:7px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      padding:7px 10px;
+      border-radius:6px;
+      font-size:13px;
+      font-weight:bold;
+    }
+
+    nav a:hover{
+      background:rgba(255,255,255,.2);
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#dcfce7,#ecfdf5);
+      padding:70px 20px;
+      text-align:center;
+    }
+
+    .hero h2{
+      color:#087f23;
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+      color:#374151;
+    }
+
+    .btn{
+      display:inline-block;
+      margin:22px 7px 0;
+      padding:12px 22px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:bold;
+      background:#087f23;
+      color:white;
+    }
+
+    .btn.secondary{
+      background:#f59e0b;
+    }
+
+    section{
+      max-width:1150px;
+      margin:auto;
+      padding:55px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      color:#087f23;
+      font-size:30px;
+      margin-bottom:12px;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      max-width:850px;
+      margin:0 auto 30px;
+      color:#555;
+    }
+
+    .intro{
+      background:white;
+      padding:30px;
+      border-radius:14px;
+      box-shadow:0 3px 15px rgba(0,0,0,.08);
+      text-align:center;
+    }
+
+    .intro strong{
+      color:#087f23;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:30px;
+    }
+
+    .card{
+      background:white;
+      padding:23px;
+      border-radius:14px;
+      box-shadow:0 3px 12px rgba(0,0,0,.08);
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card .icon{
+      font-size:36px;
+      margin-bottom:8px;
+    }
+
+    .card h3{
+      color:#087f23;
+      margin-bottom:8px;
+      font-size:19px;
+    }
+
+    .activities{
+      background:#ecfdf5;
+    }
+
+    .activity-list{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:25px;
+    }
+
+    .activity{
+      background:white;
+      padding:18px;
+      border-left:5px solid #16a34a;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,.06);
+    }
+
+    .activity span{
+      font-weight:bold;
+      color:#087f23;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:30px;
+    }
+
+    .step{
+      text-align:center;
+      background:white;
+      padding:25px 18px;
+      border-radius:14px;
+      box-shadow:0 3px 12px rgba(0,0,0,.08);
+    }
+
+    .step-number{
+      width:50px;
+      height:50px;
+      margin:0 auto 12px;
+      border-radius:50%;
+      background:#087f23;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:21px;
+      font-weight:bold;
+    }
+
+    .habits{
+      background:#fff;
+    }
+
+    .habit-list{
+      max-width:850px;
+      margin:25px auto 0;
+    }
+
+    .habit-list li{
+      list-style:none;
+      background:#f0fdf4;
+      margin:10px 0;
+      padding:13px 18px;
+      border-radius:8px;
+    }
+
+    .habit-list li::before{
+      content:"✓";
+      color:#087f23;
+      font-weight:bold;
+      margin-right:10px;
+    }
+
+    .roles{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+      margin-top:30px;
+    }
+
+    .role{
+      padding:25px;
+      border-radius:14px;
+      background:#f0fdf4;
+      text-align:center;
+    }
+
+    .role h3{
+      color:#087f23;
+      margin-bottom:8px;
+    }
+
+    .pledge{
+      background:linear-gradient(135deg,#087f23,#16a34a);
+      color:white;
+      padding:45px 25px;
+      text-align:center;
+      border-radius:18px;
+      margin-top:20px;
+    }
+
+    .pledge h2{
+      font-size:30px;
+      margin-bottom:15px;
+    }
+
+    .notice{
+      background:#fff7ed;
+      border-left:5px solid #f59e0b;
+      padding:22px;
+      border-radius:10px;
+      margin-top:30px;
+    }
+
+    .notice h3{
+      color:#b45309;
+      margin-bottom:8px;
+    }
+
+    .cta{
+      text-align:center;
+      background:#ecfdf5;
+      border-radius:18px;
+      padding:45px 20px;
+    }
+
+    footer{
+      background:#102a19;
+      color:white;
+      padding:40px 20px 20px;
+    }
+
+    .footer-inner{
+      max-width:1150px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+    }
+
+    footer h3{
+      color:#86efac;
+      margin-bottom:10px;
+    }
+
+    footer p, footer a{
+      color:#d1d5db;
+      font-size:14px;
+    }
+
+    footer a{
+      text-decoration:none;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #374151;
+      margin-top:30px;
+      padding-top:18px;
+      font-size:13px;
+      color:#aaa;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:#25d366;
+      color:white;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      font-size:28px;
+      box-shadow:0 4px 15px rgba(0,0,0,.25);
+      z-index:999;
+    }
+
+    @media(max-width:900px){
+      .grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .steps{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .roles{
+        grid-template-columns:1fr;
+      }
+
+      .footer-inner{
+        grid-template-columns:1fr;
+      }
+
+      .header-inner{
+        flex-direction:column;
+      }
+    }
+
+    @media(max-width:600px){
+      .hero h2{
+        font-size:28px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .grid,
+      .activity-list,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .brand h1{
+        font-size:17px;
+      }
+
+      nav a{
+        font-size:12px;
+      }
+
+      section{
+        padding:40px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+
+    <div class="brand">
+      <img src="assets/logo.svg"
+           alt="NCCPA Jankalyan Foundation Logo"
+           class="logo">
+
+      <div>
+        <h1>NCCPA Jankalyan Foundation</h1>
+        <p>हर घर तक सेवा, हर दिल में विश्वास</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="schemes.html">योजनाएं</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+<div class="hero">
+
+  <h2>🧹 स्वच्छता अभियान एवं स्वच्छ गांव</h2>
+
+  <p>
+    स्वच्छ गांव, स्वस्थ परिवार और जागरूक समाज के निर्माण के लिए
+    NCCPA Jankalyan Foundation स्वच्छता एवं जन-जागरूकता को बढ़ावा देने
+    के लिए सामुदायिक भागीदारी पर काम करने का प्रयास करता है।
+  </p>
+
+  <a href="contact.html" class="btn">🤝 हमारे साथ जुड़ें</a>
+  <a href="environment.html" class="btn secondary">🌳 पर्यावरण संरक्षण</a>
+
+</div>
+
+
+<!-- INTRO -->
+<section>
+
+  <h2 class="section-title">स्वच्छता क्यों जरूरी है?</h2>
+
+  <p class="section-subtitle">
+    स्वच्छता केवल सफाई करने का नाम नहीं है, बल्कि यह स्वस्थ जीवन,
+    सुरक्षित पर्यावरण और जिम्मेदार नागरिकता का महत्वपूर्ण हिस्सा है।
+  </p>
+
+  <div class="intro">
+
+    <p>
+      <strong>“स्वच्छ गांव – स्वस्थ परिवार – मजबूत समाज”</strong>
+      हमारा उद्देश्य लोगों को अपने घर, आसपास के क्षेत्र और सार्वजनिक
+      स्थानों की स्वच्छता के प्रति जागरूक करना है।
+    </p>
+
+    <p style="margin-top:12px;">
+      स्वच्छता के साथ-साथ कचरे का उचित प्रबंधन, प्लास्टिक का कम उपयोग,
+      स्वच्छ पानी, हाथों की स्वच्छता और सामुदायिक जिम्मेदारी पर भी
+      जागरूकता आवश्यक है।
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- FOCUS AREAS -->
+<section>
+
+  <h2 class="section-title">हमारे स्वच्छता अभियान के प्रमुख क्षेत्र</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">🏠</div>
+      <h3>घर की स्वच्छता</h3>
+      <p>
+        घर और आसपास साफ-सफाई रखने तथा स्वच्छ वातावरण के प्रति
+        परिवारों को जागरूक करना।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏘️</div>
+      <h3>सार्वजनिक स्थल</h3>
+      <p>
+        गांव की गलियों, सार्वजनिक स्थानों और सामुदायिक क्षेत्रों में
+        स्वच्छता के प्रति जनभागीदारी बढ़ाना।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🗑️</div>
+      <h3>कचरा पृथक्करण</h3>
+      <p>
+        गीले और सूखे कचरे को अलग रखने तथा उचित निपटान के बारे में
+        जागरूकता।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">♻️</div>
+      <h3>प्लास्टिक में कमी</h3>
+      <p>
+        एकल उपयोग वाले प्लास्टिक को कम करने और पुन: उपयोग योग्य
+        विकल्प अपनाने के लिए जागरूकता।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚽</div>
+      <h3>स्वच्छ शौचालय</h3>
+      <p>
+        शौचालय की स्वच्छता, व्यक्तिगत स्वच्छता और सुरक्षित स्वच्छता
+        व्यवहार के बारे में जानकारी।
+      </p>
+    </div
