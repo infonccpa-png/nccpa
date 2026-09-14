@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>पौधारोपण अभियान | NCCPA Jankalyan Foundation</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      line-height: 1.7;
+      background: #f4f8f5;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #075e2b, #159447);
+      color: white;
+      padding: 15px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 70px;
+      height: 70px;
+      background: white;
+      border-radius: 50%;
+      padding: 3px;
+    }
+
+    .brand h1 {
+      font-size: 22px;
+    }
+
+    .brand p {
+      font-size: 13px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .hero {
+      padding: 75px 20px;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(rgba(0,90,35,0.84), rgba(0,130,65,0.84)),
+        linear-gradient(135deg, #4b914c, #b6d99d);
+    }
+
+    .hero h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    .intro {
+      background: white;
+      margin-top: 30px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .intro h3 {
+      color: #075e2b;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #075e2b;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      border-top: 4px solid #159447;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #075e2b;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    .green-section {
+      background: #e8f5eb;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+    }
+
+    .item {
+      background: white;
+      padding: 18px;
+      border-radius: 10px;
+      border-left: 5px solid #159447;
+    }
+
+    .item strong {
+      color: #075e2b;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .step {
+      background: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+
+    .number {
+      width: 50px;
+      height: 50px;
+      margin: auto auto 15px;
+      border-radius: 50%;
+      background: #159447;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #fff8dc, #fff);
+      border-left: 6px solid #d49b00;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    .highlight h3 {
+      color: #8a6500;
+      margin-bottom: 12px;
+    }
+
+    .pledge {
+      background: #075e2b;
+      color: white;
+      padding: 40px 25px;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .pledge h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #075e2b;
+      color: white;
+      padding: 45px 20px;
+      border-radius: 18px;
+      margin: 30px 0 50px;
+    }
+
+    .cta h2 {
+      margin-bottom: 12px;
+      font-size: 30px;
+    }
+
+    .cta p {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #075e2b;
+      background: white;
+      padding: 12px 20px;
+      margin: 5px;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      background: #123b20;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    footer p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .brand h1 {
+        font-size: 18px;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 6px 9px;
+      }
+
+      .intro h3,
+      .section-title {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="brand">
+
+      <img src="assets/logo.svg"
+           alt="NCCPA Jankalyan Foundation Logo"
+           class="logo">
+
+      <div>
+        <h1>NCCPA Jankalyan Foundation</h1>
+        <p>हर घर तक सेवा, हर दिल में विश्वास</p>
+      </div>
+
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="environment.html">Environment</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="container">
+
+      <h2>🌱 पौधारोपण अभियान एवं हरित गांव</h2>
+
+      <p>
+        पौधारोपण के साथ पौधों की देखभाल, हरियाली का विस्तार और
+        पर्यावरण संरक्षण के प्रति सामुदायिक जागरूकता को बढ़ावा देना।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+  <section>
+
+    <div class="container">
+
+      <div class="intro">
+
+        <h3>🌳 एक पौधा, एक जिम्मेदारी</h3>
+
+        <p>
+          पेड़ हमारे पर्यावरण, जलवायु, मिट्टी और जीव-जंतुओं के लिए
+          महत्वपूर्ण हैं। पौधारोपण तभी प्रभावी होता है जब लगाए गए
+          पौधों की नियमित देखभाल और संरक्षण भी किया जाए।
+        </p>
+
+        <br>
+
+        <p>
+          <strong>NCCPA Jankalyan Foundation</strong> हरित वातावरण,
+          पर्यावरण जागरूकता और सामुदायिक भागीदारी को बढ़ावा देने के
+          उद्देश्य से पौधारोपण एवं संबंधित जनहित गतिविधियों को
+          प्रोत्साहित करता है।
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BENEFITS -->
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">🌿 पेड़-पौधों के महत्व</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>🌬️ स्वच्छ वातावरण</h3>
+          <p>
+            पेड़-पौधे प्राकृतिक पर्यावरण का महत्वपूर्ण हिस्सा हैं
+            और हरित वातावरण बनाने में योगदान करते हैं।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>💧 जल संरक्षण</h3>
+          <p>
+            वनस्पति और हरित क्षेत्र स्थानीय जल चक्र एवं मिट्टी
+            संरक्षण में महत्वपूर्ण भूमिका निभाते हैं।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🌱 मिट्टी संरक्षण</h3>
+          <p>
+            पौधों की जड़ें मिट्टी को बांधने और कटाव कम करने में
+            सहायता कर सकती हैं।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🐦 जैव विविधता</h3>
+          <p>
+            पेड़ और हरित क्षेत्र पक्षियों एवं अन्य जीवों के लिए
+            प्राकृतिक आवास प्रदान कर सकते हैं।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🏡 हरित गांव</h3>
+          <p>
+            गांवों में हरियाली बढ़ाने से सुंदर और बेहतर प्राकृतिक
+            वातावरण बनाने में सहायता मिल सकती है।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>👨‍👩‍👧 भविष्य की जिम्मेदारी</h3>
+          <p>
+            आज लगाए गए पौधों की देखभाल आने वाली पीढ़ियों के लिए
+            सकारात्मक योगदान बन सकती है।
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ACTIVITIES -->
+  <section class="green-section">
+
+    <div class="container">
+
+      <h2 class="section-title">📋 पौधारोपण अभियान की गतिविधियां</h2>
+
+      <div class="list">
+
+        <div class="item">
+          <strong>🌱 पौधों का चयन:</strong>
+          स्थानीय जलवायु और भूमि के अनुकूल पौधों के चयन के लिए जागरूकता।
+        </div>
+
+        <div class="item">
+          <strong>📍 स्थान चयन:</strong>
+          उपयुक्त और सुरक्षित स्थानों पर पौधारोपण की योजना बनाना।
+        </div>
+
+        <div class="item">
+          <strong>👥 जनभागीदारी:</strong>
+          ग्रामीण नागरिकों, युवाओं, महिलाओं और बच्चों को अभियान से जोड़ना।
+        </div>
+
+        <div class="item">
+          <strong>💧 पौधों की देखभाल:</strong>
+          लगाए गए पौधों की सिंचाई और संरक्षण की जिम्मेदारी तय करना।
+        </div>
+
+        <div class="item">
+          <strong>📸 अभियान दस्तावेजीकरण:</strong>
+          गतिविधियों का रिकॉर्ड और आवश्यकतानुसार फोटो/रिपोर्ट तैयार करना।
+        </div>
+
+        <div class="item">
+          <strong>🔎 निगरानी:</strong>
+          समय-समय पर पौधों की स्थिति की समीक्षा करना।
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PLANTATION PROCESS -->
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">🚀 पौधारोपण का 4-चरण मॉडल</h2>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="number">1</div>
+          <h3>योजना बनाएं</h3>
+          <p>
+            स्थान, मौसम, पौधों और आवश्यक संसाधनों की योजना तैयार करें।
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="number">2</div>
+          <h3>पौधा लगाएं</h3>
+          <p>
+            उपयुक्त स्थान पर पौधारोपण करें और पौधे की प्रारंभिक देखभाल करें।
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="number">3</div>
+          <h3>जिम्मेदारी तय करें
