@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>पोषण जागरूकता | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+        content="NCCPA Jankalyan Foundation द्वारा पोषण, संतुलित आहार, स्वच्छ पानी और स्वस्थ जीवनशैली के प्रति जागरूकता।">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      background: #f7fff8;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background: #087f23;
+      color: white;
+      padding: 8px 5%;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    /* HEADER */
+    header {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 12px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      color: #087f23;
+      font-size: 22px;
+    }
+
+    .brand-text p {
+      color: #777;
+      font-size: 13px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    nav a {
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #087f23;
+      color: white;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #087f23, #2eaf45);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      color: #087f23;
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      border-top: 4px solid #087f23;
+    }
+
+    .card .icon {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #087f23;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    /* INFO BOX */
+    .info-box {
+      background: #eaffee;
+      border-left: 5px solid #087f23;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 35px 0;
+    }
+
+    .info-box h3 {
+      color: #087f23;
+      margin-bottom: 10px;
+    }
+
+    /* FOOD LIST */
+    .food-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .food-item {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
+    .food-item h3 {
+      color: #087f23;
+      margin-bottom: 8px;
+    }
+
+    /* AWARENESS */
+    .awareness {
+      background: #fff8df;
+      padding: 35px 20px;
+      margin-top: 20px;
+    }
+
+    .awareness ul {
+      max-width: 850px;
+      margin: auto;
+      padding-left: 25px;
+    }
+
+    .awareness li {
+      margin: 10px 0;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #087f23, #2eaf45);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 750px;
+      margin: auto auto 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #087f23;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .btn:hover {
+      background: #eeeeee;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #12351a;
+      color: white;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    footer h3 {
+      margin-bottom: 12px;
+      color: #8ee59b;
+    }
+
+    footer p {
+      color: #ddd;
+      margin-bottom: 7px;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 30px;
+      padding-top: 18px;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      z-index: 2000;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .topbar {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .brand-text h1 {
+        font-size: 19px;
+      }
+
+      .hero {
+        padding: 50px 15px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .cards,
+      .food-list,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div>📞 8084284106 | 7903998184</div>
+    <div>✉️ infonccpa@gmail.com</div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <img src="assets/logo.svg"
+             alt="NCCPA Jankalyan Foundation Logo"
+             class="logo">
+
+        <div class="brand-text">
+          <h1>NCCPA Jankalyan Foundation</h1>
+          <p>हर घर तक सेवा, हर दिल में विश्वास</p>
+        </div>
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="mission.html">Mission</a>
+        <a href="services.html">Services</a>
+        <a href="health.html">Health</a>
+        <a href="education.html">Education</a>
+        <a href="schemes.html">Schemes</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>🥗 पोषण जागरूकता</h2>
+    <p>
+      स्वस्थ शरीर और स्वस्थ समाज के लिए संतुलित आहार,
+      स्वच्छ पानी, भोजन की स्वच्छता और सही पोषण के प्रति
+      जागरूकता बढ़ाना हमारा महत्वपूर्ण प्रयास है।
+    </p>
+  </section>
+
+  <!-- INTRO -->
+  <section class="container">
+
+    <div class="section-title">
+      <h2>पोषण क्यों जरूरी है?</h2>
+      <p>अच्छा पोषण स्वस्थ जीवन की मजबूत नींव है।</p>
+    </div>
+
+    <div class="info-box">
+      <h3>🌱 हमारा उद्देश्य</h3>
+      <p>
+        NCCPA Jankalyan Foundation के माध्यम से लोगों को
+        संतुलित भोजन, पोषण संबंधी सामान्य जानकारी,
+        स्वच्छ पेयजल, भोजन की स्वच्छता और स्वस्थ जीवनशैली
+        के प्रति जागरूक करने का प्रयास किया जाता है।
+      </p>
+    </div>
+
+    <!-- MAIN CARDS -->
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🥗</div>
+        <h3>संतुलित आहार</h3>
+        <p>
+          भोजन में अनाज, दालें, सब्जियां, फल और अन्य
+          पौष्टिक खाद्य पदार्थों का उचित संतुलन रखने के
+          महत्व के बारे में जागरूकता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💧</div>
+        <h3>स्वच्छ पानी</h3>
+        <p>
+          सुरक्षित और स्वच्छ पेयजल का उपयोग तथा पानी को
+          स्वच्छ रखने की आदतों के प्रति जागरूकता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🍎</div>
+        <h3>फल और सब्जियां</h3>
+        <p>
+          उपलब्ध और किफायती मौसमी फल एवं सब्जियों को
+          भोजन में शामिल करने के महत्व की जानकारी।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👶</div>
+        <h3>बच्चों का पोषण</h3>
+        <p>
+          बच्चों के नियमित और विविध भोजन तथा उनकी
+          पोषण संबंधी जरूरतों के बारे में परिवारों को
+          जागरूक करना।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👩</div>
+        <h3>महिला पोषण</h3>
+        <p>
+          महिलाओं और किशोरियों के लिए पौष्टिक भोजन,
+          भोजन की विविधता और स्वास्थ्य जागरूकता को बढ़ावा देना।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👴</div>
+        <h3>वृद्धजन पोषण</h3>
+        <p>
+          वृद्धजनों के लिए पर्याप्त, विविध और आसानी से
+          पचने वाले भोजन के महत्व के प्रति सामान्य जागरूकता।
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AFFORDABLE FOOD -->
+  <section class="container">
+
+    <div class="section-title">
+      <h2>🍚 स्थानीय और किफायती पौष्टिक भोजन</h2>
+      <p>
+        स्वस्थ भोजन हमेशा महंगा होना जरूरी नहीं है।
+      </p>
+    </div>
+
+    <div class="food-list">
+
+      <div class="food-item">
+        <h3>🌾 अनाज</h3>
+        <p>
+          चावल, गेहूं, मक्का, बाजरा आदि जैसे उपलब्ध
+          अनाज को भोजन में शामिल किया जा सकता है।
+        </p>
+      </div>
+
+      <div class="food-item">
+        <h3>🫘 दाल और अन्य प्रोटीन स्रोत</h3>
+        <p>
+          दाल, चना, मसूर, मूंग, मटर आदि जैसे खाद्य पदार्थ
+          भोजन में विविधता प्रदान करते हैं।
+        </p>
+      </div>
+
+      <div class="food-item">
+        <h3>🥬 हरी सब्जियां</h3>
+        <p>
+          स्थानीय और मौसमी हरी सब्जियों का उपयोग
+          संतुलित भोजन का हिस्सा बनाया जा सकता है।
+        </p>
+      </div>
+
+      <div class="food-item">
+        <h3>🍌 मौसमी फल</h3>
+        <p>
+          उपलब्ध मौसमी फलों को अपनी भोजन संबंधी जरूरतों
+          और परिस्थितियों के अनुसार शामिल किया जा सकता है।
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AWARENESS -->
+  <section class="awareness">
+
+    <div class="section-title">
+      <h2>✅ पोषण संबंधी सामान्य सावधानियां</h2>
+    </div>
+
+    <ul>
+      <li>भोजन से पहले और शौचालय के बाद हाथों को साबुन से धोने की आदत रखें।</li>
+      <li>भोजन को साफ और सुरक्षित स्थान पर रखें।</li>
+      <li>साफ एवं सुरक्षित पानी का उपयोग करें।</li>
+      <li>बहुत अधिक नमक, चीनी और अत्यधिक तला-भुना भोजन सीमित रखना सामान्य स्वास्थ्य के लिए उपयोगी हो सकता है।</li>
+      <li>भोजन में विविधता रखने का प्रयास करें।</li>
+      <li>बच्चों, गर्भवती महिलाओं, स्तनपान कराने वाली माताओं और वृद्धजनों की विशेष पोषण आवश्यकताओं के लिए योग्य स्वास्थ्य विशेषज्ञ से सलाह लें।</li>
+      <li>यदि किसी व्यक्ति में लगातार कमजोरी, वजन में असामान्य बदलाव या अन्य स्वास्थ्य समस्या दिखाई दे तो योग्य चिकित्सक से संपर्क करें।</li>
+    </ul>
+
+  </section>
+
+  <!-- OUR ACTIVITIES -->
+  <section class="container">
+
+    <div class="section-title">
+      <h2>🤝 हमारी पोषण जागरूकता गतिविधियां</h2>
+      <p>समुदाय के बीच जागरूकता बढ़ाने की दिशा में प्रयास</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">📢</div>
+        <h3>जागरूकता अभियान</h3>
+        <p>
+          गांव और समुदाय स्तर पर पोषण एवं स्वस्थ जीवनशैली
+          के बारे में जागरूकता कार्यक्रम।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>स्वास्थ्य शिविर सहयोग</h3>
+        <p>
+          स्वास्थ्य एवं पोषण जागरूकता से जुड़े कार्यक्रमों
+          में सहयोग और जानकारी का प्रसार।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👨‍👩‍👧‍👦</div>
+        <h3>परिवार जागरूकता</h3>
+        <p>
+          परिवारों को भोजन, स्वच्छता और स्वस्थ आदतों
+          के महत्व के बारे में जानकारी देना।
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>🌿 स्वस्थ समाज की ओर एक कदम</h2>
+
+    <p>
+      पोषण संबंधी सही जानकारी परिवार और समुदाय को
+      स्वस्थ जीवनशैली अपनाने में सहायता कर सकती है।
+      आइए, मिलकर पोषण जागरूकता को हर घर तक पहुंचाएं।
+    </p>
+
+    <a href="contact.html" class="btn">📞 हमसे संपर्क करें</a>
+    <a href="donate.html" class="btn">❤️ सहयोग करें</a>
+
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="container">
+
+    <div class="info-box">
+
+      <h3>⚠️ महत्वपूर्ण सूचना</h3>
+
+      <p>
+        यह पेज केवल सामान्य जन-जागरूकता के उद्देश्य से तैयार किया गया है।
+        किसी बीमारी, गर्भावस्था, बच्चों, वृद्धजनों या किसी विशेष स्वास्थ्य
+        स्थिति के लिए व्यक्तिगत डाइट अथवा उपचार संबंधी सलाह लेने से पहले
+        योग्य चिकित्सक या पोषण विशेषज्ञ से परामर्श करें।
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>NCCPA Jankalyan Foundation</h3>
+
+        <p>
+          National Council for Community Promotion & Awareness
+        </p>
+
+        <p>
+          Section 8 Non-Government Organization
+        </p>
+
+        <p>
+          हर घर तक सेवा, हर दिल में विश्वास
+        </p>
+      </div>
+
+      <div>
+        <h3>महत्वपूर्ण लिंक</h3>
+
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="services.html">Our Services</a></p>
+        <p><a href="health.html">Health Services</a></p>
+        <p><a href="education.html">Education</a></p>
+        <p><a href="schemes.html">Government Schemes</a></p>
+        <p><a href="donate.html">Donate</a></p>
+      </div>
+
+      <div>
+        <h3>संपर्क</h3>
+
+        <p>📞 8084284106</p>
+        <p>📞 7903998184</p>
+        <p>✉️ infonccpa@gmail.com</p>
+        <p>📍 Purnea, Bihar, India</p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+      <br>
+      सेवा ही हमारा परम धर्म है, विकास ही हमारा लक्ष्य है!
+    </div>
+
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a
+    class="whatsapp"
+    href="https://wa.me/918084281046"
+    target="_blank"
+    aria-label="WhatsApp">
+    ☎
+  </a>
+
+</body>
+</html>
