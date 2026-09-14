@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>बाल विवाह जागरूकता एवं रोकथाम | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+    content="NCCPA Jankalyan Foundation द्वारा बाल विवाह के दुष्प्रभाव, बाल अधिकार, शिक्षा एवं जागरूकता के लिए सामाजिक पहल।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,"Noto Sans Devanagari",sans-serif;
+      background:#f5f8fb;
+      color:#222;
+      line-height:1.7;
+    }
+
+    header{
+      background:linear-gradient(135deg,#0b5d3b,#087f5b);
+      color:white;
+      padding:15px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+      flex-wrap:wrap;
+      box-shadow:0 3px 12px rgba(0,0,0,.15);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo{
+      width:65px;
+      height:65px;
+      object-fit:contain;
+      background:white;
+      border-radius:50%;
+      padding:3px;
+    }
+
+    .brand h1{
+      font-size:22px;
+    }
+
+    .brand p{
+      font-size:13px;
+      opacity:.9;
+    }
+
+    nav{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:20px;
+      font-size:14px;
+      background:rgba(255,255,255,.12);
+    }
+
+    nav a:hover{
+      background:white;
+      color:#0b5d3b;
+    }
+
+    .hero{
+      padding:70px 6%;
+      text-align:center;
+      color:white;
+      background:
+        linear-gradient(rgba(110,45,15,.88),rgba(110,45,15,.88)),
+        linear-gradient(135deg,#d97706,#92400e);
+    }
+
+    .hero h2{
+      font-size:38px;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1150px;
+      margin:auto;
+      padding:45px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      color:#0b5d3b;
+      font-size:30px;
+      margin-bottom:12px;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      max-width:800px;
+      margin:0 auto 30px;
+      color:#555;
+    }
+
+    .intro{
+      background:white;
+      padding:30px;
+      border-radius:18px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      margin-bottom:40px;
+    }
+
+    .intro p{
+      font-size:17px;
+    }
+
+    .alert{
+      margin-top:25px;
+      padding:22px;
+      background:#fff3cd;
+      border-left:6px solid #d89b00;
+      border-radius:12px;
+    }
+
+    .alert strong{
+      color:#805b00;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:white;
+      padding:24px 18px;
+      border-radius:18px;
+      text-align:center;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      border-top:4px solid #0b8f5b;
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .icon{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      color:#0b5d3b;
+      margin-bottom:8px;
+      font-size:19px;
+    }
+
+    .card p{
+      color:#555;
+      font-size:14px;
+    }
+
+    .activity{
+      margin-top:45px;
+    }
+
+    .activity-list{
+      background:white;
+      border-radius:18px;
+      padding:30px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+    }
+
+    .activity-list li{
+      list-style:none;
+      padding:11px 0;
+      border-bottom:1px solid #eee;
+      font-size:16px;
+    }
+
+    .activity-list li:last-child{
+      border-bottom:none;
+    }
+
+    .activity-list li::before{
+      content:"✓";
+      color:#0b8f5b;
+      font-weight:bold;
+      margin-right:10px;
+    }
+
+    .effects{
+      margin-top:45px;
+      background:#fff7f0;
+      padding:35px;
+      border-radius:20px;
+    }
+
+    .effects h3{
+      color:#9a4d00;
+      font-size:25px;
+      margin-bottom:15px;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:25px;
+    }
+
+    .step{
+      background:white;
+      padding:20px;
+      border-radius:16px;
+      text-align:center;
+      box-shadow:0 3px 12px rgba(0,0,0,.07);
+    }
+
+    .number{
+      width:45px;
+      height:45px;
+      margin:0 auto 10px;
+      border-radius:50%;
+      background:#0b8f5b;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+      font-size:20px;
+    }
+
+    .family{
+      margin-top:45px;
+      background:#eaf7f1;
+      padding:35px;
+      border-radius:20px;
+    }
+
+    .family h3{
+      color:#0b5d3b;
+      margin-bottom:12px;
+      font-size:25px;
+    }
+
+    .safety{
+      margin-top:45px;
+      background:#eef5ff;
+      padding:35px;
+      border-radius:20px;
+    }
+
+    .safety h3{
+      color:#17579b;
+      margin-bottom:12px;
+      font-size:25px;
+    }
+
+    .help{
+      margin-top:45px;
+      background:#fff;
+      padding:35px;
+      border-radius:20px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+    }
+
+    .help h3{
+      color:#b42318;
+      margin-bottom:12px;
+      font-size:25px;
+    }
+
+    .help-box{
+      margin-top:15px;
+      padding:20px;
+      background:#fff0f0;
+      border-radius:12px;
+    }
+
+    .notice{
+      margin-top:45px;
+      padding:25px;
+      background:#fff3cd;
+      border-left:6px solid #e0a000;
+      border-radius:12px;
+    }
+
+    .notice h3{
+      color:#8a6200;
+      margin-bottom:8px;
+    }
+
+    .cta{
+      margin-top:45px;
+      background:linear-gradient(135deg,#0b5d3b,#0b8f5b);
+      color:white;
+      padding:40px 25px;
+      text-align:center;
+      border-radius:22px;
+    }
+
+    .cta h2{
+      margin-bottom:12px;
+      font-size:28px;
+    }
+
+    .cta p{
+      max-width:750px;
+      margin:0 auto 20px;
+    }
+
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      background:white;
+      color:#0b5d3b;
+      padding:11px 20px;
+      border-radius:25px;
+      margin:5px;
+      font-weight:bold;
+    }
+
+    footer{
+      background:#12352a;
+      color:white;
+      text-align:center;
+      padding:30px 15px;
+      margin-top:50px;
+    }
+
+    footer p{
+      margin:6px 0;
+      font-size:14px;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:55px;
+      height:55px;
+      background:#25d366;
+      color:white;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      font-size:29px;
+      box-shadow:0 4px 15px rgba(0,0,0,.25);
+      z-index:999;
+    }
+
+    @media(max-width:900px){
+      .grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .steps{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:600px){
+      header{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .brand{
+        justify-content:center;
+      }
+
+      nav{
+        justify-content:center;
+      }
+
+      .hero{
+        padding:50px 20px;
+      }
+
+      .hero h2{
+        font-size:28px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .grid,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .section-title{
+        font-size:25px;
+      }
+
+      .intro,
+      .activity-list,
+      .effects,
+      .family,
+      .safety,
+      .help{
+        padding:22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="brand">
+
+    <img
+      src="assets/logo.svg"
+      alt="NCCPA Jankalyan Foundation Logo"
+      class="logo"
+    >
+
+    <div>
+      <h1>NCCPA Jankalyan Foundation</h1>
+      <p>हर घर तक सेवा, हर दिल में विश्वास</p>
+    </div>
+
+  </div>
+
+  <nav>
+    <a href="index.html">होम</a>
+    <a href="about.html">हमारे बारे में</a>
+    <a href="child-welfare.html">बाल कल्याण</a>
+    <a href="child-education.html">बाल शिक्षा</a>
+    <a href="contact.html">संपर्क</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h2>🚫 बाल विवाह जागरूकता एवं रोकथाम</h2>
+
+  <p>
+    बच्चों को शिक्षा, सुरक्षा और सम्मान के साथ आगे बढ़ने का अवसर मिले।
+    बाल विवाह के दुष्प्रभावों के प्रति परिवार एवं समुदाय को जागरूक करना
+    हमारी सामाजिक जागरूकता पहल का एक महत्वपूर्ण हिस्सा है।
+  </p>
+
+</section>
+
+
+<main class="container">
+
+  <section class="intro">
+
+    <h2 class="section-title">
+      🧒 बचपन सुरक्षित, भविष्य मजबूत
+    </h2>
+
+    <p>
+      बाल विवाह बच्चों की शिक्षा, स्वास्थ्य, सुरक्षा और भविष्य के अवसरों
+      को प्रभावित कर सकता है। बच्चों को कम उम्र में विवाह के बजाय
+      शिक्षा, कौशल विकास और सुरक्षित वातावरण में आगे बढ़ने का अवसर मिलना
+      आवश्यक है।
+    </p>
+
+    <br>
+
+    <p>
+      NCCPA Jankalyan Foundation द्वारा बाल विवाह के विरुद्ध सामाजिक
+      जागरूकता, बाल शिक्षा, बाल अधिकार, अभिभावक संवाद और समुदाय की
+      सकारात्मक भागीदारी को प्रोत्साहित करने का प्रयास किया जाता है।
+    </p>
+
+    <div class="alert">
+      <strong>⚠️ ध्यान दें:</strong>
+      बाल विवाह से संबंधित किसी वास्तविक या आसन्न मामले में स्वयं
+      हस्तक्षेप या टकराव करने के बजाय उचित सरकारी/कानूनी सहायता
+      और बाल संरक्षण तंत्र से संपर्क करना अधिक सुरक्षित है।
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2 class="section-title">
+      🛡️ बाल विवाह रोकथाम के प्रमुख क्षेत्र
+    </h2>
+
+    <p class="section-subtitle">
+      जागरूकता, शिक्षा और समुदाय की भागीदारी के माध्यम से बच्चों की सुरक्षा
+      को मजबूत करने का प्रयास।
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>बाल शिक्षा</h3>
+        <p>
+          बच्चों को नियमित शिक्षा से जुड़े रहने के लिए प्रोत्साहित करना।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👨‍👩‍👧</div>
+        <h3>परिवार जागरूकता</h3>
+        <p>
+          अभिभावकों को बाल विवाह के संभावित दुष्प्रभावों की जानकारी देना।
+        </p>
+      </div>
+
+      <div class="card">
+        <div
