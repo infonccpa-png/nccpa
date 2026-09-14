@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NCCPA ज्ञानदीप ई-लाइब्रेरी | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+        content="NCCPA ज्ञानदीप ई-लाइब्रेरी - विद्यार्थियों, युवाओं और ग्रामीण समुदाय के लिए डिजिटल अध्ययन सामग्री एवं शैक्षणिक संसाधनों की जानकारी।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,"Noto Sans Devanagari",sans-serif;
+      line-height:1.7;
+      background:#f5f8fb;
+      color:#222;
+    }
+
+    .topbar{
+      background:#123c69;
+      color:#fff;
+      padding:8px 5%;
+      font-size:14px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.12);
+    }
+
+    .header-inner{
+      max-width:1200px;
+      margin:auto;
+      padding:12px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo{
+      width:75px;
+      height:75px;
+      object-fit:contain;
+    }
+
+    .brand h1{
+      color:#123c69;
+      font-size:22px;
+    }
+
+    .brand p{
+      color:#555;
+      font-size:13px;
+    }
+
+    nav{
+      background:#123c69;
+      padding:10px 5%;
+      text-align:center;
+      overflow-x:auto;
+      white-space:nowrap;
+    }
+
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin:0 9px;
+      font-size:14px;
+    }
+
+    nav a:hover{
+      color:#ffd54f;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#123c69,#1976a8);
+      color:#fff;
+      padding:65px 20px;
+      text-align:center;
+    }
+
+    .hero h2{
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:45px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      color:#123c69;
+      font-size:30px;
+      margin-bottom:12px;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      color:#666;
+      max-width:800px;
+      margin:0 auto 35px;
+    }
+
+    .intro{
+      background:#fff;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      margin-bottom:40px;
+    }
+
+    .intro h3{
+      color:#123c69;
+      margin-bottom:12px;
+    }
+
+    .library-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .library-card{
+      background:#fff;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      border-top:4px solid #1976a8;
+      transition:.3s;
+    }
+
+    .library-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .icon{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    .library-card h3{
+      color:#123c69;
+      margin-bottom:8px;
+    }
+
+    .library-card p{
+      color:#555;
+      margin-bottom:15px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:9px 18px;
+      border-radius:25px;
+      background:#123c69;
+      color:#fff;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .notice{
+      margin-top:45px;
+      background:#eaf4fb;
+      padding:30px;
+      border-radius:15px;
+    }
+
+    .notice h2{
+      color:#123c69;
+      margin-bottom:15px;
+    }
+
+    .notice ul{
+      padding-left:22px;
+    }
+
+    .notice li{
+      margin-bottom:9px;
+    }
+
+    .features{
+      margin-top:45px;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
+      margin-top:25px;
+    }
+
+    .feature{
+      background:#fff;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,.07);
+    }
+
+    .feature strong{
+      color:#123c69;
+    }
+
+    .cta{
+      background:#123c69;
+      color:#fff;
+      text-align:center;
+      padding:45px 20px;
+      margin-top:45px;
+    }
+
+    .cta h2{
+      font-size:30px;
+      margin-bottom:12px;
+    }
+
+    .cta-btn{
+      display:inline-block;
+      margin:10px 6px;
+      padding:12px 25px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .btn-light{
+      background:#fff;
+      color:#123c69;
+    }
+
+    .btn-green{
+      background:#25D366;
+      color:#fff;
+    }
+
+    .disclaimer{
+      max-width:1000px;
+      margin:30px auto;
+      padding:20px;
+      background:#fff8e1;
+      border-left:5px solid #f0ad00;
+      color:#555;
+    }
+
+    footer{
+      background:#0d2d4d;
+      color:#fff;
+      text-align:center;
+      padding:30px 20px;
+    }
+
+    footer p{
+      margin:6px 0;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#25D366;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      text-decoration:none;
+      box-shadow:0 4px 15px rgba(0,0,0,.25);
+      z-index:2000;
+    }
+
+    @media(max-width:850px){
+      .library-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:600px){
+      .topbar{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .header-inner{
+        justify-content:center;
+        text-align:center;
+        flex-direction:column;
+      }
+
+      .brand h1{
+        font-size:19px;
+      }
+
+      .library-grid,
+      .feature-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding:45px 15px;
+      }
+
+      .hero h2{
+        font-size:27px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .section-title{
+        font-size:25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>📞 8084284106 / 7903998184</span>
+    <span>✉️ infonccpa@gmail.com</span>
+  </div>
+
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="header-inner">
+
+      <img src="assets/logo.svg"
+           alt="NCCPA Jankalyan Foundation Logo"
+           class="logo">
+
+      <div class="brand">
+        <h1>NCCPA Jankalyan Foundation</h1>
+        <p>National Council for Community Promotion & Awareness</p>
+      </div>
+
+    </div>
+
+    <nav>
+      <a href="index.html">होम</a>
+      <a href="about.html">हमारे बारे में</a>
+      <a href="services.html">सेवाएँ</a>
+      <a href="education.html">शिक्षा</a>
+      <a href="digital-education.html">डिजिटल शिक्षा</a>
+      <a href="e-library.html">ई-लाइब्रेरी</a>
+      <a href="health.html">स्वास्थ्य</a>
+      <a href="schemes.html">सरकारी योजनाएँ</a>
+      <a href="news.html">समाचार</a>
+      <a href="gallery.html">गैलरी</a>
+      <a href="contact.html">संपर्क</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <h2>📚 NCCPA ज्ञानदीप ई-लाइब्रेरी</h2>
+
+    <p>
+      ज्ञान, शिक्षा और डिजिटल संसाधनों को हर जरूरतमंद
+      विद्यार्थी एवं नागरिक तक पहुँचाने की एक पहल।
+    </p>
+
+  </section>
+
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- INTRO -->
+    <div class="intro">
+
+      <h3>💡 ज्ञान से विकास की ओर</h3>
+
+      <p>
+        NCCPA ज्ञानदीप ई-लाइब्रेरी का उद्देश्य विद्यार्थियों,
+        युवाओं और ग्रामीण समुदाय को उपयोगी शैक्षणिक एवं
+        डिजिटल अध्ययन संसाधनों तक पहुँचने के लिए प्रोत्साहित करना है।
+      </p>
+
+      <p>
+        इस मंच पर भविष्य में संस्था द्वारा तैयार की गई अध्ययन सामग्री,
+        सामान्य ज्ञान, हिंदी व्याकरण, प्रतियोगी परीक्षा संबंधी सामग्री,
+        डिजिटल शिक्षा संसाधन तथा उपयोगी शैक्षणिक दस्तावेज उपलब्ध कराए
+        जा सकते हैं।
+      </p>
+
+    </div>
+
+
+    <!-- LIBRARY CATEGORIES -->
+    <h2 class="section-title">
+      📖 पुस्तकालय के प्रमुख विभाग
+    </h2>
+
+    <p class="section-subtitle">
+      अलग-अलग जरूरतों के अनुसार अध्ययन सामग्री को व्यवस्थित करने
+      के लिए प्रस्तावित डिजिटल विभाग।
+    </p>
+
+
+    <div class="library-grid">
+
+      <div class="library-card">
+        <div class="icon">📕</div>
+        <h3>हिंदी साहित्य</h3>
+        <p>
+          हिंदी भाषा, साहित्य और लेखन से संबंधित
+          अध्ययन सामग्री एवं उपयोगी संसाधन।
+        </p>
+        <a href="#" class="btn">जल्द उपलब्ध</a>
+      </div>
+
+
+      <div class="library-card">
+        <div class="icon">📝</div>
+        <h3>हिंदी व्याकरण</h3>
+        <p>
+          हिंदी व्याकरण, भाषा ज्ञान और परीक्षा उपयोगी
+          अध्ययन सामग्री के लिए विशेष विभाग।
+        </p>
+        <a href="#" class="btn">जल्द उपलब्ध</a>
+      </div>
+
+
+      <div class="library-card">
+        <div class="icon">🎓</div>
+        <h3>प्रतियोगी परीक्षा</h3>
+        <p>
+          विभिन्न प्रतियोगी परीक्षाओं की तैयारी के लिए
+          सामान्य अध्ययन एवं अभ्यास सामग्री।
+        </p>
+        <a href="#" class="btn">जल्द उपलब्ध</a>
+      </div>
+
+
+      <div class="library-card">
+        <div class="icon">🌍</div>
+        <h3>सामान्य ज्ञान</h3>
+        <p>
+          सामान्य ज्ञान एवं जागरूकता बढ़ाने वाली
+          उपयोगी शैक्षणिक सामग्री।
+        </p>
+        <a href="#" class="btn">जल्द उपलब्ध</a>
+      </div>
+
+
+      <div class="library-card">
+        <div class="icon">💻</div>
+        <h3>कंप्यूटर शिक्षा</h3>
+        <p>
+          कंप्यूटर एवं डिजिटल शिक्षा से संबंधित
+          शुरुआती अध्ययन सामग्री।
+        </p>
+        <a href="#" class="btn">जल्द उपलब्ध</a>
+      </div>
+
+
+      <div class="library-card">
+        <div class="icon">👨‍🎓</div>
+        <h3>विद्यार्थी संसाधन</h3>
+        <p>
+          विद्यार्थियों के अध्ययन, करियर और
+          शैक्षणिक विकास के लिए उपयोगी सामग्री।
+        </p>
+        <a href="#" class="btn">जल्द उपलब्ध</a>
+      </div>
+
+    </div>
+
+
+    <!-- FEATURES -->
+    <section class="features">
+
+      <h2 class="section-title">
+        🌟 ई-लाइब्रेरी की विशेषताएँ
+      </h2>
+
+      <div class="feature-grid">
+
+        <div class="feature">
+          📱 <strong>मोबाइल फ्रेंडली</strong><br>
+          मोबाइल फोन से अध्ययन सामग्री तक आसान पहुँच का प्रयास।
+        </div>
+
+        <div class="feature">
+          📚 <strong>विषयवार सामग्री</strong><br>
+          सामग्री को अलग-अलग विषय और श्रेणियों में व्यवस्थित किया जा सकता है।
+        </div>
+
+        <div class="feature">
+          🆓 <strong>सुलभ ज्ञान</strong><br>
+          सामाजिक उद्देश्य के तहत उपयोगी शैक्षणिक संसाधनों को अधिक लोगों तक पहुँचाने का प्रयास।
+        </div>
+
+        <div class="feature">
+          🔎 <strong>आसान खोज</strong><br>
+          भविष्य में सामग्री खोजने के लिए सर्च सुविधा जोड़ी जा सकती है।
+        </div>
+
+        <div class="feature">
+          📥 <strong>डिजिटल संसाधन</strong><br>
+          उपलब्ध होने पर PDF, नोट्स और अन्य अध्ययन संसाधनों के लिंक दिए जा सकते हैं।
+        </div>
+
+        <div class="feature">
+          🌱 <strong>ग्रामीण विद्यार्थियों पर ध्यान</strong><br>
+          ग्रामीण क्षेत्रों के विद्यार्थियों को डिजिटल अध्ययन अवसरों से जोड़ने का प्रयास।
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HOW TO USE -->
+    <section class="notice">
+
+      <h2>📌 ई-लाइब्रेरी का उपयोग कैसे करें?</h2>
+
+      <ul>
+
+        <li>
+          अपनी आवश्यकता के अनुसार विषय या श्रेणी चुनें।
+        </li>
+
+        <li>
+          उपलब्ध अध्ययन सामग्री के विवरण को पढ़ें।
+        </li>
+
+        <li>
+          यदि PDF या अन्य संसाधन उपलब्ध हो तो संबंधित लिंक खोलें।
+        </li>
+
+        <li>
+          अध्ययन सामग्री का उपयोग केवल वैध और शैक्षणिक उद्देश्य के लिए करें।
+        </li>
+
+        <li>
+          किसी कॉपीराइट सामग्री का अनधिकृत वितरण या पुनःप्रकाशन न करें।
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- FUTURE PLAN -->
+    <section style="margin-top:45px;">
+
+      <h2 class="section-title">
+        🚀 भविष्य की योजना
+      </h2>
+
+      <p class="section-subtitle">
+        NCCPA ज्ञानदीप ई-लाइब्रेरी को भविष्य में अधिक उपयोगी
+        डिजिटल शिक्षा मंच के रूप में विकसित करने का प्रयास किया जा सकता है।
+      </p>
+
+      <div class="library-grid">
+
+        <div class="library-card">
+          <div class="icon">🔍</div>
+          <h3>सर्च सिस्टम</h3>
+          <p>
+            विषय एवं कीवर्ड के आधार पर सामग्री खोजने की सुविधा।
+          </p>
+        </div>
+
+        <div class="library-card">
+          <div class="icon">📄</div>
+          <h3>PDF संग्रह</h3>
+          <p>
+            संस्था द्वारा उपलब्ध कराई जाने वाली उपयोगी PDF सामग्री का संग्रह।
+          </p>
+        </div>
+
+        <div class="library-card">
+          <div class="icon">🎯</div>
+          <h3>परीक्षा सामग्री</h3>
+          <p>
+            प्रतियोगी परीक्षाओं के लिए व्यवस्थित अध्ययन संसाधन।
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>🤝 ज्ञानदीप ई-लाइब्रेरी से जुड़ें</h2>
+
+    <p>
+      यदि आपके पास उपयोगी शैक्षणिक सामग्री, पुस्तकें या
+      डिजिटल शिक्षा संबंधी संसाधन हैं, तो संस्था से संपर्क करें।
+    </p>
+
+    <a href="contact.html" class="cta-btn btn-light">
+      📞 संपर्क करें
+    </a>
+
+    <a href="donate.html" class="cta-btn btn-green">
+      ❤️ सहयोग / Donate
+    </a>
+
+  </section>
+
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+
+    <strong>महत्वपूर्ण सूचना:</strong>
+
+    इस पेज पर उपलब्ध सामग्री एवं लिंक संस्था की उपलब्धता
+    और अनुमति के अनुसार जोड़े जाएंगे। बाहरी वेबसाइटों या
+    संसाधनों की सामग्री के लिए संबंधित स्रोत के नियम एवं
+    कॉपीराइट का पालन करना आवश्यक है।
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>NCCPA Jankalyan Foundation</strong>
+    </p>
+
+    <p>
+      National Council for Community Promotion & Awareness
+    </p>
+
+    <p>
+      “हर घर तक सेवा, हर दिल में विश्वास”
+    </p>
+
+    <p>
+      “आपातकाल हो या अधिकार – हम हैं तैयार”
+    </p>
+
+    <p>
+      📍 Bochgaon, Purnea, Bihar – 854330
+    </p>
+
+    <p>
+      📞 8084284106 | 7903998184
+    </p>
+
+    <p>
+      ✉️ infonccpa@gmail.com
+    </p>
+
+    <p style="margin-top:15px;">
+      © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/918084281046"
+    class="whatsapp"
+    target="_blank"
+    aria-label="WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
