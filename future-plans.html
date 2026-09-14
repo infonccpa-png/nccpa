@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>भविष्य की योजनाएँ | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+    content="NCCPA Jankalyan Foundation की भविष्य की योजनाएँ और सामाजिक विकास के प्रस्तावित कार्यक्रम।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,sans-serif;
+      line-height:1.7;
+      background:#f5f7fa;
+      color:#222;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .topbar{
+      background:#087443;
+      color:white;
+      text-align:center;
+      padding:8px 5%;
+      font-size:14px;
+    }
+
+    header{
+      background:white;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.12);
+    }
+
+    .header-inner{
+      max-width:1200px;
+      margin:auto;
+      padding:10px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo img{
+      width:65px;
+      height:65px;
+      object-fit:contain;
+    }
+
+    .logo-text h2{
+      color:#087443;
+      font-size:20px;
+    }
+
+    .logo-text p{
+      color:#555;
+      font-size:12px;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:7px;
+    }
+
+    nav a{
+      color:#222;
+      font-weight:bold;
+      padding:7px 8px;
+      font-size:14px;
+    }
+
+    nav a:hover{
+      color:#087443;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#087443,#0b9b59);
+      color:white;
+      text-align:center;
+      padding:70px 20px;
+    }
+
+    .hero img{
+      width:110px;
+      height:110px;
+      background:white;
+      border-radius:50%;
+      padding:5px;
+      margin-bottom:15px;
+    }
+
+    .hero h1{
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      max-width:800px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:50px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:35px;
+    }
+
+    .section-title h2{
+      color:#087443;
+      font-size:30px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    .plan-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:14px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      border-top:4px solid #087443;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+    }
+
+    .icon{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      color:#087443;
+      font-size:21px;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      color:#555;
+      font-size:15px;
+    }
+
+    .roadmap{
+      margin-top:45px;
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+    }
+
+    .roadmap h2{
+      text-align:center;
+      color:#087443;
+      margin-bottom:25px;
+    }
+
+    .roadmap-item{
+      display:flex;
+      gap:20px;
+      margin-bottom:20px;
+      padding:20px;
+      background:#eef8f2;
+      border-left:5px solid #087443;
+      border-radius:8px;
+    }
+
+    .number{
+      min-width:45px;
+      height:45px;
+      border-radius:50%;
+      background:#087443;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+    }
+
+    .roadmap-item h3{
+      color:#087443;
+      margin-bottom:5px;
+    }
+
+    .note{
+      margin-top:35px;
+      padding:25px;
+      background:#fff8e8;
+      border-radius:12px;
+      border-left:5px solid #d99b00;
+    }
+
+    .note h3{
+      color:#9a6b00;
+      margin-bottom:8px;
+    }
+
+    .cta{
+      background:#087443;
+      color:white;
+      text-align:center;
+      padding:45px 20px;
+      margin-top:40px;
+    }
+
+    .cta h2{
+      font-size:30px;
+      margin-bottom:10px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin:15px 5px 0;
+      padding:12px 22px;
+      border-radius:25px;
+      background:white;
+      color:#087443;
+      font-weight:bold;
+    }
+
+    footer{
+      background:#10231a;
+      color:white;
+      text-align:center;
+      padding:30px 20px;
+    }
+
+    footer img{
+      width:75px;
+      background:white;
+      border-radius:50%;
+      padding:4px;
+      margin-bottom:10px;
+    }
+
+    footer p{
+      margin:5px 0;
+      font-size:14px;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#25D366;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      box-shadow:0 4px 12px rgba(0,0,0,.3);
+      z-index:2000;
+    }
+
+    @media(max-width:850px){
+
+      .header-inner{
+        flex-direction:column;
+      }
+
+      .plan-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .hero h1{
+        font-size:32px;
+      }
+    }
+
+    @media(max-width:600px){
+
+      .plan-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:28px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .roadmap-item{
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  📞 8084284106 &nbsp; | &nbsp;
+  📱 WhatsApp: 7903998184 &nbsp; | &nbsp;
+  ✉️ infonccpa@gmail.com
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+
+    <div class="logo">
+
+      <img src="assets/logo.svg"
+           alt="NCCPA Jankalyan Foundation Logo">
+
+      <div class="logo-text">
+        <h2>NCCPA Jankalyan Foundation</h2>
+        <p>हर घर तक सेवा, हर दिल में विश्वास</p>
+      </div>
+
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="objectives.html">Objectives</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="impact.html">Impact</a>
+      <a href="future-plans.html">Future Plans</a>
+      <a href="schemes.html">Schemes</a>
+      <a href="news.html">News</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <img src="assets/logo.svg" alt="NCCPA Logo">
+
+  <h1>भविष्य की योजनाएँ</h1>
+
+  <p>
+    ग्रामीण एवं जरूरतमंद समुदायों के लिए स्वास्थ्य, शिक्षा,
+    कौशल, रोजगार और सामाजिक विकास को मजबूत करने की हमारी दिशा
+  </p>
+
+</section>
+
+<!-- PLANS -->
+<section class="container">
+
+  <div class="section-title">
+
+    <h2>हमारी प्रस्तावित योजनाएँ</h2>
+
+    <p>
+      उपलब्ध संसाधनों, सहयोग और आवश्यक अनुमतियों के अनुसार
+      इन योजनाओं को चरणबद्ध तरीके से आगे बढ़ाने का प्रयास किया जाएगा।
+    </p>
+
+  </div>
+
+  <div class="plan-grid">
+
+    <div class="card">
+      <div class="icon">🏥</div>
+      <h3>स्वास्थ्य सेवा केंद्र</h3>
+      <p>
+        ग्रामीण क्षेत्र में स्वास्थ्य जागरूकता, प्राथमिक सहायता,
+        स्वास्थ्य परामर्श एवं जरूरतमंद लोगों को उपयुक्त सेवाओं से
+        जोड़ने की दिशा में पहल।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🩺</div>
+      <h3>स्वास्थ्य शिविर</h3>
+      <p>
+        विशेषज्ञों एवं स्थानीय सहयोग के माध्यम से स्वास्थ्य जांच,
+        जागरूकता और आवश्यक स्वास्थ्य सेवाओं तक पहुँच बढ़ाने का प्रयास।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>कंप्यूटर एवं डिजिटल सेंटर</h3>
+      <p>
+        युवाओं और विद्यार्थियों के लिए कंप्यूटर शिक्षा,
+        डिजिटल साक्षरता और ऑनलाइन सेवाओं की जानकारी उपलब्ध कराने की योजना।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📚</div>
+      <h3>ई-लाइब्रेरी</h3>
+      <p>
+        विद्यार्थियों एवं प्रतियोगी परीक्षा की तैयारी करने वाले युवाओं
+        के लिए डिजिटल अध्ययन सामग्री और ज्ञान संसाधनों को बढ़ावा देने की पहल।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎓</div>
+      <h3>कौशल विकास</h3>
+      <p>
+        कंप्यूटर, रोजगारपरक कौशल और अन्य उपयोगी प्रशिक्षण के माध्यम से
+        युवाओं को आत्मनिर्भर बनाने की दिशा में प्रयास।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💼</div>
+      <h3>रोजगार सहायता</h3>
+      <p>
+        युवाओं को नौकरी, स्वरोजगार, प्रशिक्षण और सरकारी रोजगार योजनाओं
+        से संबंधित जानकारी उपलब्ध कराने की योजना।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">👩‍💼</div>
+      <h3>महिला आत्मनिर्भरता</h3>
+      <p>
+        महिलाओं के लिए कौशल प्रशिक्षण, स्वयं सहायता समूह और
+        स्वरोजगार की संभावनाओं को बढ़ावा देने का प्रयास।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌱</div>
+      <h3>पर्यावरण अभियान</h3>
+      <p>
+        वृक्षारोपण, स्वच्छता और पर्यावरण संरक्षण से संबंधित
+        सामुदायिक जागरूकता अभियानों को बढ़ावा देने की योजना।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏡</div>
+      <h3>ग्रामीण विकास</h3>
+      <p>
+        गांवों की स्थानीय आवश्यकताओं की पहचान कर शिक्षा,
+        स्वास्थ्य, कौशल और सरकारी सेवाओं से जुड़ी पहल को मजबूत करना।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📢</div>
+      <h3>सरकारी योजना जागरूकता</h3>
+      <p>
+        पात्र नागरिकों को केंद्र एवं राज्य सरकार की जनकल्याणकारी
+        योजनाओं की जानकारी और आवेदन प्रक्रिया समझाने की दिशा में प्रयास।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">⚖️</div>
+      <h3>मानव अधिकार जागरूकता</h3>
+      <p>
+        नागरिक अधिकार, मानव अधिकार और कानूनी जागरूकता से संबंधित
+        सूचना एवं मार्गदर्शन को समुदाय तक पहुँचाने की पहल।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📊</div>
+      <h3>डिजिटल सर्वे सिस्टम</h3>
+      <p>
+        समुदाय की आवश्यकताओं को बेहतर ढंग से समझने के लिए
+        डिजिटल सर्वेक्षण एवं डेटा प्रबंधन प्रणाली विकसित करने का प्रयास।
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ROADMAP -->
+
+  <div class="roadmap">
+
+    <h2>हमारा चरणबद्ध रोडमैप</h2>
+
+    <div class="roadmap-item">
+
+      <div class="number">1</div>
+
+      <div>
+        <h3>जरूरतों का सर्वेक्षण</h3>
+
+        <p>
+          स्थानीय समुदाय की वास्तविक समस्याओं और आवश्यकताओं को
+          सर्वेक्षण एवं संवाद के माध्यम से समझना।
+        </p>
+      </div>
+
+    </div>
+
+    <div class="roadmap-item">
+
+      <div class="number">2</div>
+
+      <div>
+        <h3>संसाधन एवं सहयोग</h3>
+
+        <p>
+          स्वयंसेवकों, विशेषज्ञों, सामाजिक संस्थाओं और संभावित
+          सहयोगकर्ताओं के साथ नेटवर्क विकसित करना।
+        </p>
+      </div>
+
+    </div>
+
+    <div class="roadmap-item">
+
+      <div class="number">3</div>
+
+      <div>
+        <h3>पायलट प्रोजेक्ट</h3>
+
+        <p>
+          उपलब्ध संसाधनों के अनुसार छोटे स्तर पर उपयोगी कार्यक्रम
+          शुरू करके उनके परिणामों का मूल्यांकन करना।
+        </p>
+      </div>
+
+    </div>
+
+    <div class="roadmap-item">
+
+      <div class="number">4</div>
+
+      <div>
+        <h3>विस्तार</h3>
+
+        <p>
+          सफल कार्यक्रमों को अधिक गांवों एवं जरूरतमंद समुदायों तक
+          चरणबद्ध तरीके से विस्तारित करने का प्रयास।
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- NOTE -->
+
+  <div class="note">
+
+    <h3>महत्वपूर्ण सूचना</h3>
+
+    <p>
+      ऊपर दी गई योजनाएँ संस्था की प्रस्तावित भविष्य की दिशा को दर्शाती हैं।
+      किसी भी स्वास्थ्य, प्रशिक्षण, वित्तीय या अन्य सेवा को लागू करने से पहले
+      आवश्यक कानूनी अनुमति, योग्य विशेषज्ञ, संसाधन और संबंधित सरकारी
+      दिशानिर्देशों का पालन किया जाएगा।
+    </p>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <h2>भविष्य के निर्माण में सहयोग करें</h2>
+
+  <p>
+    आपके सहयोग से सामाजिक सेवा की नई योजनाओं को आगे बढ़ाने में मदद मिल सकती है।
+  </p>
+
+  <a class="btn" href="contact.html">
+    हमसे संपर्क करें
+  </a>
+
+  <a class="btn" href="donate.html">
+    सहयोग करें
+  </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <img src="assets/logo.svg" alt="NCCPA Logo">
+
+  <h3>NCCPA Jankalyan Foundation</h3>
+
+  <p>
+    National Council for Community Promotion & Awareness
+  </p>
+
+  <p>
+    “हर घर तक सेवा, हर दिल में विश्वास”
+  </p>
+
+  <p>
+    “आपातकाल हो या अधिकार – हम हैं तैयार”
+  </p>
+
+  <p>
+    📞 8084284106 &nbsp; | &nbsp;
+    📱 7903998184
+  </p>
+
+  <p>
+    ✉️ infonccpa@gmail.com
+  </p>
+
+  <p>
+    © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+  </p>
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+   href="https://wa.me/917903998184"
+   target="_blank"
+   aria-label="WhatsApp">
+  💬
+</a>
+
+</body>
+</html>
