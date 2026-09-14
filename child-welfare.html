@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>बाल कल्याण एवं संरक्षण | NCCPA Jankalyan Foundation</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      background: #f7fbff;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1565c0, #00a6a6);
+      color: white;
+      text-align: center;
+      padding: 18px 15px;
+    }
+
+    .logo {
+      width: 105px;
+      height: 105px;
+      background: white;
+      border-radius: 50%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 14px;
+    }
+
+    nav {
+      background: #0d477f;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 7px;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #e7f5ff, #ffffff);
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    .hero h2 {
+      color: #1565c0;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 35px 18px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #1565c0;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .intro {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #1565c0;
+      margin-bottom: 8px;
+    }
+
+    .info-box {
+      background: #eaf6ff;
+      border-left: 5px solid #1565c0;
+      padding: 22px;
+      margin: 30px 0;
+      border-radius: 8px;
+    }
+
+    .warning-box {
+      background: #fff8e1;
+      border-left: 5px solid #f9a825;
+      padding: 22px;
+      margin: 30px 0;
+      border-radius: 8px;
+    }
+
+    .list-box {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .list-box ul {
+      padding-left: 22px;
+    }
+
+    .list-box li {
+      margin: 9px 0;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .step {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      border-top: 5px solid #00a6a6;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .step-number {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1565c0;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #1565c0, #00a6a6);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 35px;
+    }
+
+    .cta h2 {
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ffd700;
+      color: #222;
+      padding: 11px 20px;
+      margin: 8px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #08345d;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #25D366;
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 28px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 21px;
+      }
+
+      .hero h2 {
+        font-size: 25px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      nav a {
+        font-size: 13px;
+        margin: 3px 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <img
+      src="assets/logo.svg"
+      alt="NCCPA Jankalyan Foundation Logo"
+      class="logo">
+
+    <h1>NCCPA Jankalyan Foundation</h1>
+
+    <p>
+      National Council for Community Promotion & Awareness
+    </p>
+
+    <p>
+      “आपातकाल हो या अधिकार – हम हैं तैयार”
+    </p>
+
+  </header>
+
+
+  <!-- NAVIGATION -->
+  <nav>
+
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="education.html">📚 Education</a>
+    <a href="child-welfare.html">👶 Child Welfare</a>
+    <a href="child-education.html">📖 Child Education</a>
+    <a href="child-rights.html">⚖️ Child Rights</a>
+    <a href="child-marriage.html">🚫 Child Marriage</a>
+    <a href="contact.html">📞 Contact</a>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <h2>👶 बाल कल्याण एवं संरक्षण</h2>
+
+    <p>
+      हर बच्चे को सुरक्षित, सम्मानजनक और स्वस्थ वातावरण
+      मिलना चाहिए। NCCPA Jankalyan Foundation बच्चों की
+      शिक्षा, स्वास्थ्य, सुरक्षा, अधिकार और समग्र विकास
+      के प्रति जागरूकता बढ़ाने का प्रयास करता है।
+    </p>
+
+  </section>
+
+
+  <main class="container">
+
+
+    <!-- INTRO -->
+    <section class="intro">
+
+      <h2 class="section-title">
+        🌈 बच्चों के बेहतर भविष्य की ओर
+      </h2>
+
+      <p>
+        बच्चे समाज और देश का भविष्य हैं। उनके विकास के लिए
+        शिक्षा के साथ-साथ सुरक्षा, स्वास्थ्य, पोषण, परिवार का
+        सहयोग और सकारात्मक वातावरण भी आवश्यक है।
+      </p>
+
+      <p style="margin-top:12px;">
+        हमारा उद्देश्य बच्चों एवं अभिभावकों को बाल कल्याण,
+        शिक्षा, सुरक्षा और अधिकारों से संबंधित सामान्य
+        जागरूकता उपलब्ध कराने में सहयोग करना है।
+      </p>
+
+    </section>
+
+
+    <!-- KEY AREAS -->
+    <section>
+
+      <h2 class="section-title">
+        🎯 बाल कल्याण के प्रमुख क्षेत्र
+      </h2>
+
+      <div class="cards">
+
+
+        <div class="card">
+
+          <div class="icon">📚</div>
+
+          <h3>बाल शिक्षा</h3>
+
+          <p>
+            बच्चों की शिक्षा और नियमित विद्यालय जाने के
+            महत्व के प्रति जागरूकता।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">🛡️</div>
+
+          <h3>बाल सुरक्षा</h3>
+
+          <p>
+            बच्चों को असुरक्षित परिस्थितियों से बचाने और
+            सुरक्षित वातावरण के प्रति जागरूकता।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">❤️</div>
+
+          <h3>स्वास्थ्य</h3>
+
+          <p>
+            बच्चों के स्वास्थ्य, स्वच्छता और नियमित
+            स्वास्थ्य देखभाल के प्रति जागरूकता।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">🥗</div>
+
+          <h3>पोषण</h3>
+
+          <p>
+            संतुलित आहार और बच्चों के पोषण के महत्व
+            के प्रति जागरूकता।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">⚖️</div>
+
+          <h3>बाल अधिकार</h3>
+
+          <p>
+            बच्चों के अधिकारों और उनके संरक्षण से
+            संबंधित सामान्य जानकारी।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">👨‍👩‍👧</div>
+
+          <h3>परिवार सहयोग</h3>
+
+          <p>
+            बच्चों के सकारात्मक विकास में परिवार की
+            भूमिका के प्रति जागरूकता।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">🎨</div>
+
+          <h3>रचनात्मक विकास</h3>
+
+          <p>
+            खेल, कला, संस्कृति और रचनात्मक गतिविधियों
+            के माध्यम से बच्चों के विकास को प्रोत्साहन।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">🚫</div>
+
+          <h3>बाल शोषण से सुरक्षा</h3>
+
+          <p>
+            बाल शोषण एवं असुरक्षित परिस्थितियों के
+            प्रति जागरूकता और उचित सहायता तक पहुँच।
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ACTIVITIES -->
+    <section style="margin-top:40px;">
+
+      <h2 class="section-title">
+        📢 हमारी संभावित गतिविधियाँ
+      </h2>
+
+      <div class="list-box">
+
+        <ul>
+
+          <li>बाल शिक्षा जागरूकता कार्यक्रम</li>
+
+          <li>बाल स्वास्थ्य एवं स्वच्छता जागरूकता</li>
+
+          <li>पोषण जागरूकता कार्यक्रम</li>
+
+          <li>बाल अधिकार जागरूकता अभियान</li>
+
+          <li>बाल सुरक्षा के प्रति परिवारों को जागरूक करना</li>
+
+          <li>बाल विवाह के विरुद्ध जागरूकता</li>
+
+          <li>स्कूल ड्रॉपआउट रोकने के लिए जागरूकता</li>
+
+          <li>डिजिटल सुरक्षा एवं ऑनलाइन सावधानी की जानकारी</li>
+
+          <li>खेल एवं रचनात्मक गतिविधियों को प्रोत्साहन</li>
+
+          <li>जरूरतमंद परिवारों को उपलब्ध सहायता सेवाओं की जानकारी</li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- CHILD DEVELOPMENT -->
+    <section style="margin-top:40px;">
+
+      <h2 class="section-title">
+        🌱 बच्चे के समग्र विकास के लिए
+      </h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon">🏫</div>
+          <h3>शिक्षा</h3>
+          <p>
+            बच्चे को सीखने और शिक्षा प्राप्त करने का
+            सकारात्मक वातावरण मिले।
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🍎</div>
+          <h3>पोषण</h3>
+          <p>
+            बच्चे की उम्र और आवश्यकता के अनुसार
+            उचित पोषण के महत्व को समझें।
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">⚽</div>
+          <h3>खेल</h3>
+          <p>
+            खेलकूद एवं शारीरिक गतिविधियों के लिए
+            उचित अवसर मिलें।
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎭</div>
+          <h3>रचनात्मकता</h3>
+          <p>
+            कला, संगीत, कहानी और अन्य रचनात्मक
+            गतिविधियों को प्रोत्साहित करें।
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOUR STEPS -->
+    <section style="margin-top:40px;">
+
+      <h2 class="section-title">
+        🛡️ बाल सुरक्षा के 4 महत्वपूर्ण कदम
+      </h2>
+
+      <div class="steps">
+
+
+        <div class="step">
+
+          <div class="step-number">01</div>
+
+          <h3>बच्चे की बात सुनें</h3>
+
+          <p>
+            बच्चे की बात को ध्यान से सुनें और उसकी
+            समस्या को गंभीरता से समझने का प्रयास करें।
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">02</div>
+
+          <h3>सुरक्षित वातावरण दें</h3>
+
+          <p>
+            बच्चे को घर, स्कूल और आसपास सुरक्षित
+            वातावरण उपलब्ध कराने का प्रयास करें।
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">03</div>
+
+          <h3>समय पर सहायता लें</h3>
+
+          <p>
+            गंभीर समस्या होने पर विश्वसनीय व्यक्ति,
+            संबंधित विभाग या आधिकारिक सहायता सेवा से संपर्क करें।
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">04</div>
+
+          <h3>जागरूकता बढ़ाएँ</h3>
+
+          <p>
+            परिवार और समुदाय में बाल सुरक्षा एवं
+            अधिकारों के प्रति जागरूकता बढ़ाएँ।
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- PARENTS -->
+    <section style="margin-top:40px;">
+
+      <h2 class="section-title">
+        👨‍👩‍👧 अभिभावकों के लिए संदेश
+      </h2>
+
+      <div class="info-box">
+
+        <p>
+          बच्चों को प्यार, सम्मान और सुरक्षित वातावरण देना
+          उनके स्वस्थ विकास के लिए महत्वपूर्ण है।
+        </p>
+
+        <p style="margin-top:12px;">
+          बच्चों की शिक्षा, स्वास्थ्य, पोषण और मानसिक
+          एवं सामाजिक विकास पर ध्यान दें। बच्चों की समस्या
+          को नजरअंदाज करने के बजाय उचित और सुरक्षित सहायता
+          प्राप्त करने का प्रयास करें।
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CHILD PROTECTION -->
+    <section style="margin-top:40px;">
+
+      <h2 class="section-title">
+        🛡️ यदि बच्चा संकट में हो
+      </h2>
+
+      <div class="warning-box">
+
+        <p>
+          यदि कोई बच्चा तत्काल खतरे, हिंसा, शोषण या गंभीर
+          असुरक्षा की स्थिति में है, तो स्वयं जोखिम लेने के
+          बजाय स्थानीय प्रशासन, पुलिस या संबंधित बाल संरक्षण
+          एवं आधिकारिक सहायता व्यवस्था से संपर्क करें।
+        </p>
+
+        <p style="margin-top:12px;">
+          बच्चे की पहचान और निजी जानकारी को अनावश्यक रूप से
+          सार्वजनिक न करें।
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- IMPORTANT NOTICE -->
+    <section style="margin-top:40px;">
+
+      <div class="info-box">
+
+        <h3>⚠️ महत्वपूर्ण सूचना</h3>
+
+        <p style="margin-top:8px;">
+          NCCPA Jankalyan Foundation द्वारा बाल कल्याण से
+          संबंधित जागरूकता एवं सामाजिक गतिविधियाँ उपलब्ध
+          संसाधनों और स्थानीय आवश्यकताओं के अनुसार आयोजित
+          की जा सकती हैं।
+        </p>
+
+        <p style="margin-top:10px;">
+          किसी भी गंभीर बाल संरक्षण मामले में प्रशिक्षित
+          संबंधित अधिकारी या आधिकारिक बाल संरक्षण व्यवस्था
+          से संपर्क करना उचित है।
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>
+      🌈 हर बच्चे का सुरक्षित भविष्य हमारा साझा दायित्व है
+    </h2>
+
+    <p>
+      शिक्षा • सुरक्षा • स्वास्थ्य • पोषण • अधिकार • विकास
+    </p>
+
+    <a href="contact.html" class="btn">
+      📞 हमसे संपर्क करें
+    </a>
+
+    <a href="child-education.html" class="btn">
+      📚 बाल शिक्षा
+    </a>
+
+    <a href="child-rights.html" class="btn">
+      ⚖️ बाल अधिकार
+    </a>
+
+    <a href="child-marriage.html" class="btn">
+      🚫 बाल विवाह जागरूकता
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <h3>NCCPA Jankalyan Foundation</h3>
+
+    <p>
+      National Council for Community Promotion & Awareness
+    </p>
+
+    <p>
+      “हर घर तक सेवा, हर दिल में विश्वास”
+    </p>
+
+    <p>
+      “आपातकाल हो या अधिकार – हम हैं तैयार”
+    </p>
+
+    <p style="margin-top:12px;">
+      📍 Registered Office: Bochgaon, Purnea, Bihar - 854330
+    </p>
+
+    <p>
+      📞 8084284106 | 7903998184
+    </p>
+
+    <p>
+      ✉️ infonccpa@gmail.com
+    </p>
+
+    <p style="margin-top:15px;">
+      © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/918084281046"
+    class="whatsapp"
+    target="_blank"
+    aria-label="WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
