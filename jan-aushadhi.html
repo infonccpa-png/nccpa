@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jan Aushadhi Awareness | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+    content="NCCPA Jankalyan Foundation द्वारा जन औषधि एवं जेनेरिक दवाओं के प्रति जन-जागरूकता और उचित स्वास्थ्य मार्गदर्शन।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,sans-serif;
+      line-height:1.7;
+      color:#222;
+      background:#f5f8fa;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .topbar{
+      background:#123b2a;
+      color:#fff;
+      padding:8px 5%;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:8px;
+      font-size:14px;
+    }
+
+    header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.10);
+    }
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      padding:10px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo{
+      width:75px;
+      height:75px;
+      object-fit:contain;
+    }
+
+    .brand h1{
+      color:#123b2a;
+      font-size:21px;
+    }
+
+    .brand p{
+      color:#666;
+      font-size:12px;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:7px;
+    }
+
+    nav a{
+      color:#123b2a;
+      font-weight:bold;
+      font-size:14px;
+      padding:7px 9px;
+      border-radius:6px;
+    }
+
+    nav a:hover{
+      background:#e8f5ed;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#075985,#047857);
+      color:#fff;
+      text-align:center;
+      padding:70px 5%;
+    }
+
+    .badge{
+      display:inline-block;
+      background:#fff;
+      color:#075985;
+      padding:6px 16px;
+      border-radius:30px;
+      font-weight:bold;
+      margin-bottom:18px;
+    }
+
+    .hero h2{
+      font-size:42px;
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1150px;
+      margin:auto;
+      padding:50px 5%;
+    }
+
+    .intro{
+      background:#fff;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 3px 15px rgba(0,0,0,.08);
+      margin-bottom:40px;
+    }
+
+    .intro h3{
+      color:#075985;
+      font-size:25px;
+      margin-bottom:12px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .section-title h2{
+      color:#123b2a;
+      font-size:30px;
+      margin-bottom:8px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:#fff;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 3px 15px rgba(0,0,0,.08);
+      border-top:4px solid #047857;
+    }
+
+    .icon{
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      color:#123b2a;
+      margin-bottom:10px;
+      font-size:21px;
+    }
+
+    .card p{
+      color:#555;
+      font-size:15px;
+    }
+
+    .info-box{
+      background:#e8f5ed;
+      padding:30px;
+      border-radius:15px;
+      margin-top:40px;
+    }
+
+    .info-box h2{
+      color:#123b2a;
+      margin-bottom:15px;
+    }
+
+    .info-box ul{
+      padding-left:22px;
+    }
+
+    .info-box li{
+      margin-bottom:8px;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:30px;
+    }
+
+    .step{
+      background:#fff;
+      padding:22px;
+      text-align:center;
+      border-radius:12px;
+      box-shadow:0 3px 12px rgba(0,0,0,.07);
+    }
+
+    .number{
+      width:45px;
+      height:45px;
+      line-height:45px;
+      margin:0 auto 12px;
+      background:#047857;
+      color:#fff;
+      border-radius:50%;
+      font-size:20px;
+      font-weight:bold;
+    }
+
+    .notice{
+      background:#fff4e5;
+      border-left:5px solid #e28b00;
+      padding:22px;
+      border-radius:8px;
+      margin-top:35px;
+    }
+
+    .notice strong{
+      color:#a85d00;
+    }
+
+    .cta{
+      background:#123b2a;
+      color:#fff;
+      text-align:center;
+      padding:50px 5%;
+    }
+
+    .cta h2{
+      font-size:30px;
+      margin-bottom:10px;
+    }
+
+    .cta p{
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:8px;
+      margin:5px;
+      font-weight:bold;
+      background:#fff;
+      color:#123b2a;
+    }
+
+    .btn.whatsapp{
+      background:#25D366;
+      color:#fff;
+    }
+
+    footer{
+      background:#0c261c;
+      color:#fff;
+      text-align:center;
+      padding:30px 5%;
+    }
+
+    footer p{
+      margin:6px 0;
+      font-size:14px;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#25D366;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:27px;
+      box-shadow:0 4px 12px rgba(0,0,0,.25);
+      z-index:999;
+    }
+
+    @media(max-width:900px){
+      .cards{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .steps{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .nav{
+        flex-direction:column;
+      }
+    }
+
+    @media(max-width:600px){
+      .topbar{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .nav{
+        padding:10px 3%;
+      }
+
+      .logo{
+        width:65px;
+        height:65px;
+      }
+
+      .brand h1{
+        font-size:17px;
+      }
+
+      nav a{
+        font-size:13px;
+        padding:6px;
+      }
+
+      .hero{
+        padding:50px 5%;
+      }
+
+      .hero h2{
+        font-size:30px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .cards,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .container{
+        padding:35px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>📞 8084284106</span>
+    <span>📱 WhatsApp: 7903998184</span>
+    <span>✉️ infonccpa@gmail.com</span>
+  </div>
+
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+
+      <div class="brand">
+
+        <img src="assets/logo.svg"
+             alt="NCCPA Jankalyan Foundation Logo"
+             class="logo">
+
+        <div>
+          <h1>NCCPA Jankalyan Foundation</h1>
+          <p>National Council for Community Promotion & Awareness</p>
+        </div>
+
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="mission.html">Mission</a>
+        <a href="services.html">Services</a>
+        <a href="health.html">Health</a>
+        <a href="health-camps.html">Health Camps</a>
+        <a href="medical-awareness.html">Medical Awareness</a>
+        <a href="ayushman.html">Ayushman Bharat</a>
+        <a href="jan-aushadhi.html">Jan Aushadhi</a>
+        <a href="schemes.html">Schemes</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <span class="badge">स्वास्थ्य एवं औषधि जागरूकता</span>
+
+    <h2>💊 Jan Aushadhi Awareness</h2>
+
+    <p>
+      जन औषधि एवं जेनेरिक दवाओं के संबंध में सही जानकारी,
+      जागरूकता और जिम्मेदार स्वास्थ्य मार्गदर्शन।
+    </p>
+
+  </section>
+
+
+  <!-- MAIN -->
+  <section class="container">
+
+    <div class="intro">
+
+      <h3>जन औषधि जागरूकता का उद्देश्य</h3>
+
+      <p>
+        NCCPA Jankalyan Foundation का प्रयास है कि आम नागरिकों
+        को जन औषधि केंद्रों और जेनेरिक दवाओं से संबंधित सामान्य
+        जानकारी उपलब्ध हो तथा वे दवाओं के उपयोग के संबंध में
+        योग्य स्वास्थ्य विशेषज्ञ की सलाह को महत्व दें।
+      </p>
+
+      <p style="margin-top:12px;">
+        किसी भी दवा का उपयोग, बदलाव या बंद करना चिकित्सक या
+        योग्य स्वास्थ्यकर्मी की सलाह के अनुसार ही किया जाना चाहिए।
+      </p>
+
+    </div>
+
+
+    <!-- AWARENESS AREAS -->
+    <div class="section-title">
+
+      <h2>हमारी जागरूकता गतिविधियाँ</h2>
+
+      <p>
+        नागरिकों तक दवा एवं स्वास्थ्य संबंधी जिम्मेदार जानकारी
+        पहुँचाने के प्रमुख क्षेत्र
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">💊</div>
+        <h3>जेनेरिक दवा जागरूकता</h3>
+        <p>
+          नागरिकों को जेनेरिक दवाओं से संबंधित सामान्य जानकारी
+          और स्वास्थ्य विशेषज्ञ की सलाह के महत्व के बारे में बताना।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🏪</div>
+        <h3>जन औषधि केंद्र जानकारी</h3>
+        <p>
+          लोगों को अपने क्षेत्र में उपलब्ध अधिकृत जन औषधि
+          केंद्र की जानकारी आधिकारिक माध्यम से प्राप्त करने
+          के लिए मार्गदर्शन।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🩺</div>
+        <h3>चिकित्सकीय सलाह</h3>
+        <p>
+          दवा लेने से पहले डॉक्टर या योग्य स्वास्थ्य विशेषज्ञ
+          से उचित सलाह लेने के महत्व पर जागरूकता।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">📋</div>
+        <h3>दवा की जानकारी</h3>
+        <p>
+          दवा का नाम, उपयोग, खुराक और सावधानियों को समझने के
+          लिए अधिकृत स्वास्थ्य विशेषज्ञ से जानकारी लेने की सलाह।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">⚠️</div>
+        <h3>स्वयं दवा लेने से सावधानी</h3>
+        <p>
+          बिना उचित चिकित्सकीय सलाह के दवा शुरू करने या
+          बदलने से बचने के प्रति जागरूकता।
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h3>सामुदायिक जागरूकता</h3>
+        <p>
+          ग्रामीण एवं जरूरतमंद समुदायों में स्वास्थ्य और
+          औषधि संबंधी जागरूकता गतिविधियों में सहयोग।
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- IMPORTANT POINTS -->
+    <div class="info-box">
+
+      <h2>📌 दवाओं के उपयोग में महत्वपूर्ण सावधानियाँ</h2>
+
+      <ul>
+        <li>दवा का उपयोग योग्य डॉक्टर या स्वास्थ्य विशेषज्ञ की सलाह के अनुसार करें।</li>
+        <li>दवा की खुराक अपने आप न बदलें।</li>
+        <li>दूसरे व्यक्ति की दवा अपने आप उपयोग न करें।</li>
+        <li>दवा की पैकिंग, नाम और समाप्ति तिथि ध्यान से देखें।</li>
+        <li>दवा से एलर्जी या असामान्य प्रतिक्रिया होने पर स्वास्थ्य विशेषज्ञ से संपर्क करें।</li>
+        <li>बच्चों और बुजुर्गों को दवा देते समय विशेष सावधानी रखें।</li>
+        <li>दवाओं के बारे में अपुष्ट सोशल मीडिया जानकारी पर भरोसा न करें।</li>
+      </ul>
+
+    </div>
+
+
+    <!-- PROCESS -->
+    <div class="section-title" style="margin-top:50px;">
+
+      <h2>जन औषधि जागरूकता कैसे बढ़ाई जाती है?</h2>
+
+      <p>
+        समुदाय तक जानकारी पहुँचाने की सामान्य प्रक्रिया
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="number">1</div>
+        <h3>जरूरत पहचान</h3>
+        <p>
+          समुदाय की स्वास्थ्य एवं औषधि संबंधी जागरूकता जरूरतों
+          को समझना।
+        </p>
+      </div>
+
+
+      <div class="step">
+        <div class="number">2</div>
+        <h3>जानकारी</h3>
+        <p>
+          सरल भाषा में सामान्य और जिम्मेदार जानकारी साझा करना।
+        </p>
+      </div>
+
+
+      <div class="step">
+        <div class="number">3</div>
+        <h3>जागरूकता</h3>
+        <p>
+          बैठक, शिविर और सामुदायिक कार्यक्रमों के माध्यम से
+          जागरूकता बढ़ाना।
+        </p>
+      </div>
+
+
+      <div class="step">
+        <div class="number">4</div>
+        <h3>मार्गदर्शन</h3>
+        <p>
+          जरूरत के अनुसार नागरिकों को उचित स्वास्थ्य सेवा
+          या अधिकृत केंद्र तक पहुँचने में मार्गदर्शन।
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="notice">
+
+      <strong>⚠️ महत्वपूर्ण स्वास्थ्य सूचना:</strong>
+
+      <p style="margin-top:8px;">
+        यह पेज केवल जन-जागरूकता के उद्देश्य से है। NCCPA
+        Jankalyan Foundation किसी व्यक्ति के लिए व्यक्तिगत
+        दवा, खुराक या उपचार निर्धारित नहीं करता। दवा का उपयोग
+        डॉक्टर या योग्य स्वास्थ्य विशेषज्ञ की सलाह के अनुसार करें।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>स्वास्थ्य जागरूकता अभियान से जुड़ें</h2>
+
+    <p>
+      सही जानकारी को समुदाय तक पहुँचाने में अपना सहयोग दें।
+    </p>
+
+    <a href="health.html" class="btn">
+      🏥 Health Services
+    </a>
+
+    <a href="contact.html" class="btn">
+      📞 संपर्क करें
+    </a>
+
+    <a href="https://wa.me/9179039918184"
+       target="_blank"
+       class="btn whatsapp">
+      💬 WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p><strong>NCCPA Jankalyan Foundation</strong></p>
+
+    <p>
+      National Council for Community Promotion & Awareness
+    </p>
+
+    <p>
+      “हर घर तक सेवा, हर दिल में विश्वास”
+    </p>
+
+    <p>
+      “आपातकाल हो या अधिकार – हम हैं तैयार”
+    </p>
+
+    <p>
+      © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/9179039918184"
+     target="_blank"
+     class="whatsapp-float"
+     aria-label="WhatsApp">
+    💬
+  </a>
+
+</body>
+  </html>
