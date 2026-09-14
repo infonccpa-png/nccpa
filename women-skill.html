@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>महिला कौशल विकास एवं प्रशिक्षण | NCCPA Jankalyan Foundation</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      background: #f8f6fa;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #7b1fa2, #c2185b);
+      color: white;
+      text-align: center;
+      padding: 18px 15px;
+    }
+
+    .logo {
+      width: 105px;
+      height: 105px;
+      background: white;
+      border-radius: 50%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 14px;
+    }
+
+    nav {
+      background: #4a1264;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 8px;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #fff0f7, #ffffff);
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    .hero h2 {
+      color: #8e246b;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 35px 18px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #8e246b;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .intro {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #8e246b;
+      margin-bottom: 8px;
+    }
+
+    .info-box {
+      background: #fff0f7;
+      border-left: 5px solid #c2185b;
+      padding: 22px;
+      margin: 30px 0;
+      border-radius: 8px;
+    }
+
+    .list-box {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .list-box ul {
+      padding-left: 22px;
+    }
+
+    .list-box li {
+      margin: 9px 0;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .step {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      border-top: 5px solid #c2185b;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .step-number {
+      font-size: 28px;
+      font-weight: bold;
+      color: #8e246b;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #7b1fa2, #c2185b);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 35px;
+    }
+
+    .cta h2 {
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ffd700;
+      color: #222;
+      padding: 11px 20px;
+      margin: 8px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #3b0c50;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #25D366;
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 28px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 21px;
+      }
+
+      .hero h2 {
+        font-size: 25px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      nav a {
+        font-size: 13px;
+        margin: 3px 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <img
+      src="assets/logo.svg"
+      alt="NCCPA Jankalyan Foundation Logo"
+      class="logo">
+
+    <h1>NCCPA Jankalyan Foundation</h1>
+
+    <p>
+      National Council for Community Promotion & Awareness
+    </p>
+
+    <p>
+      “आपातकाल हो या अधिकार – हम हैं तैयार”
+    </p>
+
+  </header>
+
+
+  <!-- NAVIGATION -->
+  <nav>
+
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="women.html">👩 Women</a>
+    <a href="women-skill.html">🧵 Women Skill</a>
+    <a href="shg.html">👭 SHG</a>
+    <a href="employment.html">💼 Employment</a>
+    <a href="contact.html">📞 Contact</a>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <h2>🧵 महिला कौशल विकास एवं प्रशिक्षण</h2>
+
+    <p>
+      कौशल विकास महिलाओं को आत्मविश्वास, रोजगार और
+      स्वरोजगार के अवसरों की दिशा में आगे बढ़ने में सहायता
+      कर सकता है। NCCPA Jankalyan Foundation महिलाओं को
+      उपयोगी कौशल एवं उपलब्ध प्रशिक्षण अवसरों की जानकारी
+      से जोड़ने का प्रयास करता है।
+    </p>
+
+  </section>
+
+
+  <main class="container">
+
+
+    <!-- INTRO -->
+    <section class="intro">
+
+      <h2 class="section-title">
+        🌸 कौशल से आत्मनिर्भरता की ओर
+      </h2>
+
+      <p>
+        आज के समय में शिक्षा के साथ-साथ व्यावहारिक कौशल भी
+        महत्वपूर्ण है। महिलाएँ अपनी रुचि और क्षमता के अनुसार
+        विभिन्न प्रकार के कौशल सीखकर रोजगार, स्वरोजगार या
+        सामुदायिक गतिविधियों में अपनी भागीदारी बढ़ा सकती हैं।
+      </p>
+
+      <p style="margin-top:12px;">
+        हमारा उद्देश्य महिलाओं को कौशल सीखने के लिए प्रेरित
+        करना तथा उपलब्ध प्रशिक्षण और आजीविका से संबंधित
+        अवसरों के प्रति जागरूक करना है।
+      </p>
+
+    </section>
+
+
+    <!-- SKILL AREAS -->
+    <section>
+
+      <h2 class="section-title">
+        🛠️ संभावित कौशल प्रशिक्षण क्षेत्र
+      </h2>
+
+      <div class="cards">
+
+
+        <div class="card">
+
+          <div class="icon">🧵</div>
+
+          <h3>सिलाई प्रशिक्षण</h3>
+
+          <p>
+            सिलाई मशीन के उपयोग, कपड़े की कटिंग और
+            सामान्य सिलाई कार्यों की जानकारी।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">🪡</div>
+
+          <h3>कढ़ाई एवं हस्तकला</h3>
+
+          <p>
+            कढ़ाई, सजावटी वस्तुएँ और स्थानीय हस्तशिल्प
+            जैसे रचनात्मक कौशल।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">💻</div>
+
+          <h3>कंप्यूटर प्रशिक्षण</h3>
+
+          <p>
+            बेसिक कंप्यूटर, टाइपिंग, इंटरनेट और डिजिटल
+            सेवाओं का प्रारंभिक ज्ञान।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">📱</div>
+
+          <h3>डिजिटल कौशल</h3>
+
+          <p>
+            स्मार्टफोन, ऑनलाइन सेवाओं और डिजिटल प्लेटफॉर्म
+            के सुरक्षित उपयोग की जानकारी।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">🍱</div>
+
+          <h3>खाद्य प्रसंस्करण</h3>
+
+          <p>
+            घरेलू स्तर पर खाद्य उत्पाद बनाने और छोटे
+            व्यवसाय की संभावनाओं की जानकारी।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">🌾</div>
+
+          <h3>कृषि आधारित कौशल</h3>
+
+          <p>
+            स्थानीय संसाधनों के आधार पर संभावित आजीविका
+            गतिविधियों की जानकारी।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">🧴</div>
+
+          <h3>घरेलू उत्पाद</h3>
+
+          <p>
+            स्थानीय मांग के अनुसार विभिन्न घरेलू उत्पाद
+            एवं छोटे व्यवसाय की संभावनाएँ।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">🎨</div>
+
+          <h3>रचनात्मक कौशल</h3>
+
+          <p>
+            सजावट, डिजाइन और अन्य रचनात्मक गतिविधियों
+            के माध्यम से कौशल विकास।
