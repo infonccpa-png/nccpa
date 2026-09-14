@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>उपलब्धियाँ | NCCPA Jankalyan Foundation</title>
+
+  <meta name="description"
+        content="NCCPA Jankalyan Foundation की प्रमुख उपलब्धियाँ, सामाजिक कार्य, स्वास्थ्य, शिक्षा, महिला सशक्तिकरण और जनजागरूकता गतिविधियाँ।">
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      line-height:1.7;
+      background:#f5f7fa;
+      color:#222;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .topbar{
+      background:#087443;
+      color:white;
+      padding:8px 5%;
+      font-size:14px;
+      text-align:center;
+    }
+
+    header{
+      background:white;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.12);
+    }
+
+    .header-inner{
+      max-width:1200px;
+      margin:auto;
+      padding:10px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo img{
+      width:65px;
+      height:65px;
+      object-fit:contain;
+    }
+
+    .logo-text h2{
+      color:#087443;
+      font-size:20px;
+    }
+
+    .logo-text p{
+      font-size:12px;
+      color:#555;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:8px;
+    }
+
+    nav a{
+      color:#222;
+      font-weight:bold;
+      padding:7px 9px;
+      font-size:14px;
+    }
+
+    nav a:hover{
+      color:#087443;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#087443,#0b9b59);
+      color:white;
+      text-align:center;
+      padding:70px 20px;
+    }
+
+    .hero img{
+      width:110px;
+      height:110px;
+      background:white;
+      border-radius:50%;
+      padding:5px;
+      margin-bottom:15px;
+    }
+
+    .hero h1{
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      max-width:800px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:50px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:35px;
+    }
+
+    .section-title h2{
+      color:#087443;
+      font-size:30px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    .achievement-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:14px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+      border-top:4px solid #087443;
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .icon{
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      color:#087443;
+      margin-bottom:10px;
+      font-size:21px;
+    }
+
+    .card p{
+      color:#555;
+      font-size:15px;
+    }
+
+    .milestone{
+      background:white;
+      margin-top:40px;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 4px 15px rgba(0,0,0,.08);
+    }
+
+    .milestone h2{
+      color:#087443;
+      margin-bottom:20px;
+      text-align:center;
+    }
+
+    .milestone ul{
+      list-style:none;
+    }
+
+    .milestone li{
+      padding:14px;
+      margin:10px 0;
+      background:#f0f8f4;
+      border-left:5px solid #087443;
+      border-radius:6px;
+    }
+
+    .cta{
+      background:#087443;
+      color:white;
+      text-align:center;
+      padding:45px 20px;
+      margin-top:40px;
+    }
+
+    .cta h2{
+      font-size:30px;
+      margin-bottom:10px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin:15px 5px 0;
+      padding:12px 22px;
+      border-radius:25px;
+      background:white;
+      color:#087443;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      background:#eee;
+    }
+
+    footer{
+      background:#10231a;
+      color:white;
+      text-align:center;
+      padding:30px 20px;
+    }
+
+    footer img{
+      width:75px;
+      background:white;
+      border-radius:50%;
+      padding:4px;
+      margin-bottom:10px;
+    }
+
+    footer p{
+      margin:5px 0;
+      font-size:14px;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:#25D366;
+      color:white;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      box-shadow:0 4px 12px rgba(0,0,0,.3);
+      z-index:2000;
+    }
+
+    @media(max-width:800px){
+
+      .header-inner{
+        flex-direction:column;
+      }
+
+      nav{
+        width:100%;
+      }
+
+      .achievement-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:30px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .logo-text{
+        text-align:left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  📞 8084284106 &nbsp; | &nbsp;
+  📱 WhatsApp: 7903998184 &nbsp; | &nbsp;
+  ✉️ infonccpa@gmail.com
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+
+    <div class="logo">
+      <img src="assets/logo.svg" alt="NCCPA Jankalyan Foundation Logo">
+
+      <div class="logo-text">
+        <h2>NCCPA Jankalyan Foundation</h2>
+        <p>हर घर तक सेवा, हर दिल में विश्वास</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="objectives.html">Objectives</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="schemes.html">Schemes</a>
+      <a href="news.html">News</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <img src="assets/logo.svg" alt="NCCPA Logo">
+
+  <h1>हमारी उपलब्धियाँ</h1>
+
+  <p>
+    समाज सेवा, स्वास्थ्य, शिक्षा, जागरूकता और जनकल्याण के क्षेत्र में
+    NCCPA Jankalyan Foundation के प्रमुख कार्य एवं प्रयास
+  </p>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="container">
+
+  <div class="section-title">
+    <h2>प्रमुख उपलब्धियाँ एवं प्रयास</h2>
+    <p>सेवा और सामाजिक विकास की दिशा में हमारे महत्वपूर्ण कदम</p>
+  </div>
+
+  <div class="achievement-grid">
+
+    <div class="card">
+      <div class="icon">🏢</div>
+      <h3>Section 8 संस्था</h3>
+      <p>
+        NCCPA Jankalyan Foundation एक Section 8 Non-Government Organization
+        के रूप में सामाजिक सेवा एवं जनकल्याण के उद्देश्य से कार्यरत है।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📋</div>
+      <h3>NGO Darpan पंजीकरण</h3>
+      <p>
+        संस्था का NGO Darpan पंजीकरण उपलब्ध है और संगठन सरकारी योजनाओं
+        एवं सामाजिक विकास से जुड़े कार्यों को आगे बढ़ाने के लिए प्रयासरत है।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">❤️</div>
+      <h3>स्वास्थ्य जागरूकता</h3>
+      <p>
+        ग्रामीण एवं जरूरतमंद समुदायों के बीच स्वास्थ्य जागरूकता,
+        प्राथमिक सहायता और स्वास्थ्य सेवाओं की जानकारी पहुँचाने का प्रयास।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📚</div>
+      <h3>शिक्षा के लिए प्रयास</h3>
+      <p>
+        शिक्षा, डिजिटल शिक्षा, विद्यार्थियों के मार्गदर्शन और
+        शिक्षा संबंधी सरकारी योजनाओं की जानकारी के लिए पहल।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">👩‍🦰</div>
+      <h3>महिला सशक्तिकरण</h3>
+      <p>
+        महिलाओं के अधिकार, कौशल विकास, आत्मनिर्भरता और स्वयं सहायता समूहों
+        से संबंधित जागरूकता को बढ़ावा देने का प्रयास।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌱</div>
+      <h3>पर्यावरण संरक्षण</h3>
+      <p>
+        स्वच्छता, वृक्षारोपण, पर्यावरण संरक्षण और प्रकृति के प्रति
+        जिम्मेदारी की भावना विकसित करने के लिए जनजागरूकता।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">👨‍👩‍👧‍👦</div>
+      <h3>समुदाय सेवा</h3>
+      <p>
+        गरीब एवं जरूरतमंद परिवारों की सहायता तथा सामाजिक समस्याओं के
+        समाधान के लिए समुदाय के साथ मिलकर कार्य करने का प्रयास।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>डिजिटल पहल</h3>
+      <p>
+        डिजिटल माध्यमों के द्वारा जनजागरूकता, सर्वेक्षण, सूचना प्रसार
+        और सामाजिक सेवाओं को बेहतर बनाने की दिशा में प्रयास।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📢</div>
+      <h3>सरकारी योजनाओं की जागरूकता</h3>
+      <p>
+        पात्र लोगों तक सरकारी योजनाओं एवं जनकल्याणकारी सेवाओं की जानकारी
+        पहुँचाने के लिए जागरूकता अभियान की दिशा में कार्य।
+      </p>
+    </div>
+
+  </div>
+
+  <!-- MILESTONES -->
+  <div class="milestone">
+
+    <h2>संस्था के महत्वपूर्ण पड़ाव</h2>
+
+    <ul>
+
+      <li>
+        <strong>2023:</strong>
+        NCCPA Jankalyan Foundation का Section 8 संगठन के रूप में गठन।
+      </li>
+
+      <li>
+        <strong>NGO Darpan:</strong>
+        संस्था का NGO Darpan पंजीकरण — BR/2023/0362020।
+      </li>
+
+      <li>
+        <strong>सामाजिक सेवा:</strong>
+        स्वास्थ्य, शिक्षा, महिला सशक्तिकरण, ग्रामीण विकास और जनजागरूकता
+        जैसे क्षेत्रों को कार्यक्षेत्र में शामिल किया गया।
+      </li>
+
+      <li>
+        <strong>डिजिटल विकास:</strong>
+        संस्था की ऑनलाइन उपस्थिति, डिजिटल जानकारी और सर्वेक्षण व्यवस्था
+        विकसित करने की दिशा में पहल।
+      </li>
+
+      <li>
+        <strong>भविष्य की दिशा:</strong>
+        ग्रामीण क्षेत्र में स्वास्थ्य, शिक्षा, कौशल विकास और
+        रोजगार सहायता को मजबूत करने की योजना।
+      </li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+
+  <h2>आप भी सेवा अभियान से जुड़ें</h2>
+
+  <p>
+    समाज के विकास में आपका सहयोग, समय और सुझाव महत्वपूर्ण है।
+  </p>
+
+  <a class="btn" href="contact.html">हमसे संपर्क करें</a>
+
+  <a class="btn" href="donate.html">सहयोग करें</a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <img src="assets/logo.svg" alt="NCCPA Logo">
+
+  <h3>NCCPA Jankalyan Foundation</h3>
+
+  <p>
+    National Council for Community Promotion & Awareness
+  </p>
+
+  <p>
+    “हर घर तक सेवा, हर दिल में विश्वास”
+  </p>
+
+  <p>
+    “आपातकाल हो या अधिकार – हम हैं तैयार”
+  </p>
+
+  <p>
+    📞 8084284106 &nbsp; | &nbsp;
+    📱 7903998184
+  </p>
+
+  <p>
+    © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+  </p>
+
+</footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp"
+   href="https://wa.me/917903998184"
+   target="_blank"
+   aria-label="WhatsApp">
+  💬
+</a>
+
+</body>
+</html>
